@@ -1,0 +1,801 @@
+return_id,order_item_id,return_date,return_reason,refund_amount
+1,7522,2023-12-28,Damaged in Shipping,12.11
+2,4498,2023-03-03,Customer Preference,19.89
+3,5803,2024-05-09,Damaged in Shipping,16.72
+4,6629,2023-03-13,Customer Preference,12.3
+5,8582,2024-07-26,Wrong Item,7.37
+6,4269,2024-03-01,Defective,11.03
+7,4049,2023-07-10,Customer Preference,8.16
+8,507,2024-03-17,Defective,18.89
+9,6288,2023-11-19,Damaged in Shipping,15.6
+10,247,2024-09-04,Damaged in Shipping,17.98
+11,6685,2023-07-23,Wrong Item,18.56
+12,7553,2024-03-27,Wrong Item,14.5
+13,2715,2024-07-06,Defective,6.09
+14,6756,2024-05-18,Customer Preference,13.79
+15,2640,2024-01-19,Wrong Item,17.23
+16,6685,2024-06-02,Defective,10.4
+17,4158,2024-09-16,Customer Preference,18.99
+18,1919,2023-10-09,Wrong Item,19.96
+19,5922,2024-09-05,Defective,13.69
+20,944,2024-10-01,Defective,13.44
+21,8309,2023-06-08,Wrong Item,15.17
+22,2558,2023-09-24,Wrong Item,13.93
+23,6699,2023-11-27,Wrong Item,8.25
+24,989,2023-08-08,Damaged in Shipping,9.8
+25,7937,2023-05-28,Customer Preference,8.83
+26,6694,2024-02-03,Wrong Item,7.01
+27,8156,2023-04-16,Customer Preference,7.97
+28,4280,2023-06-26,Defective,19.61
+29,3568,2023-08-18,Customer Preference,13.77
+30,7161,2024-04-20,Wrong Item,7.76
+31,3114,2024-07-29,Defective,15.98
+32,8708,2024-09-20,Wrong Item,12.68
+33,4215,2024-05-09,Wrong Item,9.15
+34,3149,2023-09-16,Defective,19.21
+35,4888,2024-06-01,Customer Preference,9.14
+36,2887,2024-05-07,Customer Preference,7.37
+37,7291,2024-04-14,Defective,8.88
+38,2482,2024-12-09,Wrong Item,18.77
+39,2011,2024-03-13,Customer Preference,18.01
+40,1426,2023-07-26,Customer Preference,18.52
+41,7518,2023-10-05,Wrong Item,18.83
+42,668,2023-08-24,Customer Preference,7.08
+43,5533,2024-06-08,Customer Preference,15.96
+44,6473,2023-08-10,Damaged in Shipping,15.3
+45,103,2023-12-09,Damaged in Shipping,19.9
+46,5461,2024-06-24,Defective,16.01
+47,3686,2024-04-13,Defective,17.09
+48,5165,2023-03-06,Wrong Item,16.01
+49,6489,2023-04-19,Damaged in Shipping,14.69
+50,49,2024-05-15,Defective,13.74
+51,4948,2023-04-15,Damaged in Shipping,19.57
+52,8660,2023-10-03,Defective,19.11
+53,8239,2023-09-25,Customer Preference,12.13
+54,4720,2024-02-09,Customer Preference,9.98
+55,3828,2024-04-08,Wrong Item,13.13
+56,1294,2024-10-28,Damaged in Shipping,16.45
+57,6101,2023-03-25,Damaged in Shipping,11.61
+58,6909,2024-02-15,Damaged in Shipping,13.52
+59,1317,2023-07-03,Damaged in Shipping,10.18
+60,7751,2024-07-14,Customer Preference,11.99
+61,499,2023-05-02,Customer Preference,19.4
+62,487,2024-02-02,Damaged in Shipping,9.01
+63,7580,2024-01-16,Wrong Item,19.84
+64,4475,2023-08-10,Damaged in Shipping,9.02
+65,8967,2024-01-30,Defective,10.47
+66,5741,2024-06-06,Customer Preference,7.22
+67,889,2023-12-14,Customer Preference,16.53
+68,4788,2023-10-29,Damaged in Shipping,6.25
+69,7333,2023-12-31,Defective,17.03
+70,4110,2023-07-30,Wrong Item,14.08
+71,7737,2023-06-03,Customer Preference,16.48
+72,7172,2024-04-10,Defective,16.96
+73,1105,2024-01-31,Defective,7.74
+74,181,2023-06-05,Customer Preference,6.3
+75,4768,2024-02-19,Customer Preference,8.36
+76,870,2023-05-02,Defective,11.38
+77,8409,2024-05-13,Wrong Item,7.03
+78,5386,2024-01-13,Defective,12.39
+79,2811,2024-09-01,Customer Preference,9.99
+80,8817,2024-11-05,Damaged in Shipping,11.09
+81,6334,2023-05-22,Wrong Item,19.17
+82,632,2024-04-13,Defective,16.14
+83,7568,2023-06-13,Customer Preference,15.21
+84,131,2023-08-26,Defective,15.15
+85,8722,2024-09-22,Wrong Item,13.78
+86,6560,2024-02-01,Wrong Item,13.18
+87,1148,2023-09-22,Wrong Item,18.35
+88,562,2023-09-26,Wrong Item,7.05
+89,3587,2024-11-23,Wrong Item,10.04
+90,1096,2024-11-25,Customer Preference,7.46
+91,2173,2024-02-16,Defective,6.15
+92,7173,2024-03-24,Defective,6.19
+93,84,2024-12-06,Damaged in Shipping,6.34
+94,2988,2024-05-18,Wrong Item,15.54
+95,6876,2024-12-04,Defective,7.56
+96,5143,2024-10-23,Wrong Item,8.83
+97,5080,2023-06-10,Defective,11.87
+98,906,2023-08-08,Defective,9.77
+99,6794,2024-02-20,Customer Preference,17.43
+100,3233,2024-11-26,Customer Preference,14.73
+101,3145,2023-07-21,Customer Preference,10.67
+102,8731,2024-08-30,Wrong Item,10.45
+103,6206,2024-04-16,Wrong Item,15.57
+104,8594,2023-11-14,Customer Preference,8.39
+105,199,2024-11-05,Defective,9.93
+106,5334,2023-06-29,Wrong Item,10.95
+107,6922,2024-12-05,Wrong Item,12.37
+108,4123,2023-06-07,Damaged in Shipping,8.67
+109,5101,2023-10-02,Defective,8.2
+110,972,2024-05-11,Defective,19.86
+111,5315,2024-06-14,Damaged in Shipping,18.78
+112,5559,2024-04-06,Damaged in Shipping,13.33
+113,8043,2023-03-13,Damaged in Shipping,16.72
+114,2371,2024-01-07,Damaged in Shipping,15.44
+115,8090,2023-10-21,Damaged in Shipping,7.05
+116,7982,2023-05-22,Damaged in Shipping,13.25
+117,5322,2023-10-29,Wrong Item,8.57
+118,7619,2024-02-04,Wrong Item,14.18
+119,8952,2023-10-10,Wrong Item,6.87
+120,1372,2023-09-01,Customer Preference,8.28
+121,2059,2024-04-16,Damaged in Shipping,16.94
+122,8627,2023-06-05,Damaged in Shipping,17.81
+123,3104,2024-01-15,Damaged in Shipping,18.7
+124,840,2023-07-05,Damaged in Shipping,18.55
+125,6292,2023-10-01,Wrong Item,18.7
+126,6413,2024-08-21,Damaged in Shipping,7.33
+127,7802,2024-07-03,Customer Preference,15.23
+128,4739,2023-04-19,Wrong Item,15.81
+129,5007,2023-11-23,Wrong Item,9.75
+130,6908,2023-05-22,Wrong Item,19.9
+131,2300,2023-10-30,Customer Preference,10.0
+132,2616,2023-10-11,Wrong Item,14.05
+133,892,2024-08-11,Customer Preference,18.21
+134,4011,2024-02-26,Defective,10.05
+135,8953,2023-06-19,Damaged in Shipping,14.49
+136,1226,2024-03-01,Customer Preference,16.08
+137,2297,2024-03-24,Damaged in Shipping,14.77
+138,4910,2024-01-18,Damaged in Shipping,11.68
+139,6517,2024-10-08,Wrong Item,19.23
+140,8368,2023-03-23,Wrong Item,14.57
+141,3177,2023-08-03,Customer Preference,9.14
+142,865,2023-09-19,Customer Preference,17.29
+143,6583,2024-09-02,Wrong Item,15.18
+144,2102,2023-06-06,Damaged in Shipping,7.53
+145,2369,2023-12-29,Wrong Item,9.89
+146,1243,2023-08-09,Damaged in Shipping,8.21
+147,928,2024-10-24,Defective,7.02
+148,5589,2024-05-15,Customer Preference,9.22
+149,6892,2023-04-26,Wrong Item,9.89
+150,2944,2024-08-22,Damaged in Shipping,12.53
+151,4500,2024-11-25,Defective,19.57
+152,347,2024-05-09,Damaged in Shipping,19.21
+153,6820,2024-02-17,Customer Preference,16.55
+154,489,2024-06-09,Wrong Item,15.05
+155,2848,2024-08-01,Damaged in Shipping,19.26
+156,2407,2023-06-15,Customer Preference,7.99
+157,7709,2024-10-24,Wrong Item,10.62
+158,7086,2024-02-06,Defective,13.75
+159,1111,2023-05-23,Damaged in Shipping,17.4
+160,2426,2024-04-13,Wrong Item,14.73
+161,6223,2023-04-08,Wrong Item,17.32
+162,970,2023-04-02,Wrong Item,8.14
+163,4404,2023-08-25,Customer Preference,8.7
+164,1935,2024-03-18,Defective,16.37
+165,3161,2023-10-01,Defective,10.88
+166,4787,2023-09-17,Customer Preference,12.11
+167,7455,2024-03-31,Damaged in Shipping,17.08
+168,6800,2023-09-23,Customer Preference,6.98
+169,164,2023-12-13,Defective,8.35
+170,5415,2024-09-21,Customer Preference,10.14
+171,8843,2023-10-22,Defective,18.37
+172,7921,2024-10-13,Defective,11.67
+173,7923,2024-05-02,Defective,9.53
+174,7642,2024-09-02,Defective,15.5
+175,2095,2023-05-21,Damaged in Shipping,6.42
+176,4102,2023-08-09,Defective,16.85
+177,4853,2023-06-21,Wrong Item,15.77
+178,5008,2024-10-21,Wrong Item,6.77
+179,2569,2024-08-05,Defective,12.97
+180,4939,2024-07-05,Defective,11.66
+181,3797,2024-04-02,Customer Preference,8.21
+182,5934,2024-06-14,Damaged in Shipping,8.16
+183,2375,2023-11-20,Defective,8.24
+184,1932,2023-05-28,Customer Preference,14.4
+185,7027,2024-03-01,Defective,8.4
+186,6888,2023-10-02,Damaged in Shipping,6.83
+187,7174,2024-09-11,Damaged in Shipping,19.41
+188,4139,2023-11-25,Wrong Item,6.55
+189,7450,2024-09-22,Damaged in Shipping,15.29
+190,1590,2024-05-29,Wrong Item,19.1
+191,2944,2024-01-31,Damaged in Shipping,6.53
+192,7819,2023-12-24,Customer Preference,19.52
+193,5335,2023-09-30,Damaged in Shipping,13.03
+194,3097,2024-10-14,Customer Preference,16.99
+195,908,2023-05-03,Wrong Item,14.75
+196,4673,2024-11-19,Customer Preference,14.64
+197,8452,2024-07-01,Wrong Item,17.04
+198,8129,2024-01-22,Damaged in Shipping,6.92
+199,5538,2024-08-17,Customer Preference,11.49
+200,5595,2024-03-20,Customer Preference,19.57
+201,2763,2024-01-09,Wrong Item,6.76
+202,870,2024-11-03,Damaged in Shipping,9.68
+203,2032,2024-04-21,Defective,15.41
+204,8125,2024-01-06,Defective,7.41
+205,5238,2024-06-02,Customer Preference,13.51
+206,8767,2024-03-04,Wrong Item,15.99
+207,8333,2023-03-05,Wrong Item,16.6
+208,4095,2023-06-17,Wrong Item,13.86
+209,3373,2023-08-30,Damaged in Shipping,13.01
+210,6369,2024-11-20,Damaged in Shipping,15.99
+211,6305,2023-12-17,Damaged in Shipping,8.03
+212,397,2024-12-09,Defective,15.53
+213,1865,2023-05-24,Customer Preference,18.87
+214,6373,2023-08-21,Damaged in Shipping,15.56
+215,8630,2024-09-14,Customer Preference,6.65
+216,6558,2024-12-03,Wrong Item,13.08
+217,6753,2023-08-31,Damaged in Shipping,16.17
+218,5952,2023-11-22,Damaged in Shipping,6.61
+219,652,2024-06-12,Damaged in Shipping,16.67
+220,2178,2023-06-13,Customer Preference,9.94
+221,8847,2023-08-25,Defective,14.24
+222,849,2024-03-16,Defective,19.53
+223,8670,2023-06-21,Wrong Item,19.93
+224,1062,2023-12-11,Customer Preference,14.88
+225,976,2023-07-01,Damaged in Shipping,12.88
+226,5884,2023-05-27,Defective,8.49
+227,519,2024-08-18,Wrong Item,8.92
+228,2949,2024-08-23,Defective,12.01
+229,7997,2024-10-06,Customer Preference,15.83
+230,3803,2024-10-05,Wrong Item,16.77
+231,8257,2024-04-23,Customer Preference,9.11
+232,4033,2024-11-13,Wrong Item,13.5
+233,8198,2024-07-29,Customer Preference,14.28
+234,4360,2023-11-11,Damaged in Shipping,18.5
+235,4149,2024-08-13,Damaged in Shipping,18.27
+236,2313,2023-06-08,Customer Preference,17.44
+237,2854,2023-12-06,Customer Preference,13.23
+238,6304,2023-08-16,Defective,6.91
+239,7191,2024-02-29,Defective,10.68
+240,2433,2024-03-17,Wrong Item,14.7
+241,4971,2024-01-19,Customer Preference,14.93
+242,618,2023-10-19,Customer Preference,17.89
+243,2360,2023-05-30,Customer Preference,11.31
+244,3932,2023-03-28,Defective,19.11
+245,5603,2023-04-13,Defective,8.29
+246,2080,2024-10-17,Damaged in Shipping,6.7
+247,2886,2024-01-05,Wrong Item,8.47
+248,8285,2024-03-07,Defective,12.47
+249,4130,2023-12-22,Wrong Item,17.52
+250,3361,2023-04-13,Wrong Item,8.15
+251,6457,2023-03-11,Defective,13.67
+252,7830,2024-03-15,Customer Preference,16.87
+253,5324,2024-07-17,Customer Preference,6.49
+254,4716,2023-09-15,Damaged in Shipping,6.58
+255,4819,2024-06-11,Customer Preference,12.87
+256,3501,2023-06-29,Customer Preference,8.56
+257,5096,2023-03-14,Defective,12.31
+258,7675,2024-06-19,Wrong Item,6.62
+259,5303,2024-04-11,Customer Preference,19.68
+260,7227,2024-09-26,Defective,15.16
+261,6240,2023-06-03,Wrong Item,15.61
+262,6649,2023-11-23,Defective,13.14
+263,8403,2023-09-09,Customer Preference,17.55
+264,7950,2024-05-17,Customer Preference,17.67
+265,7739,2023-04-27,Defective,8.23
+266,8975,2023-06-02,Damaged in Shipping,16.76
+267,8095,2023-12-23,Wrong Item,13.93
+268,7137,2024-07-25,Wrong Item,16.67
+269,7371,2024-04-09,Customer Preference,18.86
+270,112,2024-02-25,Defective,10.69
+271,5243,2024-01-22,Defective,13.99
+272,3785,2023-09-22,Customer Preference,17.02
+273,697,2023-09-09,Defective,19.81
+274,7738,2023-10-10,Customer Preference,14.58
+275,8447,2023-04-07,Damaged in Shipping,16.1
+276,1253,2024-05-21,Wrong Item,17.85
+277,2975,2024-07-05,Damaged in Shipping,16.52
+278,3410,2023-06-19,Defective,19.19
+279,258,2023-11-07,Wrong Item,9.22
+280,3132,2024-06-14,Customer Preference,18.71
+281,5078,2024-07-04,Customer Preference,8.9
+282,8624,2024-10-16,Wrong Item,13.91
+283,118,2024-07-03,Damaged in Shipping,13.32
+284,6077,2024-02-27,Damaged in Shipping,17.64
+285,2948,2023-08-07,Customer Preference,11.58
+286,6170,2024-07-24,Defective,8.0
+287,340,2023-06-06,Customer Preference,15.9
+288,1277,2024-10-18,Defective,14.49
+289,8724,2024-09-24,Defective,17.58
+290,3376,2023-11-14,Wrong Item,16.62
+291,6521,2023-05-20,Wrong Item,18.53
+292,1597,2024-06-04,Customer Preference,17.75
+293,151,2024-02-22,Wrong Item,15.6
+294,829,2024-06-10,Customer Preference,12.52
+295,7871,2024-02-29,Wrong Item,6.29
+296,8467,2023-06-03,Damaged in Shipping,10.31
+297,8011,2024-07-01,Damaged in Shipping,16.19
+298,8449,2023-12-12,Damaged in Shipping,6.83
+299,681,2024-09-20,Wrong Item,16.59
+300,8074,2023-04-12,Defective,13.23
+301,6480,2023-08-05,Wrong Item,18.15
+302,3112,2023-10-21,Damaged in Shipping,15.24
+303,2983,2024-06-17,Customer Preference,17.18
+304,5076,2024-04-15,Defective,8.4
+305,6474,2024-03-28,Damaged in Shipping,8.42
+306,243,2023-07-22,Wrong Item,8.96
+307,5055,2023-03-10,Customer Preference,10.67
+308,480,2024-07-23,Wrong Item,18.66
+309,5215,2024-01-24,Customer Preference,16.84
+310,5031,2023-11-23,Damaged in Shipping,11.11
+311,8966,2024-06-23,Customer Preference,18.86
+312,8401,2023-08-03,Customer Preference,16.9
+313,8149,2024-08-11,Customer Preference,15.18
+314,2626,2023-12-09,Damaged in Shipping,12.11
+315,481,2024-07-03,Customer Preference,15.12
+316,7692,2023-11-25,Wrong Item,14.31
+317,1549,2023-11-19,Defective,16.95
+318,1959,2024-06-20,Wrong Item,9.16
+319,1638,2024-02-19,Customer Preference,18.4
+320,3757,2023-11-14,Customer Preference,14.29
+321,2261,2023-09-18,Damaged in Shipping,17.29
+322,1193,2023-07-15,Wrong Item,10.86
+323,2018,2023-04-16,Customer Preference,11.49
+324,7043,2023-05-02,Damaged in Shipping,19.12
+325,521,2023-05-16,Damaged in Shipping,14.71
+326,5036,2024-11-22,Damaged in Shipping,10.45
+327,8211,2024-05-28,Damaged in Shipping,7.15
+328,4626,2023-03-13,Customer Preference,12.08
+329,2285,2024-03-24,Customer Preference,17.89
+330,2152,2024-05-31,Damaged in Shipping,9.52
+331,937,2024-08-09,Damaged in Shipping,18.04
+332,237,2024-06-10,Wrong Item,8.26
+333,3174,2024-02-04,Damaged in Shipping,7.82
+334,1972,2023-04-24,Damaged in Shipping,14.48
+335,391,2024-04-16,Customer Preference,17.26
+336,2809,2024-01-28,Defective,16.92
+337,3852,2024-01-05,Wrong Item,13.61
+338,5081,2023-09-04,Customer Preference,14.94
+339,5144,2024-08-02,Damaged in Shipping,9.61
+340,3504,2023-03-06,Damaged in Shipping,13.72
+341,7666,2024-11-03,Damaged in Shipping,8.91
+342,630,2024-04-16,Wrong Item,19.0
+343,4495,2023-12-05,Damaged in Shipping,15.49
+344,8348,2023-04-20,Defective,13.91
+345,5979,2023-10-14,Wrong Item,9.46
+346,1151,2023-12-02,Wrong Item,11.73
+347,8469,2024-10-15,Damaged in Shipping,16.92
+348,3052,2024-01-12,Wrong Item,9.35
+349,7195,2024-02-10,Wrong Item,7.8
+350,7087,2023-06-25,Defective,10.3
+351,7736,2023-05-14,Customer Preference,17.12
+352,8175,2024-06-16,Defective,18.36
+353,8829,2024-03-07,Customer Preference,11.8
+354,874,2024-01-04,Defective,16.94
+355,21,2023-08-18,Damaged in Shipping,10.65
+356,5646,2023-10-26,Defective,13.12
+357,5361,2024-11-22,Wrong Item,6.28
+358,6251,2023-07-30,Wrong Item,15.97
+359,4812,2023-05-15,Wrong Item,16.06
+360,8732,2024-12-01,Damaged in Shipping,7.4
+361,8049,2023-11-06,Defective,11.02
+362,2981,2023-11-15,Customer Preference,12.77
+363,5734,2024-01-11,Defective,16.84
+364,242,2023-07-04,Defective,17.53
+365,3054,2024-08-29,Customer Preference,16.07
+366,396,2024-09-03,Defective,9.02
+367,5323,2024-02-22,Wrong Item,10.99
+368,4316,2023-08-13,Customer Preference,9.46
+369,4515,2024-02-01,Defective,14.92
+370,3298,2024-02-16,Customer Preference,15.06
+371,5334,2024-04-17,Customer Preference,6.23
+372,2407,2023-03-25,Damaged in Shipping,16.24
+373,8693,2024-08-11,Customer Preference,9.21
+374,3543,2024-11-21,Customer Preference,17.22
+375,7948,2024-07-14,Damaged in Shipping,17.66
+376,8979,2024-02-16,Damaged in Shipping,17.16
+377,2262,2024-10-16,Wrong Item,11.71
+378,2540,2024-07-02,Wrong Item,10.88
+379,8414,2024-05-22,Customer Preference,12.09
+380,1924,2024-06-24,Damaged in Shipping,13.38
+381,6413,2024-01-23,Customer Preference,9.5
+382,1108,2024-09-27,Customer Preference,19.04
+383,4839,2024-03-01,Defective,13.06
+384,6022,2024-08-20,Customer Preference,7.02
+385,2092,2023-05-27,Damaged in Shipping,19.96
+386,1612,2024-04-12,Defective,12.78
+387,5072,2023-10-22,Defective,19.26
+388,3949,2023-04-19,Damaged in Shipping,11.46
+389,8017,2023-08-30,Wrong Item,9.15
+390,161,2024-03-28,Damaged in Shipping,16.32
+391,4404,2023-09-02,Defective,12.05
+392,2387,2023-05-28,Damaged in Shipping,18.34
+393,888,2023-05-25,Damaged in Shipping,12.5
+394,5770,2024-11-05,Wrong Item,10.74
+395,6050,2024-11-11,Customer Preference,19.53
+396,940,2023-06-28,Damaged in Shipping,17.63
+397,3493,2023-05-27,Customer Preference,8.88
+398,2152,2023-04-25,Damaged in Shipping,12.84
+399,8248,2023-08-02,Damaged in Shipping,7.59
+400,8688,2023-05-29,Wrong Item,7.51
+401,1165,2023-12-19,Damaged in Shipping,17.95
+402,4130,2024-02-24,Wrong Item,19.05
+403,5476,2024-08-16,Damaged in Shipping,16.34
+404,8245,2024-10-15,Defective,19.85
+405,3075,2023-05-27,Defective,6.63
+406,330,2023-04-22,Wrong Item,10.64
+407,7787,2024-04-06,Damaged in Shipping,7.85
+408,1670,2024-07-28,Defective,16.95
+409,8341,2024-08-14,Damaged in Shipping,18.47
+410,3578,2023-10-30,Wrong Item,12.26
+411,8325,2024-11-27,Damaged in Shipping,17.61
+412,2307,2023-04-21,Customer Preference,17.87
+413,1300,2023-10-29,Wrong Item,7.96
+414,7229,2024-04-05,Wrong Item,11.28
+415,7075,2024-09-06,Customer Preference,8.63
+416,6291,2024-11-08,Damaged in Shipping,15.38
+417,4938,2023-06-21,Defective,11.42
+418,825,2023-10-09,Wrong Item,15.35
+419,5786,2024-05-04,Wrong Item,18.26
+420,5958,2023-08-21,Defective,11.78
+421,4592,2024-02-10,Damaged in Shipping,19.61
+422,6767,2024-02-10,Defective,11.72
+423,4698,2023-09-01,Damaged in Shipping,8.99
+424,8066,2024-03-30,Customer Preference,13.41
+425,7729,2023-12-10,Defective,11.59
+426,1440,2024-01-07,Wrong Item,7.75
+427,3988,2023-09-14,Defective,6.32
+428,8957,2024-09-17,Wrong Item,16.42
+429,5214,2023-05-10,Customer Preference,19.06
+430,2725,2024-09-15,Damaged in Shipping,12.17
+431,7789,2024-06-09,Wrong Item,6.92
+432,3988,2024-08-07,Defective,16.37
+433,572,2024-07-10,Customer Preference,18.14
+434,4650,2024-08-14,Wrong Item,10.53
+435,1687,2024-06-04,Defective,9.11
+436,8617,2024-08-07,Customer Preference,10.72
+437,2633,2023-06-23,Defective,18.72
+438,2587,2024-03-17,Damaged in Shipping,11.85
+439,2222,2023-09-11,Wrong Item,15.16
+440,1649,2023-09-23,Defective,7.04
+441,763,2024-05-05,Customer Preference,9.94
+442,4043,2024-07-17,Damaged in Shipping,9.19
+443,1193,2024-06-04,Defective,6.88
+444,4681,2023-06-19,Wrong Item,7.69
+445,782,2024-05-13,Customer Preference,11.83
+446,2027,2024-11-02,Customer Preference,13.81
+447,2627,2023-08-16,Damaged in Shipping,10.37
+448,3994,2024-05-05,Defective,11.87
+449,6915,2023-11-13,Damaged in Shipping,16.63
+450,8622,2024-05-28,Customer Preference,9.46
+451,953,2024-11-29,Wrong Item,6.48
+452,7904,2024-02-15,Customer Preference,9.6
+453,7950,2023-07-01,Defective,18.9
+454,2696,2023-12-17,Customer Preference,6.25
+455,3512,2024-01-31,Wrong Item,7.81
+456,3970,2023-12-04,Wrong Item,6.91
+457,4468,2023-10-17,Damaged in Shipping,11.28
+458,287,2023-06-17,Customer Preference,15.07
+459,3163,2024-08-26,Defective,18.74
+460,2595,2023-07-04,Wrong Item,17.12
+461,5694,2024-09-30,Wrong Item,9.51
+462,6296,2024-01-21,Defective,14.89
+463,4673,2023-11-22,Customer Preference,15.29
+464,6764,2024-06-30,Wrong Item,7.27
+465,856,2024-12-07,Damaged in Shipping,11.98
+466,5921,2023-12-01,Wrong Item,10.36
+467,7578,2023-05-01,Defective,8.2
+468,7525,2023-08-18,Customer Preference,6.82
+469,6202,2024-11-04,Wrong Item,6.38
+470,4582,2023-05-31,Wrong Item,18.02
+471,1141,2023-05-14,Customer Preference,10.63
+472,6386,2024-11-15,Customer Preference,12.9
+473,7398,2023-06-29,Damaged in Shipping,10.08
+474,843,2024-06-26,Wrong Item,8.32
+475,3837,2023-11-18,Damaged in Shipping,9.66
+476,8905,2023-07-16,Damaged in Shipping,8.38
+477,8419,2023-08-15,Defective,16.61
+478,2617,2024-07-28,Wrong Item,18.71
+479,1606,2023-09-17,Customer Preference,12.08
+480,3832,2023-06-10,Damaged in Shipping,17.52
+481,2633,2023-03-19,Defective,11.96
+482,8959,2024-02-29,Defective,12.25
+483,4872,2024-06-23,Wrong Item,12.79
+484,6747,2024-04-25,Defective,17.48
+485,6643,2024-08-15,Defective,19.11
+486,5592,2024-02-22,Wrong Item,16.42
+487,8944,2024-11-30,Damaged in Shipping,18.44
+488,8714,2023-07-27,Defective,15.0
+489,5004,2024-07-09,Damaged in Shipping,17.75
+490,7325,2024-03-25,Damaged in Shipping,13.8
+491,8454,2023-03-07,Damaged in Shipping,16.82
+492,8693,2024-01-27,Customer Preference,15.87
+493,8033,2023-03-23,Wrong Item,16.49
+494,7192,2023-05-29,Wrong Item,9.28
+495,8019,2024-08-11,Damaged in Shipping,8.15
+496,581,2024-10-03,Defective,15.14
+497,5270,2023-05-05,Customer Preference,12.76
+498,1852,2023-04-22,Customer Preference,16.71
+499,5910,2024-04-06,Wrong Item,8.05
+500,2140,2023-07-20,Customer Preference,19.27
+501,2193,2023-03-25,Damaged in Shipping,15.86
+502,5983,2023-04-02,Damaged in Shipping,6.32
+503,2223,2024-09-01,Wrong Item,14.07
+504,3217,2024-03-12,Wrong Item,10.38
+505,4799,2024-03-02,Customer Preference,9.85
+506,6279,2023-09-28,Defective,18.63
+507,541,2023-07-11,Customer Preference,17.7
+508,4333,2024-11-14,Wrong Item,6.13
+509,1736,2023-07-27,Damaged in Shipping,8.54
+510,3944,2024-03-10,Damaged in Shipping,16.07
+511,7952,2023-05-16,Defective,17.87
+512,5707,2024-08-07,Defective,16.05
+513,5819,2024-09-16,Customer Preference,13.35
+514,5161,2024-07-10,Damaged in Shipping,19.78
+515,6603,2023-05-31,Customer Preference,17.16
+516,6122,2024-03-17,Defective,12.55
+517,7910,2024-11-30,Wrong Item,14.17
+518,4720,2024-07-20,Customer Preference,6.63
+519,5593,2023-07-08,Customer Preference,19.51
+520,2106,2023-05-11,Damaged in Shipping,11.08
+521,6829,2024-04-06,Damaged in Shipping,15.26
+522,7656,2024-07-23,Damaged in Shipping,15.34
+523,4045,2023-07-04,Customer Preference,6.8
+524,4276,2024-07-17,Damaged in Shipping,9.72
+525,28,2024-07-26,Damaged in Shipping,15.19
+526,2948,2024-06-21,Defective,18.77
+527,7906,2023-03-10,Damaged in Shipping,16.9
+528,5875,2024-05-26,Wrong Item,14.12
+529,2039,2024-06-13,Defective,9.25
+530,6964,2024-03-08,Customer Preference,19.28
+531,5897,2023-05-04,Customer Preference,11.65
+532,1810,2023-06-17,Damaged in Shipping,8.1
+533,8898,2023-12-25,Wrong Item,6.3
+534,1704,2023-04-11,Defective,19.3
+535,3094,2023-11-14,Damaged in Shipping,16.89
+536,7269,2024-11-12,Defective,9.03
+537,3248,2024-04-17,Damaged in Shipping,7.98
+538,272,2023-03-28,Defective,19.43
+539,5169,2024-09-13,Defective,9.37
+540,6138,2024-03-05,Customer Preference,12.47
+541,7781,2023-09-29,Defective,14.55
+542,6719,2024-11-26,Wrong Item,6.87
+543,2893,2024-09-02,Customer Preference,10.82
+544,1968,2023-08-01,Damaged in Shipping,19.21
+545,4815,2023-08-05,Damaged in Shipping,15.8
+546,3806,2023-12-19,Defective,11.15
+547,6498,2024-02-24,Customer Preference,17.08
+548,1568,2024-02-29,Customer Preference,17.72
+549,8556,2024-05-26,Damaged in Shipping,8.12
+550,5783,2024-11-11,Wrong Item,14.21
+551,4682,2023-10-20,Wrong Item,11.13
+552,5397,2023-08-24,Customer Preference,13.1
+553,203,2024-11-28,Customer Preference,12.57
+554,1932,2024-10-12,Damaged in Shipping,13.05
+555,7089,2023-04-21,Customer Preference,13.31
+556,8807,2024-05-21,Damaged in Shipping,6.97
+557,4271,2024-01-24,Wrong Item,8.49
+558,5373,2024-10-14,Customer Preference,13.93
+559,3438,2024-09-03,Wrong Item,19.1
+560,1178,2023-12-21,Wrong Item,16.45
+561,7824,2024-02-09,Defective,9.34
+562,2994,2023-08-01,Damaged in Shipping,11.06
+563,2413,2023-10-18,Damaged in Shipping,10.7
+564,3773,2024-01-26,Damaged in Shipping,16.77
+565,5796,2023-07-24,Defective,19.61
+566,7509,2024-06-24,Damaged in Shipping,10.98
+567,8458,2024-03-13,Defective,6.21
+568,6319,2024-03-10,Customer Preference,19.12
+569,7852,2024-09-18,Defective,16.55
+570,508,2023-03-30,Wrong Item,17.68
+571,1388,2024-05-02,Damaged in Shipping,8.92
+572,4030,2024-07-10,Defective,15.04
+573,251,2024-10-07,Defective,9.26
+574,2567,2024-07-06,Defective,6.16
+575,8678,2024-09-14,Defective,8.2
+576,197,2023-09-12,Customer Preference,18.92
+577,1299,2023-07-16,Customer Preference,9.01
+578,5486,2023-09-07,Customer Preference,14.19
+579,5206,2024-06-22,Damaged in Shipping,19.55
+580,2197,2023-08-25,Defective,7.06
+581,1362,2024-04-15,Customer Preference,17.31
+582,2662,2024-02-26,Damaged in Shipping,14.37
+583,6693,2024-08-30,Wrong Item,10.53
+584,1945,2023-11-04,Wrong Item,11.1
+585,1063,2024-05-18,Damaged in Shipping,6.38
+586,1230,2024-02-04,Defective,9.58
+587,8418,2023-10-12,Defective,11.93
+588,2486,2023-03-08,Wrong Item,16.04
+589,7263,2024-08-16,Defective,9.85
+590,1457,2024-02-12,Defective,14.12
+591,8194,2023-08-13,Defective,16.24
+592,1535,2023-11-30,Defective,15.78
+593,8495,2024-08-29,Customer Preference,14.26
+594,4583,2024-01-06,Customer Preference,14.12
+595,2659,2023-10-13,Defective,16.1
+596,8582,2023-04-28,Damaged in Shipping,10.7
+597,6874,2023-06-05,Customer Preference,12.3
+598,2560,2023-11-04,Defective,19.53
+599,6954,2023-11-16,Customer Preference,15.36
+600,990,2024-04-06,Damaged in Shipping,13.28
+601,2632,2023-04-27,Damaged in Shipping,14.1
+602,5345,2023-04-26,Customer Preference,7.46
+603,2698,2023-05-12,Defective,14.29
+604,3184,2024-03-24,Defective,17.71
+605,740,2024-08-15,Wrong Item,13.33
+606,7913,2023-04-22,Defective,8.48
+607,503,2024-09-19,Damaged in Shipping,12.27
+608,5682,2023-06-11,Damaged in Shipping,9.89
+609,3820,2023-06-20,Damaged in Shipping,11.04
+610,5832,2024-07-19,Wrong Item,9.15
+611,6853,2024-03-04,Wrong Item,10.67
+612,7681,2024-12-06,Wrong Item,17.5
+613,6595,2023-09-01,Damaged in Shipping,16.61
+614,8475,2023-03-26,Customer Preference,12.87
+615,8381,2023-03-25,Defective,16.96
+616,4221,2023-11-19,Defective,19.66
+617,3760,2024-08-02,Customer Preference,11.69
+618,1815,2023-10-06,Customer Preference,19.72
+619,940,2024-05-25,Defective,9.44
+620,5032,2023-08-19,Defective,19.36
+621,7051,2023-08-17,Wrong Item,18.1
+622,6795,2024-03-29,Wrong Item,8.79
+623,3940,2023-06-20,Customer Preference,10.9
+624,2662,2023-12-15,Customer Preference,15.91
+625,1980,2024-09-30,Damaged in Shipping,8.68
+626,3383,2023-07-17,Customer Preference,14.27
+627,8600,2023-10-05,Customer Preference,13.49
+628,9000,2024-04-06,Damaged in Shipping,10.09
+629,8465,2024-07-10,Defective,10.21
+630,2915,2023-03-25,Wrong Item,13.23
+631,1036,2024-04-09,Damaged in Shipping,10.2
+632,5263,2023-11-07,Customer Preference,8.52
+633,1191,2024-05-19,Customer Preference,16.83
+634,269,2024-10-13,Defective,14.14
+635,2142,2023-05-16,Wrong Item,12.13
+636,2154,2024-01-18,Wrong Item,8.54
+637,5907,2024-06-22,Wrong Item,14.32
+638,1737,2023-12-09,Wrong Item,14.8
+639,1337,2023-08-05,Defective,12.72
+640,4156,2023-08-15,Damaged in Shipping,11.22
+641,696,2023-07-27,Defective,18.14
+642,1433,2023-07-21,Customer Preference,15.87
+643,1384,2024-12-02,Defective,10.99
+644,3972,2024-01-31,Customer Preference,14.3
+645,5044,2024-06-05,Defective,9.27
+646,3711,2023-06-05,Wrong Item,6.16
+647,7269,2024-05-26,Wrong Item,18.16
+648,3652,2023-11-19,Damaged in Shipping,17.46
+649,8940,2024-03-27,Wrong Item,14.95
+650,3180,2024-02-09,Defective,17.36
+651,8109,2024-03-20,Customer Preference,16.93
+652,2697,2023-08-12,Damaged in Shipping,18.04
+653,377,2024-07-22,Damaged in Shipping,18.49
+654,8579,2024-06-26,Defective,17.46
+655,4326,2024-03-30,Defective,17.92
+656,4050,2024-08-12,Wrong Item,13.02
+657,2423,2024-05-23,Wrong Item,15.91
+658,2286,2024-08-09,Wrong Item,10.67
+659,4063,2024-07-26,Damaged in Shipping,18.06
+660,6391,2024-04-08,Damaged in Shipping,18.02
+661,8578,2024-08-03,Customer Preference,6.93
+662,1062,2024-11-07,Damaged in Shipping,10.86
+663,7412,2023-03-17,Wrong Item,8.4
+664,8711,2023-09-20,Damaged in Shipping,7.9
+665,7562,2023-03-07,Damaged in Shipping,11.81
+666,1101,2024-09-08,Damaged in Shipping,14.76
+667,4133,2024-07-23,Customer Preference,10.81
+668,4505,2023-03-10,Damaged in Shipping,10.33
+669,3650,2024-12-08,Customer Preference,7.32
+670,844,2023-03-13,Damaged in Shipping,11.36
+671,6968,2023-09-05,Customer Preference,12.59
+672,5583,2024-05-05,Wrong Item,11.58
+673,4650,2023-07-22,Customer Preference,15.52
+674,6193,2024-04-28,Defective,10.03
+675,3143,2023-12-11,Customer Preference,16.02
+676,246,2024-01-22,Customer Preference,18.36
+677,5111,2024-08-04,Wrong Item,14.28
+678,6020,2024-05-09,Customer Preference,11.44
+679,5968,2024-07-03,Wrong Item,8.52
+680,8534,2024-01-25,Wrong Item,19.05
+681,6211,2023-04-17,Wrong Item,16.53
+682,8918,2023-11-12,Defective,9.45
+683,6068,2023-05-26,Customer Preference,8.11
+684,2887,2023-04-01,Defective,6.69
+685,4153,2024-01-12,Wrong Item,8.67
+686,1310,2023-07-21,Customer Preference,16.25
+687,7623,2023-05-31,Wrong Item,14.81
+688,4289,2023-09-05,Customer Preference,19.54
+689,6770,2023-05-17,Customer Preference,10.51
+690,667,2024-05-13,Customer Preference,17.01
+691,586,2023-04-03,Damaged in Shipping,7.69
+692,354,2023-06-26,Damaged in Shipping,13.88
+693,2615,2023-03-24,Damaged in Shipping,12.54
+694,7638,2024-08-21,Customer Preference,17.73
+695,3098,2024-04-17,Wrong Item,15.82
+696,8236,2024-08-31,Wrong Item,8.72
+697,2896,2023-09-30,Damaged in Shipping,19.77
+698,8716,2023-07-07,Defective,17.52
+699,7256,2024-11-22,Customer Preference,10.96
+700,6795,2023-09-28,Wrong Item,17.56
+701,8850,2024-05-26,Wrong Item,19.4
+702,7844,2023-08-08,Damaged in Shipping,18.46
+703,2387,2023-06-17,Defective,13.79
+704,5446,2024-09-27,Defective,14.08
+705,6743,2024-05-01,Customer Preference,7.49
+706,1863,2023-05-03,Wrong Item,8.31
+707,7020,2023-03-09,Customer Preference,19.76
+708,777,2023-04-01,Defective,16.78
+709,5826,2023-07-03,Defective,6.36
+710,1664,2023-12-07,Customer Preference,13.67
+711,756,2024-11-10,Defective,10.83
+712,4655,2023-08-17,Damaged in Shipping,10.36
+713,7533,2023-08-23,Damaged in Shipping,13.79
+714,3696,2023-10-31,Defective,10.48
+715,303,2023-11-11,Wrong Item,9.52
+716,1099,2023-07-29,Defective,19.13
+717,7619,2023-06-11,Customer Preference,6.56
+718,1405,2024-08-18,Wrong Item,12.11
+719,1322,2023-07-19,Damaged in Shipping,13.16
+720,305,2023-11-28,Damaged in Shipping,12.16
+721,6174,2024-11-09,Damaged in Shipping,15.2
+722,4104,2023-03-27,Damaged in Shipping,6.36
+723,5541,2023-07-12,Damaged in Shipping,18.39
+724,8,2024-10-11,Wrong Item,13.0
+725,1215,2023-12-18,Damaged in Shipping,13.75
+726,6521,2023-10-10,Wrong Item,12.48
+727,698,2024-03-02,Customer Preference,12.22
+728,4002,2023-06-14,Defective,8.61
+729,2727,2024-06-19,Wrong Item,13.06
+730,6800,2023-09-18,Damaged in Shipping,11.9
+731,1924,2024-01-09,Customer Preference,12.55
+732,3424,2023-03-10,Customer Preference,6.19
+733,430,2023-11-12,Defective,7.83
+734,5389,2024-09-14,Defective,16.68
+735,3154,2023-07-24,Wrong Item,11.87
+736,6157,2024-02-21,Wrong Item,16.4
+737,7069,2024-03-07,Defective,8.4
+738,1221,2024-07-02,Defective,15.77
+739,3062,2023-06-11,Defective,10.05
+740,5727,2023-04-17,Customer Preference,15.87
+741,5951,2023-09-01,Defective,7.21
+742,3942,2023-06-11,Customer Preference,10.67
+743,3123,2023-10-10,Damaged in Shipping,7.67
+744,303,2024-10-23,Damaged in Shipping,14.82
+745,7511,2024-03-11,Wrong Item,11.5
+746,2079,2023-06-19,Wrong Item,7.04
+747,3670,2024-01-16,Defective,13.37
+748,8734,2024-11-29,Wrong Item,6.35
+749,6550,2023-07-31,Damaged in Shipping,17.46
+750,4784,2024-02-19,Wrong Item,19.14
+751,6887,2024-02-06,Customer Preference,17.34
+752,5480,2024-11-21,Wrong Item,19.32
+753,2480,2024-04-20,Damaged in Shipping,18.56
+754,3001,2023-12-09,Damaged in Shipping,18.53
+755,8511,2023-08-04,Damaged in Shipping,9.44
+756,7428,2024-04-02,Damaged in Shipping,9.24
+757,4583,2024-08-08,Customer Preference,17.33
+758,1361,2024-02-26,Wrong Item,12.88
+759,3819,2024-05-16,Damaged in Shipping,19.19
+760,2387,2024-05-08,Wrong Item,18.56
+761,8956,2024-11-21,Defective,18.5
+762,5007,2024-02-04,Customer Preference,10.57
+763,4997,2023-11-03,Defective,7.86
+764,5294,2024-06-16,Customer Preference,15.49
+765,8216,2023-06-26,Damaged in Shipping,12.17
+766,1026,2023-05-31,Wrong Item,19.08
+767,7867,2024-08-29,Customer Preference,17.95
+768,1188,2024-05-10,Defective,19.0
+769,1008,2024-08-05,Defective,13.95
+770,5471,2024-08-21,Wrong Item,13.37
+771,1118,2023-05-14,Customer Preference,17.86
+772,8396,2023-05-18,Defective,13.17
+773,7291,2023-05-18,Defective,18.6
+774,8229,2023-09-21,Customer Preference,6.48
+775,6774,2024-08-22,Damaged in Shipping,11.02
+776,7308,2023-12-07,Damaged in Shipping,17.69
+777,634,2023-03-23,Wrong Item,8.94
+778,4515,2024-08-10,Damaged in Shipping,11.59
+779,5860,2023-07-11,Wrong Item,6.14
+780,4981,2023-04-28,Defective,10.22
+781,8520,2024-11-04,Defective,10.46
+782,7524,2024-10-26,Damaged in Shipping,16.26
+783,1031,2024-07-14,Customer Preference,15.48
+784,2563,2024-05-15,Damaged in Shipping,12.23
+785,8920,2023-12-07,Wrong Item,16.2
+786,7060,2023-08-18,Wrong Item,12.0
+787,5332,2023-07-04,Customer Preference,12.08
+788,686,2023-05-25,Defective,15.04
+789,3141,2024-11-10,Defective,16.12
+790,6081,2024-07-26,Damaged in Shipping,17.86
+791,2026,2024-09-06,Wrong Item,16.52
+792,5649,2023-06-14,Wrong Item,15.38
+793,2380,2023-10-05,Customer Preference,13.86
+794,430,2024-11-10,Customer Preference,10.31
+795,2808,2024-09-06,Damaged in Shipping,9.66
+796,6884,2023-12-30,Customer Preference,17.81
+797,1195,2023-05-30,Defective,16.04
+798,8398,2024-07-08,Customer Preference,15.32
+799,5723,2023-05-20,Wrong Item,9.62
+800,1161,2023-07-12,Wrong Item,19.58

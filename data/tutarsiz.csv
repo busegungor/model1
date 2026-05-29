@@ -1,0 +1,644 @@
+,order_item_id,order_id,order_date,order_status,product_id,quantity,item_price,product_name,category_id,category_name,unit_cost,unit_price,return_id,return_date,return_reason,refund_amount
+38,39,655,2023-10-01,Returned,24,1,7.43,Scrunchie Style 24,1,Classic Scrunchies,2.85,13.92,,,No Return,0.0
+40,41,3844,2023-05-10,Returned,50,4,13.66,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+52,53,28,2023-07-28,Returned,39,3,14.85,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+57,58,811,2024-02-11,Returned,13,1,14.55,Scrunchie Style 13,5,Scrunchie Bundles,3.61,14.06,,,No Return,0.0
+70,71,1980,2024-01-17,Returned,42,3,12.65,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+118,119,2203,2023-11-20,Returned,4,4,8.15,Scrunchie Style 4,5,Scrunchie Bundles,3.58,13.64,,,No Return,0.0
+140,141,2843,2024-09-05,Returned,4,4,11.75,Scrunchie Style 4,5,Scrunchie Bundles,3.58,13.64,,,No Return,0.0
+151,152,3707,2024-09-30,Returned,21,2,11.98,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+154,155,410,2024-01-13,Returned,8,1,14.35,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+201,202,722,2023-11-09,Returned,29,1,9.55,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+203,204,924,2023-02-23,Returned,36,3,14.65,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+215,216,4860,2023-05-21,Returned,22,3,9.37,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+230,231,3643,2023-07-08,Returned,42,2,10.59,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+234,235,277,2024-03-18,Returned,34,4,10.35,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+259,260,1660,2023-06-19,Returned,13,1,6.79,Scrunchie Style 13,5,Scrunchie Bundles,3.61,14.06,,,No Return,0.0
+308,308,2719,2024-05-31,Returned,41,3,10.23,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+315,315,669,2024-05-25,Returned,32,4,9.62,Scrunchie Style 32,4,Mini Scrunchies,2.56,8.92,,,No Return,0.0
+372,372,3940,2024-03-13,Returned,36,1,13.02,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+403,403,877,2023-10-11,Returned,2,3,11.07,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+407,407,4120,2024-03-30,Returned,2,4,9.82,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+414,414,3108,2024-06-15,Returned,40,4,8.51,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+417,417,4861,2024-08-02,Returned,30,2,9.73,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+423,423,2417,2023-12-04,Returned,44,1,13.26,Scrunchie Style 44,2,Luxury Silk Scrunchies,2.62,12.23,,,No Return,0.0
+428,428,4207,2024-09-07,Returned,41,1,7.05,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+432,431,2583,2024-07-02,Returned,48,1,14.28,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+446,445,3728,2023-09-16,Returned,34,2,8.18,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+455,454,1630,2023-12-28,Returned,1,4,10.2,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+465,464,2766,2023-02-22,Returned,20,4,14.32,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+471,470,167,2024-08-10,Returned,28,2,8.01,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+475,474,900,2023-09-21,Returned,2,4,9.35,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+478,477,3413,2024-02-01,Returned,15,2,10.99,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+511,510,1758,2024-07-04,Returned,2,1,10.46,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+512,511,1965,2024-08-22,Returned,34,1,6.56,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+517,516,2405,2023-04-02,Returned,36,4,7.9,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+518,517,3563,2024-01-13,Returned,40,2,9.5,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+534,533,4138,2023-06-01,Returned,49,3,12.68,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+541,540,341,2023-06-09,Returned,21,3,10.57,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+547,546,2299,2024-12-01,Returned,6,4,9.18,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+578,577,3924,2024-10-12,Returned,50,3,11.22,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+580,579,997,2023-05-27,Returned,21,3,13.92,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+598,597,4434,2024-12-31,Returned,26,2,12.05,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+636,635,4155,2024-07-19,Returned,32,1,7.35,Scrunchie Style 32,4,Mini Scrunchies,2.56,8.92,,,No Return,0.0
+643,642,2405,2023-04-02,Returned,20,4,9.72,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+654,653,277,2024-03-18,Returned,12,4,10.67,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+677,676,4170,2023-12-31,Returned,47,4,6.61,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+688,687,969,2023-02-20,Returned,48,2,7.24,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+693,692,4122,2024-01-30,Returned,42,3,11.26,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+713,712,3585,2024-12-21,Returned,5,3,9.92,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+730,729,700,2024-09-27,Returned,41,4,9.46,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+734,733,1008,2023-04-27,Returned,23,4,13.14,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+738,737,2429,2024-05-17,Returned,15,3,7.04,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+753,752,508,2024-09-27,Returned,23,4,14.61,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+787,786,2429,2024-05-17,Returned,2,3,11.06,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+818,817,838,2023-10-31,Returned,25,4,14.7,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+820,819,3715,2023-03-23,Returned,20,3,8.2,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+827,826,2386,2024-02-22,Returned,33,1,12.49,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+834,833,363,2024-08-07,Returned,8,1,11.87,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+861,860,1009,2024-03-21,Returned,35,1,11.66,Scrunchie Style 35,3,Seasonal Prints,1.54,14.16,,,No Return,0.0
+877,875,1430,2024-07-29,Returned,8,1,8.01,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+879,877,962,2024-01-28,Returned,12,1,7.05,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+885,883,3967,2023-09-05,Returned,26,2,8.04,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+905,903,2814,2023-02-18,Returned,5,1,9.08,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+931,929,2517,2023-02-20,Returned,48,4,8.8,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+938,936,167,2024-08-10,Returned,10,2,10.25,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+952,949,963,2024-02-16,Returned,16,1,9.73,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+963,960,2738,2024-09-25,Returned,36,3,9.46,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+972,969,259,2023-07-17,Returned,2,1,6.7,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+984,981,3104,2023-06-02,Returned,49,3,14.33,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+994,991,4495,2024-09-08,Returned,46,1,9.56,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+1003,1000,3369,2024-01-15,Returned,22,2,13.65,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+1035,1032,2530,2024-04-15,Returned,5,2,6.48,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+1038,1035,835,2024-01-14,Returned,35,1,12.78,Scrunchie Style 35,3,Seasonal Prints,1.54,14.16,,,No Return,0.0
+1085,1081,433,2023-10-13,Returned,20,1,6.85,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+1086,1082,1209,2024-01-19,Returned,10,4,8.79,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+1095,1091,318,2023-04-20,Returned,23,2,9.96,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+1096,1092,457,2024-03-21,Returned,40,4,7.28,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+1101,1097,4974,2024-09-16,Returned,2,3,13.71,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+1113,1109,3239,2024-08-31,Returned,5,3,14.12,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+1139,1135,4207,2024-09-07,Returned,40,2,14.78,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+1140,1136,2201,2024-08-15,Returned,20,4,13.77,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+1154,1150,871,2023-03-25,Returned,11,4,11.96,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+1166,1162,2865,2023-03-05,Returned,14,2,6.43,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+1171,1167,4879,2024-02-07,Returned,25,1,8.31,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+1178,1174,2293,2024-10-30,Returned,27,1,11.38,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+1188,1184,1630,2023-12-28,Returned,26,4,14.38,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+1211,1206,4425,2023-10-12,Returned,2,2,13.82,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+1216,1211,3857,2023-02-08,Returned,39,4,8.98,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+1244,1239,3571,2023-05-05,Returned,11,3,9.7,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+1251,1246,3503,2023-05-04,Returned,2,3,8.48,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+1252,1247,3627,2024-03-27,Returned,16,3,14.29,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+1256,1251,835,2024-01-14,Returned,43,1,13.6,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+1257,1252,3000,2024-07-17,Returned,26,2,8.58,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+1276,1271,3013,2023-11-30,Returned,27,4,9.25,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+1285,1280,4342,2024-06-01,Returned,42,2,7.08,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+1294,1289,4207,2024-09-07,Returned,21,3,11.3,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+1303,1298,4434,2024-12-31,Returned,3,3,12.28,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+1308,1303,4861,2024-08-02,Returned,8,1,9.29,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+1337,1332,2070,2023-11-14,Returned,25,2,14.25,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+1362,1357,4729,2024-12-13,Returned,9,3,13.53,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+1365,1360,4120,2024-03-30,Returned,35,4,8.42,Scrunchie Style 35,3,Seasonal Prints,1.54,14.16,,,No Return,0.0
+1374,1369,3200,2024-06-13,Returned,45,3,14.6,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+1375,1370,4517,2023-04-02,Returned,1,3,10.59,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+1382,1377,1841,2024-06-25,Returned,21,2,10.8,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+1402,1397,4440,2023-07-23,Returned,29,3,10.95,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+1420,1415,1082,2024-12-23,Returned,26,2,9.39,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+1429,1424,2144,2024-08-21,Returned,50,2,6.35,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+1437,1432,3746,2023-07-27,Returned,47,2,8.08,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+1453,1448,3380,2024-06-05,Returned,13,4,12.99,Scrunchie Style 13,5,Scrunchie Bundles,3.61,14.06,,,No Return,0.0
+1454,1449,1599,2024-09-07,Returned,26,2,9.76,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+1458,1453,3373,2023-11-09,Returned,28,1,7.85,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+1459,1454,1070,2023-09-01,Returned,8,2,10.08,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+1504,1499,722,2023-11-09,Returned,22,2,8.27,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+1529,1524,4005,2023-05-22,Returned,21,4,14.73,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+1546,1541,2222,2024-05-21,Returned,25,3,9.18,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+1548,1543,2130,2024-12-07,Returned,18,2,8.13,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+1552,1547,3474,2024-03-26,Returned,5,2,6.32,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+1553,1548,1809,2023-08-10,Returned,27,2,13.35,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+1604,1599,4853,2023-09-02,Returned,16,2,9.72,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+1613,1608,3818,2024-04-24,Returned,18,4,14.76,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+1619,1614,3967,2023-09-05,Returned,42,4,13.33,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+1646,1641,2728,2024-01-31,Returned,20,3,13.49,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+1651,1646,4828,2024-11-20,Returned,6,3,12.49,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+1670,1665,1571,2024-04-20,Returned,15,4,8.37,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+1707,1702,4005,2023-05-22,Returned,40,4,8.39,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+1711,1706,4646,2023-03-29,Returned,7,2,6.57,Scrunchie Style 7,3,Seasonal Prints,1.96,8.3,,,No Return,0.0
+1721,1716,4342,2024-06-01,Returned,47,2,8.94,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+1723,1718,1731,2023-10-13,Returned,29,2,11.66,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+1724,1719,1975,2023-12-10,Returned,5,2,14.51,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+1749,1744,3000,2024-07-17,Returned,2,4,11.85,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+1762,1757,3239,2024-08-31,Returned,5,3,6.76,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+1779,1774,3820,2023-12-04,Returned,3,1,8.31,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+1783,1778,835,2024-01-14,Returned,9,2,8.03,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+1789,1784,807,2024-08-22,Returned,28,4,10.88,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+1795,1790,221,2024-08-18,Returned,18,3,11.1,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+1804,1799,4994,2024-04-19,Returned,25,4,14.37,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+1812,1807,3364,2024-10-07,Returned,32,2,8.63,Scrunchie Style 32,4,Mini Scrunchies,2.56,8.92,,,No Return,0.0
+1824,1819,3160,2023-09-29,Returned,18,2,11.75,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+1826,1821,3941,2023-05-16,Returned,47,2,13.34,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+1836,1831,4207,2024-09-07,Returned,20,1,9.15,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+1852,1847,1677,2023-08-24,Returned,46,3,14.73,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+1878,1873,4014,2023-06-08,Returned,29,2,11.72,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+1883,1878,1529,2023-11-20,Returned,37,1,6.85,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+1886,1881,2912,2024-06-16,Returned,11,2,6.49,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+1895,1890,2728,2024-01-31,Returned,31,4,10.15,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+1905,1900,4861,2024-08-02,Returned,10,1,11.95,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+1916,1911,1758,2024-07-04,Returned,49,2,10.2,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+1933,1927,1232,2023-02-12,Returned,29,1,14.87,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+1943,1936,530,2024-03-06,Returned,33,4,13.5,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+1953,1946,3052,2023-06-07,Returned,39,4,13.97,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+1962,1955,2261,2024-01-02,Returned,30,3,6.5,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+1968,1961,363,2024-08-07,Returned,43,1,7.23,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+2022,2015,3627,2024-03-27,Returned,5,2,7.21,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+2047,2040,2821,2024-05-01,Returned,8,2,10.4,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+2048,2041,167,2024-08-10,Returned,20,3,13.07,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+2053,2046,4287,2023-12-15,Returned,8,3,11.54,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+2056,2049,1532,2023-03-26,Returned,2,1,11.88,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+2071,2064,3288,2023-11-05,Returned,5,1,10.82,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+2074,2067,1462,2023-07-19,Returned,25,1,10.19,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+2120,2113,213,2024-04-29,Returned,5,4,13.0,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+2141,2134,196,2024-04-20,Returned,25,4,11.85,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+2145,2138,1552,2023-12-27,Returned,42,4,13.94,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+2158,2151,1456,2023-02-09,Returned,21,3,13.3,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+2169,2161,4912,2024-10-25,Returned,44,2,9.35,Scrunchie Style 44,2,Luxury Silk Scrunchies,2.62,12.23,,,No Return,0.0
+2170,2162,2130,2024-12-07,Returned,40,1,10.81,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+2183,2175,923,2024-01-23,Returned,25,1,11.84,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+2184,2176,3160,2023-09-29,Returned,42,2,12.59,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+2191,2183,4140,2024-11-25,Returned,28,4,14.89,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+2199,2191,4974,2024-09-16,Returned,49,1,14.77,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+2207,2199,2766,2023-02-22,Returned,20,2,6.17,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+2214,2206,4917,2024-03-19,Returned,43,3,8.57,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+2232,2224,128,2024-11-19,Returned,35,3,9.61,Scrunchie Style 35,3,Seasonal Prints,1.54,14.16,,,No Return,0.0
+2264,2256,2069,2023-08-30,Returned,9,2,12.31,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+2274,2266,3688,2024-11-07,Returned,34,4,8.88,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+2288,2280,2759,2023-09-06,Returned,21,1,13.1,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+2291,2283,3643,2023-07-08,Returned,30,1,7.71,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+2292,2284,4202,2024-07-08,Returned,6,1,14.67,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+2299,2291,4818,2024-07-20,Returned,14,2,13.65,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+2360,2352,569,2023-10-31,Returned,40,4,6.66,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+2363,2355,3407,2024-07-31,Returned,30,3,10.27,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+2365,2357,2062,2024-10-06,Returned,10,3,12.68,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+2367,2359,2854,2024-07-03,Returned,9,2,10.11,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+2371,2363,1796,2023-07-17,Returned,33,1,13.82,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+2376,2368,2728,2024-01-31,Returned,36,1,11.53,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+2389,2381,1109,2024-04-27,Returned,3,3,11.27,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+2394,2386,2299,2024-12-01,Returned,47,1,10.32,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+2405,2395,4861,2024-08-02,Returned,29,1,9.8,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+2429,2418,4746,2024-05-10,Returned,46,1,12.68,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+2435,2424,1504,2023-06-13,Returned,48,4,11.25,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+2439,2428,2222,2024-05-21,Returned,49,4,13.11,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+2442,2431,3273,2024-03-04,Returned,46,3,13.66,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+2457,2446,1062,2023-10-25,Returned,44,4,11.21,Scrunchie Style 44,2,Luxury Silk Scrunchies,2.62,12.23,,,No Return,0.0
+2465,2454,1209,2024-01-19,Returned,38,2,8.84,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+2473,2462,4879,2024-02-07,Returned,37,4,8.52,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+2483,2472,1101,2023-05-05,Returned,41,3,6.64,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+2495,2484,997,2023-05-27,Returned,9,2,12.47,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+2508,2497,900,2023-09-21,Returned,31,3,13.71,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+2541,2530,1980,2024-01-17,Returned,37,1,9.29,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+2546,2535,285,2024-12-19,Returned,26,2,6.84,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+2566,2555,1352,2024-12-29,Returned,12,1,8.76,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+2587,2576,4729,2024-12-13,Returned,47,1,7.06,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+2599,2588,896,2023-09-28,Returned,15,2,8.49,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+2634,2623,566,2024-07-27,Returned,49,2,12.31,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+2681,2668,1501,2023-04-06,Returned,41,3,6.24,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+2686,2673,3509,2024-01-19,Returned,1,2,14.91,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+2696,2683,3083,2023-05-06,Returned,32,1,11.81,Scrunchie Style 32,4,Mini Scrunchies,2.56,8.92,,,No Return,0.0
+2721,2708,2222,2024-05-21,Returned,5,2,14.64,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+2736,2723,3516,2024-06-13,Returned,25,1,10.03,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+2791,2778,4763,2023-12-04,Returned,20,1,12.54,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+2794,2781,4861,2024-08-02,Returned,21,1,6.68,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+2807,2794,3108,2024-06-15,Returned,50,2,10.29,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+2813,2800,1677,2023-08-24,Returned,49,2,6.69,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+2815,2802,4917,2024-03-19,Returned,40,4,11.5,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+2816,2803,4132,2024-02-03,Returned,23,2,14.58,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+2858,2845,474,2024-06-12,Returned,29,1,10.24,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+2864,2851,2222,2024-05-21,Returned,28,3,6.85,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+2876,2863,260,2024-12-31,Returned,46,3,10.8,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+2884,2871,3509,2024-01-19,Returned,45,3,6.88,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+2890,2877,3013,2023-11-30,Returned,4,4,12.18,Scrunchie Style 4,5,Scrunchie Bundles,3.58,13.64,,,No Return,0.0
+2891,2878,2930,2023-06-24,Returned,8,4,11.21,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+2892,2879,318,2023-04-20,Returned,23,1,11.74,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+2909,2895,626,2024-05-28,Returned,32,4,7.45,Scrunchie Style 32,4,Mini Scrunchies,2.56,8.92,,,No Return,0.0
+2914,2900,2930,2023-06-24,Returned,26,3,7.23,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+2933,2919,2794,2023-07-29,Returned,2,2,9.04,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+2942,2928,2417,2023-12-04,Returned,42,2,14.37,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+2960,2945,3265,2024-03-16,Returned,38,3,7.12,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+2986,2970,196,2024-04-20,Returned,34,3,10.58,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+2996,2980,2265,2023-04-22,Returned,14,4,11.75,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+3000,2984,28,2023-07-28,Returned,13,1,7.62,Scrunchie Style 13,5,Scrunchie Bundles,3.61,14.06,,,No Return,0.0
+3002,2986,2236,2023-09-25,Returned,14,3,7.34,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+3023,3007,2675,2023-02-07,Returned,12,4,11.94,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+3099,3083,3009,2024-09-22,Returned,28,4,10.57,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+3101,3085,3663,2023-04-18,Returned,5,3,12.87,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+3104,3088,2912,2024-06-16,Returned,49,1,8.39,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+3116,3100,3238,2023-04-16,Returned,21,4,9.73,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+3119,3103,4440,2023-07-23,Returned,26,2,13.17,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+3127,3111,613,2023-07-16,Returned,21,1,14.63,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+3153,3137,4233,2024-10-16,Returned,50,4,8.44,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+3172,3156,2189,2024-04-09,Returned,3,4,13.23,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+3210,3194,1167,2023-06-19,Returned,48,1,9.55,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+3228,3212,2729,2023-05-01,Returned,23,1,13.84,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+3265,3249,1541,2023-06-10,Returned,47,4,10.52,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+3276,3260,499,2024-11-24,Returned,50,3,9.76,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+3282,3266,628,2024-05-05,Returned,23,3,8.8,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+3292,3276,1140,2023-04-18,Returned,14,2,11.6,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+3303,3287,433,2023-10-13,Returned,41,1,10.5,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+3335,3319,3818,2024-04-24,Returned,50,2,8.23,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+3341,3325,4878,2024-05-31,Returned,25,3,12.45,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+3425,3409,285,2024-12-19,Returned,20,2,12.46,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+3446,3430,335,2024-05-05,Returned,17,3,12.59,Scrunchie Style 17,4,Mini Scrunchies,3.32,7.25,,,No Return,0.0
+3448,3432,2912,2024-06-16,Returned,6,1,14.44,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+3461,3445,3795,2024-07-09,Returned,39,3,11.58,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+3476,3460,2517,2023-02-20,Returned,14,3,8.65,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+3490,3474,2548,2024-07-28,Returned,9,3,13.47,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+3497,3481,581,2024-01-04,Returned,15,1,7.62,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+3500,3484,1532,2023-03-26,Returned,28,4,12.43,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+3507,3491,859,2024-02-04,Returned,19,4,12.45,Scrunchie Style 19,1,Classic Scrunchies,2.93,10.86,,,No Return,0.0
+3510,3494,3707,2024-09-30,Returned,6,1,13.14,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+3533,3517,3052,2023-06-07,Returned,27,4,13.7,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+3536,3520,3782,2024-03-10,Returned,49,4,12.92,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+3548,3532,194,2024-02-28,Returned,4,2,6.31,Scrunchie Style 4,5,Scrunchie Bundles,3.58,13.64,,,No Return,0.0
+3552,3536,3610,2024-12-14,Returned,18,4,14.73,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+3561,3545,221,2024-08-18,Returned,13,4,7.44,Scrunchie Style 13,5,Scrunchie Bundles,3.61,14.06,,,No Return,0.0
+3611,3595,3782,2024-03-10,Returned,39,2,10.47,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+3617,3601,2253,2024-03-12,Returned,18,2,14.43,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+3622,3606,3568,2023-04-13,Returned,1,2,14.86,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+3623,3607,2766,2023-02-22,Returned,41,1,10.19,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+3640,3624,1607,2024-05-27,Returned,40,4,14.35,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+3649,3633,1533,2024-02-22,Returned,1,2,7.38,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+3652,3636,1352,2024-12-29,Returned,45,3,11.99,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+3662,3646,259,2023-07-17,Returned,32,2,9.76,Scrunchie Style 32,4,Mini Scrunchies,2.56,8.92,,,No Return,0.0
+3677,3661,789,2024-01-15,Returned,43,2,10.44,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+3689,3673,962,2024-01-28,Returned,43,3,13.82,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+3704,3688,1237,2023-07-27,Returned,37,2,8.65,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+3721,3705,1352,2024-12-29,Returned,28,2,8.8,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+3722,3706,362,2024-01-17,Returned,45,1,12.14,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+3724,3708,209,2024-02-18,Returned,37,1,14.85,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+3729,3713,4517,2023-04-02,Returned,39,4,8.04,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+3730,3714,1119,2024-03-02,Returned,49,1,6.84,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+3735,3719,221,2024-08-18,Returned,30,3,13.89,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+3746,3730,4853,2023-09-02,Returned,30,3,14.42,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+3759,3743,839,2023-07-11,Returned,48,2,7.93,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+3762,3746,4861,2024-08-02,Returned,21,4,13.28,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+3768,3752,2753,2023-12-13,Returned,33,3,13.74,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+3770,3754,4698,2024-11-11,Returned,8,4,6.59,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+3771,3755,838,2023-10-31,Returned,8,3,9.7,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+3781,3765,2387,2024-05-16,Returned,28,2,9.62,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+3786,3770,121,2023-04-15,Returned,40,2,6.42,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+3793,3777,2120,2023-11-09,Returned,8,1,11.98,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+3814,3798,3728,2023-09-16,Returned,7,1,9.03,Scrunchie Style 7,3,Seasonal Prints,1.96,8.3,,,No Return,0.0
+3815,3799,2530,2024-04-15,Returned,8,2,11.1,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+3824,3808,1184,2024-12-07,Returned,25,4,11.8,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+3830,3814,4122,2024-01-30,Returned,7,2,14.35,Scrunchie Style 7,3,Seasonal Prints,1.96,8.3,,,No Return,0.0
+3843,3827,2008,2023-04-14,Returned,25,4,10.49,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+3871,3855,3643,2023-07-08,Returned,34,4,14.33,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+3884,3868,2386,2024-02-22,Returned,28,2,11.18,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+3891,3875,4539,2024-01-16,Returned,47,2,10.02,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+3902,3886,4120,2024-03-30,Returned,29,4,10.39,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+3903,3887,2076,2023-05-20,Returned,4,4,8.88,Scrunchie Style 4,5,Scrunchie Bundles,3.58,13.64,,,No Return,0.0
+3905,3889,2672,2023-06-05,Returned,24,1,14.6,Scrunchie Style 24,1,Classic Scrunchies,2.85,13.92,,,No Return,0.0
+3912,3896,4146,2024-05-01,Returned,3,4,14.48,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+3916,3900,1731,2023-10-13,Returned,14,4,11.3,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+3917,3901,3663,2023-04-18,Returned,6,1,14.17,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+3926,3910,4287,2023-12-15,Returned,14,4,9.09,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+3936,3920,2038,2023-12-27,Returned,20,2,13.26,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+3964,3948,3585,2024-12-21,Returned,36,4,10.58,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+3966,3950,811,2024-02-11,Returned,30,2,9.75,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+3977,3961,3485,2024-08-24,Returned,4,1,10.59,Scrunchie Style 4,5,Scrunchie Bundles,3.58,13.64,,,No Return,0.0
+3998,3982,3726,2024-07-24,Returned,40,4,10.06,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+4013,3996,3288,2023-11-05,Returned,25,1,10.1,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+4014,3997,3013,2023-11-30,Returned,31,3,6.98,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+4015,3998,3013,2023-11-30,Returned,21,1,10.78,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+4053,4036,4381,2024-10-30,Returned,30,3,7.45,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+4058,4041,2184,2024-11-04,Returned,46,1,7.03,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+4068,4051,4100,2023-06-10,Returned,40,4,6.92,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+4072,4055,213,2024-04-29,Returned,28,2,7.55,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+4159,4141,3288,2023-11-05,Returned,47,3,13.94,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+4162,4144,259,2023-07-17,Returned,43,3,14.12,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+4238,4220,1935,2023-05-16,Returned,24,3,7.07,Scrunchie Style 24,1,Classic Scrunchies,2.85,13.92,,,No Return,0.0
+4246,4228,2118,2023-07-17,Returned,2,3,7.29,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+4248,4230,3104,2023-06-02,Returned,28,1,9.92,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+4250,4232,4214,2023-05-27,Returned,1,3,13.69,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+4255,4237,2675,2023-02-07,Returned,34,1,9.57,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+4272,4254,3785,2023-11-05,Returned,48,1,8.68,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+4288,4270,1002,2023-10-07,Returned,10,4,11.32,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+4290,4272,896,2023-09-28,Returned,12,3,11.24,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+4316,4298,4120,2024-03-30,Returned,46,1,14.6,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+4320,4302,1008,2023-04-27,Returned,40,3,8.42,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+4323,4305,121,2023-04-15,Returned,28,2,8.69,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+4340,4322,4431,2023-09-24,Returned,11,3,8.07,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+4342,4324,2995,2024-06-16,Returned,27,3,8.1,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+4354,4336,3288,2023-11-05,Returned,26,4,12.48,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+4373,4355,373,2024-07-25,Returned,30,4,12.83,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+4389,4371,4329,2024-06-22,Returned,39,2,6.4,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+4410,4392,4155,2024-07-19,Returned,39,3,11.97,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+4432,4413,1297,2023-08-22,Returned,28,1,12.52,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+4484,4465,3728,2023-09-16,Returned,43,1,6.42,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+4503,4484,4539,2024-01-16,Returned,35,4,6.92,Scrunchie Style 35,3,Seasonal Prints,1.54,14.16,,,No Return,0.0
+4507,4488,1958,2024-04-10,Returned,43,1,7.12,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+4515,4496,3857,2023-02-08,Returned,12,4,10.0,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+4526,4507,1096,2024-07-21,Returned,46,4,13.87,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+4530,4511,3924,2024-10-12,Returned,29,3,10.43,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+4542,4522,260,2024-12-31,Returned,1,2,9.34,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+4545,4525,4431,2023-09-24,Returned,23,4,6.09,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+4553,4533,3407,2024-07-31,Returned,23,3,6.18,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+4596,4576,2370,2024-05-24,Returned,44,4,6.61,Scrunchie Style 44,2,Luxury Silk Scrunchies,2.62,12.23,,,No Return,0.0
+4650,4629,121,2023-04-15,Returned,44,1,12.11,Scrunchie Style 44,2,Luxury Silk Scrunchies,2.62,12.23,,,No Return,0.0
+4656,4635,2672,2023-06-05,Returned,45,1,9.61,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+4670,4649,136,2024-02-25,Returned,33,2,14.22,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+4675,4653,3663,2023-04-18,Returned,9,2,11.28,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+4682,4660,545,2023-06-14,Returned,9,1,6.96,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+4697,4674,1944,2024-10-23,Returned,1,1,14.16,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+4712,4689,838,2023-10-31,Returned,14,3,13.86,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+4728,4705,1167,2023-06-19,Returned,31,2,10.8,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+4750,4726,4475,2024-06-10,Returned,22,3,14.91,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+4761,4737,1113,2024-07-19,Returned,46,4,9.0,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+4768,4744,545,2023-06-14,Returned,38,4,10.35,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+4777,4753,260,2024-12-31,Returned,45,2,10.76,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+4782,4758,2728,2024-01-31,Returned,18,3,11.68,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+4800,4776,4495,2024-09-08,Returned,15,4,12.84,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+4816,4792,1501,2023-04-06,Returned,7,3,11.13,Scrunchie Style 7,3,Seasonal Prints,1.96,8.3,,,No Return,0.0
+4848,4824,28,2023-07-28,Returned,39,4,7.1,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+4853,4829,3726,2024-07-24,Returned,29,4,11.7,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+4905,4881,213,2024-04-29,Returned,6,4,11.87,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+4913,4889,3069,2024-06-08,Returned,21,3,14.9,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+4921,4897,1501,2023-04-06,Returned,37,3,11.28,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+4946,4922,1758,2024-07-04,Returned,17,1,12.18,Scrunchie Style 17,4,Mini Scrunchies,3.32,7.25,,,No Return,0.0
+4965,4941,25,2024-05-27,Returned,28,4,12.97,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+4970,4946,2843,2024-09-05,Returned,36,3,8.66,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+4986,4962,3728,2023-09-16,Returned,48,4,10.61,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+4998,4974,4698,2024-11-11,Returned,24,2,7.27,Scrunchie Style 24,1,Classic Scrunchies,2.85,13.92,,,No Return,0.0
+5029,5005,2235,2023-07-10,Returned,22,4,7.93,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+5058,5033,593,2024-06-10,Returned,30,2,11.38,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+5068,5043,3643,2023-07-08,Returned,2,1,11.97,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+5098,5073,698,2024-12-06,Returned,41,3,12.28,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+5104,5079,2261,2024-01-02,Returned,41,4,9.19,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+5108,5083,1062,2023-10-25,Returned,33,4,12.81,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+5109,5084,4329,2024-06-22,Returned,33,3,13.08,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+5113,5088,997,2023-05-27,Returned,22,3,6.85,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+5177,5152,545,2023-06-14,Returned,35,4,9.68,Scrunchie Style 35,3,Seasonal Prints,1.54,14.16,,,No Return,0.0
+5183,5158,1237,2023-07-27,Returned,25,4,9.21,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+5184,5159,4912,2024-10-25,Returned,5,4,14.32,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+5195,5170,3585,2024-12-21,Returned,28,3,14.25,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+5215,5190,4170,2023-12-31,Returned,23,3,13.72,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+5244,5219,4152,2024-07-04,Returned,27,1,6.88,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+5273,5248,3568,2023-04-13,Returned,30,4,12.04,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+5278,5253,230,2024-09-19,Returned,50,3,10.81,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+5305,5280,230,2024-09-19,Returned,28,3,12.93,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+5310,5285,3668,2023-06-15,Returned,17,1,7.69,Scrunchie Style 17,4,Mini Scrunchies,3.32,7.25,,,No Return,0.0
+5326,5301,1261,2024-11-26,Returned,8,1,6.87,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+5331,5306,419,2024-07-07,Returned,32,2,14.62,Scrunchie Style 32,4,Mini Scrunchies,2.56,8.92,,,No Return,0.0
+5344,5319,1596,2023-03-19,Returned,31,2,13.61,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+5350,5325,924,2023-02-23,Returned,9,1,11.57,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+5355,5330,2127,2023-08-06,Returned,33,2,10.46,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+5369,5343,3688,2024-11-07,Returned,38,3,14.71,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+5375,5349,2728,2024-01-31,Returned,34,3,11.48,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+5382,5356,2008,2023-04-14,Returned,41,4,11.84,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+5384,5358,1052,2024-02-29,Returned,14,1,12.38,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+5386,5360,2374,2024-11-04,Returned,6,4,10.65,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+5388,5362,1184,2024-12-07,Returned,23,1,12.91,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+5397,5371,3770,2024-05-23,Returned,24,2,9.2,Scrunchie Style 24,1,Classic Scrunchies,2.85,13.92,,,No Return,0.0
+5405,5379,684,2023-11-17,Returned,31,4,12.41,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+5429,5403,3770,2024-05-23,Returned,14,1,7.0,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+5470,5444,3595,2024-12-16,Returned,37,3,13.83,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+5471,5445,593,2024-06-10,Returned,33,1,12.45,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+5479,5453,2422,2024-12-02,Returned,12,1,12.5,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+5480,5454,1599,2024-09-07,Returned,26,2,12.03,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+5500,5474,2174,2024-04-06,Returned,37,1,7.09,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+5510,5484,2554,2023-02-19,Returned,49,1,11.11,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+5523,5497,2130,2024-12-07,Returned,13,1,13.49,Scrunchie Style 13,5,Scrunchie Bundles,3.61,14.06,,,No Return,0.0
+5535,5509,4698,2024-11-11,Returned,3,3,13.41,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+5543,5517,1261,2024-11-26,Returned,42,4,7.74,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+5546,5520,3049,2024-12-04,Returned,15,1,14.25,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+5553,5527,2313,2024-07-07,Returned,36,2,11.17,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+5581,5555,4342,2024-06-01,Returned,43,4,10.39,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+5613,5587,1934,2023-03-30,Returned,7,1,6.75,Scrunchie Style 7,3,Seasonal Prints,1.96,8.3,,,No Return,0.0
+5623,5597,896,2023-09-28,Returned,3,1,7.58,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+5630,5604,1862,2023-11-16,Returned,23,2,8.07,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+5632,5606,4853,2023-09-02,Returned,23,4,8.91,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+5642,5616,1660,2023-06-19,Returned,47,1,11.21,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+5661,5635,2076,2023-05-20,Returned,1,1,12.89,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+5680,5654,3663,2023-04-18,Returned,9,3,6.17,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+5684,5658,2405,2023-04-02,Returned,3,4,10.29,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+5712,5686,2614,2024-11-23,Returned,27,3,12.74,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+5764,5738,2235,2023-07-10,Returned,50,1,6.91,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+5776,5750,2530,2024-04-15,Returned,48,1,7.42,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+5781,5755,4138,2023-06-01,Returned,23,3,6.15,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+5789,5763,2766,2023-02-22,Returned,26,4,7.14,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+5803,5777,2858,2023-11-29,Returned,9,1,13.68,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+5827,5801,3125,2023-08-10,Returned,42,3,6.67,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+5851,5825,1965,2024-08-22,Returned,35,4,6.37,Scrunchie Style 35,3,Seasonal Prints,1.54,14.16,,,No Return,0.0
+5872,5846,3250,2023-10-23,Returned,5,3,11.82,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+5880,5854,2368,2024-06-15,Returned,29,4,11.49,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+5916,5890,3380,2024-06-05,Returned,22,4,9.08,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+5918,5892,1355,2023-03-14,Returned,37,1,6.33,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+5946,5920,3052,2023-06-07,Returned,26,1,13.31,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+5950,5924,698,2024-12-06,Returned,28,3,12.55,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+5996,5970,508,2024-09-27,Returned,30,2,9.84,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+6021,5995,399,2023-09-19,Returned,16,2,13.04,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+6022,5996,3407,2024-07-31,Returned,25,4,7.13,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+6029,6003,2036,2023-06-03,Returned,8,2,14.79,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+6101,6075,1944,2024-10-23,Returned,38,2,8.31,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+6113,6087,318,2023-04-20,Returned,6,1,8.77,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+6120,6094,2062,2024-10-06,Returned,11,3,8.62,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+6128,6102,2854,2024-07-03,Returned,38,4,13.48,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+6136,6110,2865,2023-03-05,Returned,17,1,12.46,Scrunchie Style 17,4,Mini Scrunchies,3.32,7.25,,,No Return,0.0
+6165,6139,136,2024-02-25,Returned,34,2,8.86,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+6178,6152,4381,2024-10-30,Returned,1,3,9.22,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+6191,6165,1404,2023-08-30,Returned,41,2,9.34,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+6197,6171,3239,2024-08-31,Returned,14,4,8.19,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+6207,6181,2749,2023-02-09,Returned,19,4,6.95,Scrunchie Style 19,1,Classic Scrunchies,2.93,10.86,,,No Return,0.0
+6224,6198,1501,2023-04-06,Returned,24,1,13.55,Scrunchie Style 24,1,Classic Scrunchies,2.85,13.92,,,No Return,0.0
+6262,6236,2921,2024-10-09,Returned,42,3,12.03,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+6276,6250,4005,2023-05-22,Returned,8,3,13.42,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+6279,6253,136,2024-02-25,Returned,42,2,14.3,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+6282,6256,284,2024-11-27,Returned,5,4,9.93,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+6292,6266,780,2024-05-11,Returned,30,2,8.46,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+6304,6278,3797,2023-07-22,Returned,17,1,8.89,Scrunchie Style 17,4,Mini Scrunchies,3.32,7.25,,,No Return,0.0
+6352,6326,2130,2024-12-07,Returned,22,1,8.03,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+6366,6340,3104,2023-06-02,Returned,27,4,12.27,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+6388,6362,2226,2023-09-02,Returned,3,1,14.77,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+6398,6372,1113,2024-07-19,Returned,37,3,13.6,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+6402,6376,136,2024-02-25,Returned,26,3,11.16,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+6420,6394,838,2023-10-31,Returned,21,1,13.53,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+6425,6399,2203,2023-11-20,Returned,36,1,10.85,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+6455,6428,4233,2024-10-16,Returned,34,4,7.44,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+6519,6492,128,2024-11-19,Returned,6,4,8.28,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+6521,6494,2265,2023-04-22,Returned,42,3,12.71,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+6555,6527,642,2024-02-07,Returned,10,2,7.22,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+6565,6537,1596,2023-03-19,Returned,34,1,6.24,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+6569,6541,2130,2024-12-07,Returned,12,1,14.83,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+6576,6548,2118,2023-07-17,Returned,31,1,8.96,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+6616,6588,4917,2024-03-19,Returned,50,4,14.62,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+6621,6593,4342,2024-06-01,Returned,29,3,6.56,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+6627,6599,923,2024-01-23,Returned,36,1,11.63,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+6630,6602,3150,2023-07-04,Returned,29,1,12.62,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+6633,6605,1731,2023-10-13,Returned,30,1,7.12,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+6640,6612,3369,2024-01-15,Returned,10,1,13.29,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+6642,6614,2261,2024-01-02,Returned,2,3,9.69,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+6646,6618,4381,2024-10-30,Returned,16,1,14.11,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+6663,6635,2501,2024-11-20,Returned,31,3,11.11,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+6666,6638,1430,2024-07-29,Returned,2,3,8.4,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+6682,6654,3688,2024-11-07,Returned,31,1,13.57,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+6688,6660,3413,2024-02-01,Returned,32,2,8.68,Scrunchie Style 32,4,Mini Scrunchies,2.56,8.92,,,No Return,0.0
+6703,6675,2530,2024-04-15,Returned,31,2,14.38,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+6717,6688,4329,2024-06-22,Returned,26,4,13.13,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+6718,6689,4329,2024-06-22,Returned,41,3,8.01,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+6725,6696,4431,2023-09-24,Returned,33,3,9.07,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+6740,6711,2374,2024-11-04,Returned,41,2,14.86,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+6763,6734,2144,2024-08-21,Returned,6,4,6.93,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+6771,6742,4342,2024-06-01,Returned,10,4,9.93,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+6802,6773,3941,2023-05-16,Returned,18,1,14.35,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+6815,6786,28,2023-07-28,Returned,15,2,14.04,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+6818,6789,4975,2023-09-07,Returned,10,2,12.98,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+6827,6797,3049,2024-12-04,Returned,1,3,10.38,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+6835,6804,2614,2024-11-23,Returned,36,2,9.94,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+6857,6826,3200,2024-06-13,Returned,8,3,12.37,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+6891,6860,1440,2024-02-28,Returned,3,4,14.63,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+6903,6872,1958,2024-04-10,Returned,24,3,10.76,Scrunchie Style 24,1,Classic Scrunchies,2.85,13.92,,,No Return,0.0
+6908,6877,3064,2024-06-11,Returned,10,4,6.39,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+6913,6882,3940,2024-03-13,Returned,26,2,12.96,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+6921,6890,230,2024-09-19,Returned,16,2,11.82,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+6933,6902,3857,2023-02-08,Returned,4,2,7.6,Scrunchie Style 4,5,Scrunchie Bundles,3.58,13.64,,,No Return,0.0
+6955,6924,2130,2024-12-07,Returned,45,4,13.46,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+6967,6936,4698,2024-11-11,Returned,11,2,7.13,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+6988,6957,669,2024-05-25,Returned,43,3,12.28,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+6989,6958,2070,2023-11-14,Returned,43,1,14.15,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+6990,6959,969,2023-02-20,Returned,37,3,10.97,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+7001,6970,4490,2024-03-18,Returned,21,1,9.91,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+7002,6971,3069,2024-06-08,Returned,31,1,10.42,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+7020,6989,1758,2024-07-04,Returned,10,2,10.31,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+7038,7007,4828,2024-11-20,Returned,50,4,7.63,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+7059,7028,259,2023-07-17,Returned,17,3,11.97,Scrunchie Style 17,4,Mini Scrunchies,3.32,7.25,,,No Return,0.0
+7068,7037,196,2024-04-20,Returned,31,4,9.08,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+7088,7057,4022,2023-12-30,Returned,11,4,9.75,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+7123,7092,2729,2023-05-01,Returned,34,1,13.45,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+7131,7100,1731,2023-10-13,Returned,7,3,13.56,Scrunchie Style 7,3,Seasonal Prints,1.96,8.3,,,No Return,0.0
+7134,7103,3519,2024-08-26,Returned,16,1,8.43,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+7149,7118,2759,2023-09-06,Returned,48,1,13.73,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+7152,7121,1113,2024-07-19,Returned,41,2,8.79,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+7157,7126,642,2024-02-07,Returned,8,2,10.03,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+7165,7134,1541,2023-06-10,Returned,25,4,7.82,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+7193,7162,1113,2024-07-19,Returned,23,1,10.43,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+7202,7171,3707,2024-09-30,Returned,33,4,6.44,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+7235,7204,4853,2023-09-02,Returned,47,3,12.92,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+7239,7208,2729,2023-05-01,Returned,5,4,12.26,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+7257,7226,2235,2023-07-10,Returned,41,4,11.17,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+7261,7230,3568,2023-04-13,Returned,29,1,9.82,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+7278,7247,2037,2024-01-15,Returned,1,4,9.63,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+7296,7265,1209,2024-01-19,Returned,6,2,12.2,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+7363,7330,259,2023-07-17,Returned,6,2,12.74,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+7386,7353,3818,2024-04-24,Returned,50,4,11.79,Scrunchie Style 50,4,Mini Scrunchies,2.19,9.63,,,No Return,0.0
+7402,7369,1336,2024-04-28,Returned,36,4,8.3,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+7403,7370,335,2024-05-05,Returned,31,3,7.11,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+7415,7382,2749,2023-02-09,Returned,18,1,7.9,Scrunchie Style 18,5,Scrunchie Bundles,2.32,11.44,,,No Return,0.0
+7422,7389,1758,2024-07-04,Returned,5,4,6.34,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+7425,7392,2533,2024-06-07,Returned,34,4,10.88,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+7434,7401,285,2024-12-19,Returned,30,3,11.34,Scrunchie Style 30,4,Mini Scrunchies,1.91,9.75,,,No Return,0.0
+7435,7402,2201,2024-08-15,Returned,45,3,9.11,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+7437,7404,1841,2024-06-25,Returned,38,3,11.25,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+7442,7409,3160,2023-09-29,Returned,29,1,6.23,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+7463,7430,3104,2023-06-02,Returned,1,1,13.41,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+7475,7442,2120,2023-11-09,Returned,12,1,7.94,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+7476,7443,3746,2023-07-27,Returned,27,4,12.61,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+7501,7468,3160,2023-09-29,Returned,45,3,14.41,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+7538,7505,341,2023-06-09,Returned,11,4,11.49,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+7554,7521,3820,2023-12-04,Returned,19,3,12.75,Scrunchie Style 19,1,Classic Scrunchies,2.93,10.86,,,No Return,0.0
+7562,7529,4801,2024-11-04,Returned,11,1,11.83,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+7572,7539,4425,2023-10-12,Returned,42,3,12.62,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+7578,7545,4987,2023-05-23,Returned,27,4,14.38,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+7582,7549,2486,2023-09-06,Returned,22,2,14.05,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+7593,7560,1109,2024-04-27,Returned,12,1,7.92,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+7647,7614,3931,2024-09-17,Returned,14,2,8.91,Scrunchie Style 14,2,Luxury Silk Scrunchies,2.62,10.28,,,No Return,0.0
+7651,7618,1440,2024-02-28,Returned,36,3,13.17,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+7668,7634,410,2024-01-13,Returned,11,2,12.32,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+7696,7662,844,2024-04-19,Returned,26,1,7.79,Scrunchie Style 26,3,Seasonal Prints,3.91,8.66,,,No Return,0.0
+7705,7671,2387,2024-05-16,Returned,27,4,9.86,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+7707,7673,1355,2023-03-14,Returned,16,4,9.09,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+7719,7685,4207,2024-09-07,Returned,15,4,13.37,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+7720,7686,813,2024-03-25,Returned,40,3,13.18,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+7733,7699,2753,2023-12-13,Returned,16,3,7.74,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+7735,7701,4434,2024-12-31,Returned,46,3,10.52,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+7756,7722,270,2024-11-06,Returned,11,3,13.29,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+7758,7724,1532,2023-03-26,Returned,31,4,11.52,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+7768,7734,3413,2024-02-01,Returned,27,4,10.23,Scrunchie Style 27,3,Seasonal Prints,3.02,6.95,,,No Return,0.0
+7769,7735,2293,2024-10-30,Returned,45,1,10.1,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+7774,7740,3563,2024-01-13,Returned,21,4,11.14,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+7786,7752,2118,2023-07-17,Returned,5,2,12.94,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+7810,7776,1935,2023-05-16,Returned,46,1,14.11,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+7813,7779,2623,2023-10-26,Returned,19,3,6.75,Scrunchie Style 19,1,Classic Scrunchies,2.93,10.86,,,No Return,0.0
+7837,7803,1980,2024-01-17,Returned,23,2,12.77,Scrunchie Style 23,4,Mini Scrunchies,3.37,12.25,,,No Return,0.0
+7838,7804,2077,2023-11-23,Returned,49,2,10.98,Scrunchie Style 49,2,Luxury Silk Scrunchies,2.98,11.02,,,No Return,0.0
+7882,7848,4170,2023-12-31,Returned,43,3,12.6,Scrunchie Style 43,4,Mini Scrunchies,3.63,10.36,,,No Return,0.0
+7883,7849,1109,2024-04-27,Returned,31,3,10.35,Scrunchie Style 31,3,Seasonal Prints,1.54,13.95,,,No Return,0.0
+7893,7859,4975,2023-09-07,Returned,37,3,13.7,Scrunchie Style 37,3,Seasonal Prints,3.28,11.83,,,No Return,0.0
+7904,7870,4879,2024-02-07,Returned,38,3,12.73,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+7916,7882,2417,2023-12-04,Returned,36,1,9.93,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+7919,7885,3250,2023-10-23,Returned,12,1,12.81,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+7929,7895,136,2024-02-25,Returned,46,3,12.81,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+7945,7911,1541,2023-06-10,Returned,29,2,13.29,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+7965,7931,1529,2023-11-20,Returned,28,1,13.64,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+7970,7936,399,2023-09-19,Returned,33,1,10.09,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+8039,8004,433,2023-10-13,Returned,34,3,7.13,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+8047,8012,3519,2024-08-26,Returned,7,1,11.16,Scrunchie Style 7,3,Seasonal Prints,1.96,8.3,,,No Return,0.0
+8057,8022,2368,2024-06-15,Returned,11,2,11.04,Scrunchie Style 11,4,Mini Scrunchies,2.92,9.95,,,No Return,0.0
+8098,8063,4207,2024-09-07,Returned,40,4,9.86,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+8110,8075,835,2024-01-14,Returned,42,1,13.77,Scrunchie Style 42,1,Classic Scrunchies,3.79,10.81,,,No Return,0.0
+8121,8086,3083,2023-05-06,Returned,10,1,14.03,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+8127,8092,807,2024-08-22,Returned,12,4,9.72,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+8149,8114,2201,2024-08-15,Returned,46,2,7.58,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+8175,8140,789,2024-01-15,Returned,1,1,8.87,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+8181,8146,4763,2023-12-04,Returned,8,1,11.62,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+8194,8159,969,2023-02-20,Returned,33,3,12.54,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+8203,8168,230,2024-09-19,Returned,39,1,12.8,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+8219,8184,3726,2024-07-24,Returned,25,2,10.8,Scrunchie Style 25,1,Classic Scrunchies,2.97,11.62,,,No Return,0.0
+8224,8189,2106,2024-07-27,Returned,13,4,6.64,Scrunchie Style 13,5,Scrunchie Bundles,3.61,14.06,,,No Return,0.0
+8237,8202,2106,2024-07-27,Returned,36,1,13.18,Scrunchie Style 36,5,Scrunchie Bundles,2.0,8.45,,,No Return,0.0
+8245,8210,4602,2024-06-16,Returned,20,3,13.93,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+8267,8232,811,2024-02-11,Returned,39,3,10.94,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+8298,8263,2037,2024-01-15,Returned,21,3,6.88,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+8319,8284,3595,2024-12-16,Returned,2,4,11.96,Scrunchie Style 2,5,Scrunchie Bundles,3.21,9.45,,,No Return,0.0
+8326,8291,1070,2023-09-01,Returned,10,2,8.17,Scrunchie Style 10,5,Scrunchie Bundles,2.02,7.0,,,No Return,0.0
+8375,8340,1113,2024-07-19,Returned,17,1,9.72,Scrunchie Style 17,4,Mini Scrunchies,3.32,7.25,,,No Return,0.0
+8390,8355,2672,2023-06-05,Returned,39,1,10.01,Scrunchie Style 39,1,Classic Scrunchies,3.01,9.17,,,No Return,0.0
+8393,8358,194,2024-02-28,Returned,46,3,12.31,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+8398,8363,1301,2023-06-18,Returned,33,1,8.27,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+8406,8371,3160,2023-09-29,Returned,28,1,13.46,Scrunchie Style 28,2,Luxury Silk Scrunchies,2.19,10.11,,,No Return,0.0
+8411,8376,3623,2024-05-18,Returned,41,2,12.96,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+8412,8377,896,2023-09-28,Returned,29,2,14.62,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+8421,8386,2184,2024-11-04,Returned,22,2,13.65,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+8434,8399,1070,2023-09-01,Returned,34,3,12.64,Scrunchie Style 34,1,Classic Scrunchies,2.23,9.21,,,No Return,0.0
+8440,8405,2036,2023-06-03,Returned,15,1,12.2,Scrunchie Style 15,4,Mini Scrunchies,2.49,11.07,,,No Return,0.0
+8445,8410,2794,2023-07-29,Returned,38,2,9.94,Scrunchie Style 38,5,Scrunchie Bundles,3.48,6.0,,,No Return,0.0
+8469,8434,4517,2023-04-02,Returned,22,4,12.55,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+8543,8508,1541,2023-06-10,Returned,4,4,9.09,Scrunchie Style 4,5,Scrunchie Bundles,3.58,13.64,,,No Return,0.0
+8553,8518,839,2023-07-11,Returned,46,2,8.02,Scrunchie Style 46,1,Classic Scrunchies,2.43,8.2,,,No Return,0.0
+8557,8522,97,2024-06-28,Returned,3,4,10.15,Scrunchie Style 3,3,Seasonal Prints,3.02,14.75,,,No Return,0.0
+8565,8530,3782,2024-03-10,Returned,1,3,6.61,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+8586,8551,4140,2024-11-25,Returned,22,3,9.98,Scrunchie Style 22,5,Scrunchie Bundles,3.61,11.39,,,No Return,0.0
+8590,8555,4342,2024-06-01,Returned,5,3,6.13,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+8597,8562,3655,2024-02-06,Returned,21,1,13.92,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+8612,8577,3000,2024-07-17,Returned,13,2,14.62,Scrunchie Style 13,5,Scrunchie Bundles,3.61,14.06,,,No Return,0.0
+8622,8586,1232,2023-02-12,Returned,21,1,9.59,Scrunchie Style 21,2,Luxury Silk Scrunchies,3.9,14.49,,,No Return,0.0
+8635,8599,923,2024-01-23,Returned,9,3,13.17,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+8670,8634,2672,2023-06-05,Returned,29,1,14.86,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+8685,8649,3443,2023-10-09,Returned,40,3,8.9,Scrunchie Style 40,2,Luxury Silk Scrunchies,3.82,8.74,,,No Return,0.0
+8695,8659,4146,2024-05-01,Returned,16,2,6.37,Scrunchie Style 16,2,Luxury Silk Scrunchies,3.82,12.26,,,No Return,0.0
+8743,8706,530,2024-03-06,Returned,5,2,8.0,Scrunchie Style 5,5,Scrunchie Bundles,1.93,12.5,,,No Return,0.0
+8757,8720,2232,2023-02-12,Returned,45,3,12.25,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+8782,8745,3064,2024-06-11,Returned,33,2,12.83,Scrunchie Style 33,4,Mini Scrunchies,2.49,7.1,,,No Return,0.0
+8808,8771,1661,2023-11-03,Returned,19,4,12.7,Scrunchie Style 19,1,Classic Scrunchies,2.93,10.86,,,No Return,0.0
+8822,8785,2062,2024-10-06,Returned,47,1,10.97,Scrunchie Style 47,2,Luxury Silk Scrunchies,3.17,7.51,,,No Return,0.0
+8836,8799,4170,2023-12-31,Returned,8,1,8.21,Scrunchie Style 8,3,Seasonal Prints,3.39,6.36,,,No Return,0.0
+8847,8810,1404,2023-08-30,Returned,45,3,13.84,Scrunchie Style 45,2,Luxury Silk Scrunchies,1.74,8.42,,,No Return,0.0
+8851,8814,1404,2023-08-30,Returned,20,1,13.73,Scrunchie Style 20,4,Mini Scrunchies,2.8,7.83,,,No Return,0.0
+8872,8835,2530,2024-04-15,Returned,9,2,10.44,Scrunchie Style 9,3,Seasonal Prints,2.56,12.4,,,No Return,0.0
+8879,8842,28,2023-07-28,Returned,1,4,14.49,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+8882,8845,194,2024-02-28,Returned,29,1,7.5,Scrunchie Style 29,4,Mini Scrunchies,2.24,7.97,,,No Return,0.0
+8889,8852,2062,2024-10-06,Returned,1,4,11.54,Scrunchie Style 1,4,Mini Scrunchies,2.1,11.05,,,No Return,0.0
+8922,8885,3239,2024-08-31,Returned,6,4,10.76,Scrunchie Style 6,2,Luxury Silk Scrunchies,2.48,8.12,,,No Return,0.0
+8960,8923,2672,2023-06-05,Returned,12,1,8.02,Scrunchie Style 12,3,Seasonal Prints,1.58,7.82,,,No Return,0.0
+8979,8942,2106,2024-07-27,Returned,41,1,6.16,Scrunchie Style 41,4,Mini Scrunchies,3.13,7.48,,,No Return,0.0
+9024,8987,3568,2023-04-13,Returned,48,1,14.39,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0
+9036,8999,4152,2024-07-04,Returned,48,1,14.03,Scrunchie Style 48,5,Scrunchie Bundles,3.16,7.97,,,No Return,0.0

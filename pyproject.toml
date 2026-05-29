@@ -1,0 +1,19 @@
+[project]
+name = "model1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "distfit>=2.0.1",
+    "fitter>=1.8.0",
+    "gurobipy>=13.0.2",
+    "ipympl>=0.10.0",
+    "kagglehub==1.0.0",
+    "matplotlib>=3.10.9",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.1",
+    "scipy>=1.15.3",
+    "seaborn>=0.13.2",
+    "tabulate>=0.10.0",
+]

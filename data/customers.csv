@@ -1,0 +1,1001 @@
+customer_id,first_name,last_name,email,signup_date,customer_type,acquisition_channel,city,province,country,region_id
+1,Chloe,Taylor,chloe.taylor328@shaw.ca,2023-04-13,Returning,Referral,Richmond,British Columbia,Canada,3
+2,Charlotte,Roberts,charlotte.roberts704@gmail.com,2023-03-13,Returning,Referral,Coquitlam,British Columbia,Canada,2
+3,Lucas,Johnson,lucas.johnson338@shaw.ca,2024-04-11,New,Referral,Vancouver,British Columbia,Canada,5
+4,James,Nguyen,james.nguyen833@shaw.ca,2023-04-10,New,Referral,Coquitlam,British Columbia,Canada,6
+5,Chloe,Lewis,chloe.lewis559@shaw.ca,2023-11-05,VIP,Email,Winnipeg,Manitoba,Canada,6
+6,Alexander,Lee,alexander.lee448@telus.net,2024-01-21,New,Organic,Burnaby,British Columbia,Canada,1
+7,Mia,Anderson,mia.anderson194@gmail.com,2024-04-04,Returning,Organic,Edmonton,Alberta,Canada,4
+8,Benjamin,Taylor,benjamin.taylor926@hotmail.com,2024-07-14,Returning,Referral,Ottawa,Ontario,Canada,2
+9,Olivia,Roberts,olivia.roberts180@telus.net,2024-04-20,VIP,Referral,Montreal,Quebec,Canada,6
+10,William,Walker,william.walker821@shaw.ca,2024-11-17,Returning,Email,Halifax,Nova Scotia,Canada,4
+11,Sophia,Johnson,sophia.johnson181@hotmail.com,2024-05-19,New,Referral,Halifax,Nova Scotia,Canada,5
+12,Laura,White,laura.white564@hotmail.com,2023-06-16,New,Organic,Surrey,British Columbia,Canada,4
+13,Chloe,Pelletier,chloe.pelletier463@hotmail.com,2023-01-14,Returning,Organic,Mississauga,Ontario,Canada,2
+14,Isabella,Clark,isabella.clark646@shaw.ca,2024-07-18,New,Email,Toronto,Ontario,Canada,4
+15,Zoe,White,zoe.white376@telus.net,2024-03-30,Returning,Email,Edmonton,Alberta,Canada,3
+16,Julia,Wilson,julia.wilson963@hotmail.com,2023-07-25,New,Paid Ads,Halifax,Nova Scotia,Canada,4
+17,Madison,Gagnon,madison.gagnon924@gmail.com,2023-01-02,New,Paid Ads,Burnaby,British Columbia,Canada,2
+18,Noah,King,noah.king680@shaw.ca,2024-04-21,VIP,Paid Ads,Toronto,Ontario,Canada,4
+19,Natalie,Lewis,natalie.lewis505@telus.net,2023-06-11,New,Email,Mississauga,Ontario,Canada,6
+20,Natalie,Morin,natalie.morin371@shaw.ca,2023-09-28,New,Referral,Halifax,Nova Scotia,Canada,4
+21,Charlotte,White,charlotte.white697@telus.net,2024-12-02,New,Email,Halifax,Nova Scotia,Canada,5
+22,Benjamin,Young,benjamin.young193@telus.net,2023-12-04,Returning,Email,Calgary,Alberta,Canada,2
+23,Madison,Johnson,madison.johnson911@shaw.ca,2023-08-05,New,Email,Burnaby,British Columbia,Canada,5
+24,Hannah,Wright,hannah.wright490@telus.net,2023-02-10,New,Organic,Winnipeg,Manitoba,Canada,1
+25,Daniel,Lopez,daniel.lopez796@gmail.com,2024-06-04,Returning,Email,Winnipeg,Manitoba,Canada,3
+26,Zoe,Taylor,zoe.taylor214@hotmail.com,2024-05-13,Returning,Referral,Halifax,Nova Scotia,Canada,3
+27,Ella,Wright,ella.wright839@gmail.com,2023-10-16,Returning,Paid Ads,Edmonton,Alberta,Canada,2
+28,Natalie,Roberts,natalie.roberts619@shaw.ca,2023-02-10,VIP,Organic,London,Ontario,Canada,4
+29,Julia,Taylor,julia.taylor256@shaw.ca,2023-02-02,New,Referral,Halifax,Nova Scotia,Canada,6
+30,Liam,Gagnon,liam.gagnon713@gmail.com,2023-04-09,Returning,Paid Ads,Red Deer,Alberta,Canada,3
+31,Noah,Chen,noah.chen999@hotmail.com,2024-06-30,New,Organic,Vancouver,British Columbia,Canada,6
+32,Rachel,Roy,rachel.roy346@gmail.com,2024-10-04,Returning,Paid Ads,Mississauga,Ontario,Canada,6
+33,Natalie,Kaur,natalie.kaur935@telus.net,2024-01-28,Returning,Paid Ads,Vancouver,British Columbia,Canada,2
+34,Sophia,Gagnon,sophia.gagnon775@shaw.ca,2024-04-05,New,Email,Winnipeg,Manitoba,Canada,1
+35,Oliver,Singh,oliver.singh316@telus.net,2024-07-17,Returning,Email,Edmonton,Alberta,Canada,6
+36,Julia,Singh,julia.singh508@hotmail.com,2024-04-29,New,Organic,Halifax,Nova Scotia,Canada,3
+37,Hannah,Wilson,hannah.wilson223@telus.net,2024-06-24,New,Email,Hamilton,Ontario,Canada,3
+38,Ava,White,ava.white702@gmail.com,2023-08-31,New,Paid Ads,Richmond,British Columbia,Canada,2
+39,William,White,william.white172@gmail.com,2024-07-10,New,Organic,Winnipeg,Manitoba,Canada,6
+40,Grace,Wilson,grace.wilson132@gmail.com,2023-01-28,New,Email,Burnaby,British Columbia,Canada,6
+41,Laura,Hall,laura.hall385@shaw.ca,2023-11-27,New,Referral,Coquitlam,British Columbia,Canada,4
+42,Hannah,Chen,hannah.chen840@shaw.ca,2024-04-17,New,Organic,Red Deer,Alberta,Canada,1
+43,Julia,Tremblay,julia.tremblay903@shaw.ca,2024-01-12,Returning,Organic,Winnipeg,Manitoba,Canada,4
+44,Oliver,Roy,oliver.roy199@gmail.com,2023-09-16,New,Email,Laval,Quebec,Canada,3
+45,Hannah,Wright,hannah.wright578@telus.net,2024-10-10,New,Organic,Hamilton,Ontario,Canada,3
+46,Laura,Roberts,laura.roberts512@gmail.com,2023-08-22,New,Referral,Vancouver,British Columbia,Canada,3
+47,Zoe,Hall,zoe.hall294@shaw.ca,2024-01-09,New,Email,Burnaby,British Columbia,Canada,1
+48,William,Lopez,william.lopez385@shaw.ca,2024-11-22,New,Organic,Edmonton,Alberta,Canada,2
+49,Ethan,White,ethan.white151@gmail.com,2024-07-17,New,Referral,Surrey,British Columbia,Canada,2
+50,Chloe,Singh,chloe.singh270@shaw.ca,2024-01-22,New,Organic,Vancouver,British Columbia,Canada,1
+51,Lucas,Chen,lucas.chen160@telus.net,2024-11-29,Returning,Paid Ads,Laval,Quebec,Canada,4
+52,Amelia,King,amelia.king902@hotmail.com,2024-07-19,New,Email,Surrey,British Columbia,Canada,1
+53,Sarah,Lopez,sarah.lopez258@telus.net,2024-01-20,New,Paid Ads,Hamilton,Ontario,Canada,5
+54,Isabella,Walker,isabella.walker865@gmail.com,2024-11-14,New,Paid Ads,Calgary,Alberta,Canada,4
+55,Noah,Johnson,noah.johnson614@telus.net,2024-03-14,Returning,Referral,Coquitlam,British Columbia,Canada,1
+56,Julia,Bouchard,julia.bouchard620@gmail.com,2023-10-21,New,Email,Winnipeg,Manitoba,Canada,2
+57,Sophia,Bouchard,sophia.bouchard791@gmail.com,2023-07-17,New,Referral,Calgary,Alberta,Canada,1
+58,Laura,White,laura.white692@shaw.ca,2023-07-20,New,Paid Ads,Montreal,Quebec,Canada,5
+59,Daniel,Johnson,daniel.johnson773@telus.net,2024-10-21,New,Email,Winnipeg,Manitoba,Canada,3
+60,Alexander,Kaur,alexander.kaur309@hotmail.com,2023-12-12,Returning,Referral,Winnipeg,Manitoba,Canada,4
+61,Hannah,Lewis,hannah.lewis505@hotmail.com,2024-12-11,New,Organic,Mississauga,Ontario,Canada,2
+62,Charlotte,Clark,charlotte.clark423@telus.net,2024-10-02,Returning,Organic,Halifax,Nova Scotia,Canada,1
+63,Julia,Gagnon,julia.gagnon736@telus.net,2023-05-31,Returning,Paid Ads,Vancouver,British Columbia,Canada,3
+64,Alexander,Taylor,alexander.taylor618@shaw.ca,2023-09-20,Returning,Paid Ads,Coquitlam,British Columbia,Canada,1
+65,Mia,Anderson,mia.anderson478@shaw.ca,2024-07-25,New,Organic,Toronto,Ontario,Canada,6
+66,Ella,Martin,ella.martin783@gmail.com,2024-10-13,Returning,Email,Quebec City,Quebec,Canada,3
+67,Rachel,Singh,rachel.singh370@shaw.ca,2023-01-09,New,Referral,Toronto,Ontario,Canada,3
+68,Emma,Tremblay,emma.tremblay378@shaw.ca,2024-02-08,VIP,Email,Coquitlam,British Columbia,Canada,1
+69,Ella,Nguyen,ella.nguyen308@hotmail.com,2024-09-19,New,Email,Red Deer,Alberta,Canada,4
+70,Hannah,Wilson,hannah.wilson357@telus.net,2024-02-26,Returning,Paid Ads,London,Ontario,Canada,3
+71,Natalie,Morin,natalie.morin949@telus.net,2023-04-22,New,Referral,Vancouver,British Columbia,Canada,1
+72,Mia,Johnson,mia.johnson752@shaw.ca,2023-12-04,New,Referral,Richmond,British Columbia,Canada,5
+73,Mia,Martin,mia.martin674@telus.net,2024-11-11,New,Email,Halifax,Nova Scotia,Canada,1
+74,Emily,Taylor,emily.taylor954@gmail.com,2024-02-02,New,Email,Burnaby,British Columbia,Canada,3
+75,Liam,Kaur,liam.kaur230@telus.net,2024-02-05,New,Email,Winnipeg,Manitoba,Canada,4
+76,Olivia,Walker,olivia.walker315@hotmail.com,2024-04-14,New,Paid Ads,Toronto,Ontario,Canada,6
+77,Hannah,White,hannah.white898@hotmail.com,2023-02-07,VIP,Referral,Halifax,Nova Scotia,Canada,6
+78,William,Tremblay,william.tremblay985@shaw.ca,2023-10-10,New,Organic,Laval,Quebec,Canada,6
+79,Amelia,Roy,amelia.roy283@gmail.com,2024-08-31,Returning,Email,Edmonton,Alberta,Canada,1
+80,Zoe,Morin,zoe.morin373@shaw.ca,2024-03-28,New,Email,Hamilton,Ontario,Canada,3
+81,Amelia,Roy,amelia.roy993@telus.net,2024-05-30,New,Organic,Halifax,Nova Scotia,Canada,1
+82,Olivia,Bouchard,olivia.bouchard936@shaw.ca,2023-06-21,VIP,Organic,Laval,Quebec,Canada,6
+83,Julia,Lopez,julia.lopez328@shaw.ca,2024-01-08,VIP,Email,Ottawa,Ontario,Canada,1
+84,Emily,Clark,emily.clark385@hotmail.com,2023-02-06,VIP,Organic,Edmonton,Alberta,Canada,6
+85,Laura,Brown,laura.brown795@telus.net,2023-06-30,Returning,Email,Ottawa,Ontario,Canada,1
+86,Rachel,Singh,rachel.singh998@gmail.com,2023-04-26,New,Organic,Toronto,Ontario,Canada,1
+87,Mia,Martin,mia.martin211@gmail.com,2023-09-13,New,Paid Ads,Winnipeg,Manitoba,Canada,1
+88,Daniel,Wright,daniel.wright720@telus.net,2024-07-19,Returning,Email,Ottawa,Ontario,Canada,6
+89,James,Taylor,james.taylor145@hotmail.com,2024-09-17,Returning,Paid Ads,Laval,Quebec,Canada,2
+90,Grace,Wright,grace.wright472@shaw.ca,2024-09-30,Returning,Paid Ads,Coquitlam,British Columbia,Canada,2
+91,Lucas,Brown,lucas.brown779@hotmail.com,2023-04-14,Returning,Referral,Halifax,Nova Scotia,Canada,6
+92,Laura,Taylor,laura.taylor782@hotmail.com,2023-06-25,Returning,Paid Ads,Halifax,Nova Scotia,Canada,2
+93,Lucas,Hall,lucas.hall296@shaw.ca,2024-02-12,VIP,Paid Ads,Quebec City,Quebec,Canada,1
+94,Lucas,Clark,lucas.clark515@hotmail.com,2023-02-05,Returning,Organic,Laval,Quebec,Canada,6
+95,William,Pelletier,william.pelletier315@hotmail.com,2024-02-04,New,Referral,Richmond,British Columbia,Canada,4
+96,Lucas,Roy,lucas.roy552@telus.net,2023-12-20,New,Referral,Winnipeg,Manitoba,Canada,6
+97,Ethan,Clark,ethan.clark912@telus.net,2023-02-20,New,Referral,Red Deer,Alberta,Canada,6
+98,Natalie,Roy,natalie.roy390@gmail.com,2023-05-05,Returning,Paid Ads,Halifax,Nova Scotia,Canada,6
+99,James,Clark,james.clark938@gmail.com,2023-11-01,New,Paid Ads,Halifax,Nova Scotia,Canada,6
+100,Madison,White,madison.white925@shaw.ca,2024-03-19,New,Email,Halifax,Nova Scotia,Canada,5
+101,Isabella,Anderson,isabella.anderson586@shaw.ca,2024-07-25,New,Organic,Vancouver,British Columbia,Canada,4
+102,Daniel,Bouchard,daniel.bouchard744@telus.net,2023-12-16,Returning,Referral,Surrey,British Columbia,Canada,4
+103,Alexander,Thompson,alexander.thompson509@telus.net,2024-10-17,VIP,Email,Halifax,Nova Scotia,Canada,2
+104,Ava,Anderson,ava.anderson897@gmail.com,2024-10-31,New,Email,Halifax,Nova Scotia,Canada,3
+105,Lucas,White,lucas.white151@telus.net,2024-08-26,Returning,Paid Ads,Red Deer,Alberta,Canada,5
+106,William,White,william.white920@shaw.ca,2024-04-18,VIP,Referral,Surrey,British Columbia,Canada,1
+107,Ethan,Clark,ethan.clark727@telus.net,2024-10-02,New,Organic,Winnipeg,Manitoba,Canada,2
+108,Rachel,Roberts,rachel.roberts262@telus.net,2023-04-06,Returning,Email,Winnipeg,Manitoba,Canada,1
+109,Zoe,Bouchard,zoe.bouchard869@hotmail.com,2024-05-02,VIP,Organic,Longueuil,Quebec,Canada,5
+110,Ava,Pelletier,ava.pelletier741@telus.net,2024-12-04,Returning,Paid Ads,Halifax,Nova Scotia,Canada,5
+111,Ava,Lee,ava.lee340@hotmail.com,2023-09-04,New,Paid Ads,Montreal,Quebec,Canada,3
+112,Mia,Hall,mia.hall241@gmail.com,2023-03-27,New,Paid Ads,London,Ontario,Canada,4
+113,Charlotte,White,charlotte.white165@shaw.ca,2023-03-10,New,Paid Ads,Laval,Quebec,Canada,6
+114,Lucas,Wright,lucas.wright525@telus.net,2024-03-28,New,Paid Ads,London,Ontario,Canada,2
+115,Olivia,Thompson,olivia.thompson977@gmail.com,2024-03-07,Returning,Email,Longueuil,Quebec,Canada,1
+116,Natalie,Gagnon,natalie.gagnon106@telus.net,2023-09-11,New,Referral,Winnipeg,Manitoba,Canada,2
+117,Liam,Walker,liam.walker599@shaw.ca,2024-06-05,VIP,Email,Longueuil,Quebec,Canada,2
+118,Ava,Lee,ava.lee498@gmail.com,2023-06-29,New,Paid Ads,Longueuil,Quebec,Canada,3
+119,Noah,Clark,noah.clark960@shaw.ca,2024-03-17,Returning,Email,Halifax,Nova Scotia,Canada,5
+120,Ethan,Morin,ethan.morin503@gmail.com,2024-05-30,Returning,Email,Red Deer,Alberta,Canada,2
+121,Alexander,Kaur,alexander.kaur758@gmail.com,2024-05-11,VIP,Email,Halifax,Nova Scotia,Canada,3
+122,Lucas,Anderson,lucas.anderson366@gmail.com,2024-10-25,Returning,Referral,Laval,Quebec,Canada,4
+123,Benjamin,Hall,benjamin.hall445@hotmail.com,2024-06-28,New,Referral,Edmonton,Alberta,Canada,3
+124,Madison,Tremblay,madison.tremblay358@telus.net,2024-09-04,Returning,Organic,Quebec City,Quebec,Canada,1
+125,Rachel,Brown,rachel.brown458@gmail.com,2023-06-17,VIP,Email,Montreal,Quebec,Canada,5
+126,Ava,Wilson,ava.wilson353@gmail.com,2024-02-01,New,Paid Ads,Vancouver,British Columbia,Canada,2
+127,Isabella,Pelletier,isabella.pelletier344@shaw.ca,2023-09-10,New,Referral,Coquitlam,British Columbia,Canada,1
+128,Charlotte,Chen,charlotte.chen576@shaw.ca,2023-03-31,New,Paid Ads,Halifax,Nova Scotia,Canada,2
+129,Grace,Lee,grace.lee896@gmail.com,2024-08-24,New,Referral,Mississauga,Ontario,Canada,1
+130,Rachel,Martin,rachel.martin419@gmail.com,2023-07-15,Returning,Paid Ads,Toronto,Ontario,Canada,5
+131,Alexander,Clark,alexander.clark177@shaw.ca,2023-03-16,VIP,Email,Longueuil,Quebec,Canada,1
+132,Alexander,Lewis,alexander.lewis813@gmail.com,2023-10-04,VIP,Email,Halifax,Nova Scotia,Canada,2
+133,Madison,Walker,madison.walker455@gmail.com,2024-04-01,Returning,Referral,Halifax,Nova Scotia,Canada,1
+134,William,Wright,william.wright618@gmail.com,2023-04-09,New,Paid Ads,Halifax,Nova Scotia,Canada,1
+135,Chloe,Hall,chloe.hall208@telus.net,2023-04-06,New,Paid Ads,Surrey,British Columbia,Canada,5
+136,Lucas,Young,lucas.young545@shaw.ca,2024-01-04,Returning,Referral,Halifax,Nova Scotia,Canada,1
+137,Amelia,Roberts,amelia.roberts576@telus.net,2023-09-30,Returning,Email,Winnipeg,Manitoba,Canada,1
+138,Lucas,Pelletier,lucas.pelletier972@hotmail.com,2023-12-08,New,Referral,Halifax,Nova Scotia,Canada,1
+139,Ava,Pelletier,ava.pelletier349@telus.net,2024-09-03,New,Organic,Richmond,British Columbia,Canada,3
+140,Madison,Lopez,madison.lopez129@hotmail.com,2023-03-17,New,Email,Winnipeg,Manitoba,Canada,6
+141,Oliver,Bouchard,oliver.bouchard317@telus.net,2024-01-19,New,Paid Ads,Mississauga,Ontario,Canada,5
+142,Liam,Roy,liam.roy710@hotmail.com,2023-03-10,New,Organic,Ottawa,Ontario,Canada,4
+143,Grace,Tremblay,grace.tremblay629@gmail.com,2024-04-13,Returning,Referral,London,Ontario,Canada,1
+144,Isabella,Brown,isabella.brown600@telus.net,2023-02-08,New,Paid Ads,Red Deer,Alberta,Canada,2
+145,William,Gagnon,william.gagnon761@telus.net,2024-02-02,Returning,Organic,Red Deer,Alberta,Canada,3
+146,Grace,Chen,grace.chen401@gmail.com,2023-08-03,Returning,Referral,Montreal,Quebec,Canada,2
+147,Ava,King,ava.king779@hotmail.com,2024-08-10,Returning,Paid Ads,Halifax,Nova Scotia,Canada,4
+148,Alexander,Young,alexander.young863@telus.net,2023-09-10,Returning,Paid Ads,Quebec City,Quebec,Canada,5
+149,William,Hall,william.hall413@hotmail.com,2023-06-17,New,Paid Ads,Hamilton,Ontario,Canada,3
+150,Mia,White,mia.white222@hotmail.com,2024-09-25,New,Organic,Burnaby,British Columbia,Canada,5
+151,Zoe,Singh,zoe.singh321@shaw.ca,2024-02-26,VIP,Email,Halifax,Nova Scotia,Canada,5
+152,Zoe,Chen,zoe.chen202@hotmail.com,2023-12-08,Returning,Referral,London,Ontario,Canada,1
+153,Rachel,Thompson,rachel.thompson283@hotmail.com,2023-10-28,Returning,Paid Ads,Mississauga,Ontario,Canada,4
+154,Ella,Smith,ella.smith146@hotmail.com,2024-02-19,New,Email,Halifax,Nova Scotia,Canada,6
+155,Olivia,Singh,olivia.singh205@telus.net,2023-06-16,New,Paid Ads,Mississauga,Ontario,Canada,3
+156,Laura,Smith,laura.smith590@telus.net,2023-02-08,New,Organic,Winnipeg,Manitoba,Canada,5
+157,Ethan,Hall,ethan.hall982@hotmail.com,2023-08-08,Returning,Email,Calgary,Alberta,Canada,4
+158,Oliver,Taylor,oliver.taylor175@telus.net,2024-03-31,New,Organic,Surrey,British Columbia,Canada,1
+159,Alexander,Wilson,alexander.wilson252@shaw.ca,2024-01-22,Returning,Paid Ads,Halifax,Nova Scotia,Canada,1
+160,Sarah,Kaur,sarah.kaur221@shaw.ca,2023-07-10,New,Organic,Toronto,Ontario,Canada,1
+161,William,Gagnon,william.gagnon561@telus.net,2023-04-27,VIP,Email,Laval,Quebec,Canada,5
+162,Julia,Lopez,julia.lopez412@telus.net,2024-11-02,Returning,Referral,London,Ontario,Canada,5
+163,Alexander,Nguyen,alexander.nguyen881@gmail.com,2023-03-21,Returning,Referral,Coquitlam,British Columbia,Canada,4
+164,Isabella,Wilson,isabella.wilson260@gmail.com,2023-08-17,New,Referral,Edmonton,Alberta,Canada,4
+165,Ava,Martin,ava.martin102@shaw.ca,2024-03-16,Returning,Organic,Winnipeg,Manitoba,Canada,1
+166,Lucas,Lopez,lucas.lopez133@hotmail.com,2024-06-09,New,Organic,Halifax,Nova Scotia,Canada,5
+167,Ava,Walker,ava.walker172@telus.net,2024-07-19,Returning,Email,Halifax,Nova Scotia,Canada,1
+168,Hannah,White,hannah.white535@shaw.ca,2023-01-12,VIP,Email,London,Ontario,Canada,6
+169,Emma,Singh,emma.singh372@shaw.ca,2024-02-12,Returning,Email,Red Deer,Alberta,Canada,2
+170,Rachel,Anderson,rachel.anderson911@shaw.ca,2023-12-14,Returning,Email,Vancouver,British Columbia,Canada,2
+171,Ella,Nguyen,ella.nguyen227@telus.net,2023-11-12,Returning,Email,Halifax,Nova Scotia,Canada,5
+172,Ethan,Lewis,ethan.lewis612@hotmail.com,2023-02-10,New,Referral,Hamilton,Ontario,Canada,6
+173,William,Chen,william.chen542@gmail.com,2023-05-25,New,Organic,Montreal,Quebec,Canada,4
+174,Zoe,Hall,zoe.hall193@gmail.com,2024-04-05,Returning,Organic,Winnipeg,Manitoba,Canada,5
+175,Ava,Clark,ava.clark690@hotmail.com,2024-07-11,New,Paid Ads,Winnipeg,Manitoba,Canada,2
+176,Olivia,Gagnon,olivia.gagnon384@telus.net,2023-09-13,Returning,Organic,Edmonton,Alberta,Canada,2
+177,Amelia,Kaur,amelia.kaur581@gmail.com,2023-01-10,VIP,Paid Ads,Longueuil,Quebec,Canada,3
+178,Liam,Wright,liam.wright978@gmail.com,2023-01-05,New,Organic,Ottawa,Ontario,Canada,6
+179,Amelia,Hall,amelia.hall778@hotmail.com,2023-03-06,New,Referral,Longueuil,Quebec,Canada,1
+180,Benjamin,Pelletier,benjamin.pelletier190@telus.net,2023-10-09,New,Paid Ads,Winnipeg,Manitoba,Canada,3
+181,Noah,Lee,noah.lee985@telus.net,2024-11-19,Returning,Paid Ads,Toronto,Ontario,Canada,1
+182,James,Pelletier,james.pelletier523@telus.net,2023-04-09,New,Organic,Coquitlam,British Columbia,Canada,6
+183,Olivia,Thompson,olivia.thompson740@telus.net,2024-04-20,Returning,Referral,Winnipeg,Manitoba,Canada,5
+184,Ethan,Gagnon,ethan.gagnon662@hotmail.com,2024-03-12,Returning,Organic,Burnaby,British Columbia,Canada,5
+185,Charlotte,Morin,charlotte.morin224@telus.net,2024-12-14,Returning,Organic,Hamilton,Ontario,Canada,5
+186,Emily,Wilson,emily.wilson418@shaw.ca,2023-03-19,New,Organic,Winnipeg,Manitoba,Canada,3
+187,William,Smith,william.smith330@gmail.com,2024-11-15,Returning,Paid Ads,Winnipeg,Manitoba,Canada,1
+188,Rachel,Morin,rachel.morin763@gmail.com,2024-05-02,Returning,Email,Surrey,British Columbia,Canada,2
+189,Rachel,Anderson,rachel.anderson525@hotmail.com,2023-09-07,Returning,Paid Ads,Quebec City,Quebec,Canada,3
+190,Rachel,Chen,rachel.chen664@telus.net,2023-11-02,VIP,Paid Ads,Laval,Quebec,Canada,4
+191,Charlotte,King,charlotte.king984@shaw.ca,2024-01-24,New,Referral,Red Deer,Alberta,Canada,1
+192,Sophia,Lee,sophia.lee940@hotmail.com,2024-02-05,New,Referral,Quebec City,Quebec,Canada,5
+193,Emily,Walker,emily.walker986@telus.net,2024-07-31,Returning,Referral,Halifax,Nova Scotia,Canada,6
+194,Charlotte,Lopez,charlotte.lopez440@hotmail.com,2024-12-04,New,Paid Ads,Winnipeg,Manitoba,Canada,2
+195,William,Gagnon,william.gagnon429@telus.net,2023-04-08,Returning,Referral,Winnipeg,Manitoba,Canada,3
+196,Laura,Thompson,laura.thompson339@telus.net,2024-03-10,VIP,Email,Halifax,Nova Scotia,Canada,1
+197,Laura,Gagnon,laura.gagnon862@hotmail.com,2023-06-15,New,Referral,Montreal,Quebec,Canada,4
+198,Oliver,Lewis,oliver.lewis607@shaw.ca,2024-06-25,Returning,Referral,Longueuil,Quebec,Canada,1
+199,Olivia,Anderson,olivia.anderson995@gmail.com,2023-05-13,Returning,Paid Ads,Winnipeg,Manitoba,Canada,1
+200,Laura,Lopez,laura.lopez115@telus.net,2023-11-26,Returning,Email,Coquitlam,British Columbia,Canada,5
+201,Zoe,Anderson,zoe.anderson580@gmail.com,2024-06-29,Returning,Paid Ads,Laval,Quebec,Canada,5
+202,Sarah,Lee,sarah.lee765@telus.net,2023-05-06,Returning,Email,London,Ontario,Canada,3
+203,Sophia,Bouchard,sophia.bouchard424@telus.net,2023-04-21,New,Referral,London,Ontario,Canada,3
+204,Chloe,Lewis,chloe.lewis340@gmail.com,2024-01-09,Returning,Email,Montreal,Quebec,Canada,4
+205,Chloe,Clark,chloe.clark544@gmail.com,2024-11-26,New,Email,Mississauga,Ontario,Canada,3
+206,Emma,Gagnon,emma.gagnon270@telus.net,2024-10-28,Returning,Paid Ads,Halifax,Nova Scotia,Canada,5
+207,Grace,Walker,grace.walker915@hotmail.com,2024-09-25,New,Organic,Vancouver,British Columbia,Canada,5
+208,Olivia,Walker,olivia.walker249@telus.net,2024-04-10,New,Organic,Ottawa,Ontario,Canada,6
+209,Ava,Patel,ava.patel279@shaw.ca,2024-02-09,Returning,Organic,Laval,Quebec,Canada,1
+210,Sophia,Nguyen,sophia.nguyen697@telus.net,2024-06-07,New,Paid Ads,Laval,Quebec,Canada,1
+211,Charlotte,White,charlotte.white361@telus.net,2023-03-19,New,Referral,Quebec City,Quebec,Canada,1
+212,Hannah,Smith,hannah.smith175@shaw.ca,2023-09-06,New,Paid Ads,Quebec City,Quebec,Canada,6
+213,Ethan,Young,ethan.young806@telus.net,2023-04-17,VIP,Organic,Winnipeg,Manitoba,Canada,1
+214,Mia,Lopez,mia.lopez973@telus.net,2023-01-26,VIP,Email,Mississauga,Ontario,Canada,1
+215,Oliver,Taylor,oliver.taylor688@hotmail.com,2023-09-10,VIP,Referral,Edmonton,Alberta,Canada,6
+216,Ella,Lewis,ella.lewis381@telus.net,2024-06-09,Returning,Referral,Toronto,Ontario,Canada,6
+217,Emily,Kaur,emily.kaur952@telus.net,2023-08-04,Returning,Paid Ads,Halifax,Nova Scotia,Canada,6
+218,Natalie,Tremblay,natalie.tremblay324@hotmail.com,2024-11-29,New,Referral,Mississauga,Ontario,Canada,3
+219,Chloe,Thompson,chloe.thompson743@shaw.ca,2024-09-14,Returning,Referral,Winnipeg,Manitoba,Canada,4
+220,Emma,Tremblay,emma.tremblay907@hotmail.com,2023-10-01,New,Referral,Halifax,Nova Scotia,Canada,3
+221,Ethan,Johnson,ethan.johnson192@shaw.ca,2023-01-15,New,Referral,Winnipeg,Manitoba,Canada,5
+222,Julia,Walker,julia.walker305@shaw.ca,2023-01-28,New,Organic,Hamilton,Ontario,Canada,1
+223,Charlotte,Roy,charlotte.roy950@hotmail.com,2023-08-19,New,Paid Ads,Winnipeg,Manitoba,Canada,4
+224,Amelia,Lee,amelia.lee923@hotmail.com,2024-06-20,VIP,Email,Quebec City,Quebec,Canada,1
+225,Emma,Lopez,emma.lopez980@shaw.ca,2024-08-02,New,Organic,Burnaby,British Columbia,Canada,5
+226,Hannah,Roberts,hannah.roberts192@hotmail.com,2023-05-26,New,Referral,Halifax,Nova Scotia,Canada,6
+227,Sarah,King,sarah.king565@gmail.com,2023-02-03,Returning,Email,Richmond,British Columbia,Canada,1
+228,Liam,Clark,liam.clark942@telus.net,2024-08-17,New,Organic,Halifax,Nova Scotia,Canada,6
+229,Chloe,Young,chloe.young125@telus.net,2024-11-22,Returning,Paid Ads,Burnaby,British Columbia,Canada,3
+230,Daniel,Tremblay,daniel.tremblay763@shaw.ca,2023-11-11,VIP,Organic,Winnipeg,Manitoba,Canada,1
+231,Sophia,Wilson,sophia.wilson219@telus.net,2023-10-16,New,Organic,Quebec City,Quebec,Canada,6
+232,Charlotte,Johnson,charlotte.johnson218@telus.net,2024-08-04,New,Email,Richmond,British Columbia,Canada,6
+233,Emma,White,emma.white564@telus.net,2024-03-21,New,Referral,Winnipeg,Manitoba,Canada,1
+234,Liam,Clark,liam.clark524@shaw.ca,2023-08-31,New,Organic,Halifax,Nova Scotia,Canada,4
+235,Chloe,Taylor,chloe.taylor133@hotmail.com,2023-08-11,VIP,Email,Longueuil,Quebec,Canada,4
+236,Grace,Young,grace.young341@telus.net,2023-03-16,VIP,Paid Ads,Edmonton,Alberta,Canada,6
+237,Laura,Young,laura.young162@hotmail.com,2024-08-28,New,Referral,Richmond,British Columbia,Canada,6
+238,Benjamin,Lee,benjamin.lee193@telus.net,2024-03-16,Returning,Referral,Calgary,Alberta,Canada,2
+239,Hannah,Thompson,hannah.thompson905@gmail.com,2024-03-10,Returning,Organic,Halifax,Nova Scotia,Canada,6
+240,Noah,White,noah.white170@shaw.ca,2024-02-14,New,Referral,Red Deer,Alberta,Canada,4
+241,Rachel,Gagnon,rachel.gagnon932@shaw.ca,2023-08-13,Returning,Email,Winnipeg,Manitoba,Canada,1
+242,Laura,White,laura.white383@gmail.com,2023-03-31,Returning,Paid Ads,Mississauga,Ontario,Canada,5
+243,Laura,Anderson,laura.anderson917@hotmail.com,2023-05-19,VIP,Organic,Red Deer,Alberta,Canada,3
+244,Amelia,Taylor,amelia.taylor115@shaw.ca,2023-09-16,New,Paid Ads,Halifax,Nova Scotia,Canada,2
+245,Liam,Roy,liam.roy116@hotmail.com,2023-09-18,New,Email,Red Deer,Alberta,Canada,2
+246,Amelia,Lee,amelia.lee638@telus.net,2023-01-13,Returning,Email,Burnaby,British Columbia,Canada,1
+247,Emma,Roberts,emma.roberts896@telus.net,2023-11-15,Returning,Organic,Surrey,British Columbia,Canada,1
+248,Liam,Patel,liam.patel615@telus.net,2024-07-03,New,Paid Ads,Winnipeg,Manitoba,Canada,1
+249,Ava,Nguyen,ava.nguyen569@hotmail.com,2024-08-03,Returning,Email,Coquitlam,British Columbia,Canada,2
+250,Chloe,Smith,chloe.smith536@telus.net,2023-11-30,VIP,Referral,Surrey,British Columbia,Canada,1
+251,Hannah,Taylor,hannah.taylor182@gmail.com,2024-08-10,New,Organic,Longueuil,Quebec,Canada,6
+252,Noah,Nguyen,noah.nguyen381@shaw.ca,2024-07-25,Returning,Email,Calgary,Alberta,Canada,3
+253,Daniel,Wilson,daniel.wilson711@telus.net,2023-08-17,New,Paid Ads,Winnipeg,Manitoba,Canada,3
+254,James,Walker,james.walker912@gmail.com,2023-06-14,Returning,Referral,Longueuil,Quebec,Canada,6
+255,Grace,Taylor,grace.taylor562@telus.net,2024-02-14,VIP,Organic,Halifax,Nova Scotia,Canada,5
+256,Natalie,White,natalie.white508@telus.net,2023-02-11,New,Email,Quebec City,Quebec,Canada,6
+257,Lucas,Roberts,lucas.roberts420@telus.net,2024-11-21,Returning,Organic,Richmond,British Columbia,Canada,1
+258,Hannah,Lee,hannah.lee168@telus.net,2024-10-26,New,Referral,Mississauga,Ontario,Canada,2
+259,Sophia,Pelletier,sophia.pelletier198@telus.net,2024-09-07,New,Referral,Vancouver,British Columbia,Canada,3
+260,Zoe,Roberts,zoe.roberts700@gmail.com,2023-07-17,VIP,Referral,Mississauga,Ontario,Canada,3
+261,William,Singh,william.singh462@telus.net,2024-07-07,New,Referral,Toronto,Ontario,Canada,5
+262,Laura,Clark,laura.clark714@hotmail.com,2023-10-16,Returning,Referral,Montreal,Quebec,Canada,3
+263,Ella,Young,ella.young258@shaw.ca,2024-02-24,VIP,Organic,Coquitlam,British Columbia,Canada,1
+264,Hannah,Chen,hannah.chen965@hotmail.com,2024-02-15,Returning,Paid Ads,Calgary,Alberta,Canada,4
+265,William,Young,william.young926@shaw.ca,2024-08-20,Returning,Organic,Richmond,British Columbia,Canada,3
+266,Lucas,Bouchard,lucas.bouchard129@hotmail.com,2023-04-28,Returning,Referral,Winnipeg,Manitoba,Canada,4
+267,Amelia,Lee,amelia.lee459@hotmail.com,2023-08-04,Returning,Referral,Halifax,Nova Scotia,Canada,5
+268,Emily,Martin,emily.martin171@telus.net,2024-10-09,New,Referral,Red Deer,Alberta,Canada,4
+269,Charlotte,Roberts,charlotte.roberts864@gmail.com,2024-11-15,Returning,Referral,Halifax,Nova Scotia,Canada,3
+270,James,Thompson,james.thompson449@telus.net,2023-10-19,Returning,Referral,Longueuil,Quebec,Canada,5
+271,Amelia,Young,amelia.young153@gmail.com,2024-10-21,New,Paid Ads,Ottawa,Ontario,Canada,6
+272,Charlotte,Martin,charlotte.martin378@gmail.com,2023-05-14,New,Referral,Winnipeg,Manitoba,Canada,2
+273,Ethan,Clark,ethan.clark524@telus.net,2023-10-29,Returning,Paid Ads,Longueuil,Quebec,Canada,5
+274,Mia,Thompson,mia.thompson540@hotmail.com,2024-09-07,Returning,Organic,Winnipeg,Manitoba,Canada,1
+275,Emma,Walker,emma.walker146@hotmail.com,2024-09-14,Returning,Referral,Halifax,Nova Scotia,Canada,4
+276,Ava,King,ava.king309@gmail.com,2023-12-22,VIP,Organic,Winnipeg,Manitoba,Canada,5
+277,Ella,Thompson,ella.thompson435@hotmail.com,2023-05-07,New,Email,Edmonton,Alberta,Canada,2
+278,Emma,Smith,emma.smith232@shaw.ca,2023-02-20,Returning,Email,Longueuil,Quebec,Canada,1
+279,Benjamin,Singh,benjamin.singh173@hotmail.com,2024-02-11,New,Organic,Halifax,Nova Scotia,Canada,5
+280,Benjamin,Bouchard,benjamin.bouchard119@telus.net,2023-12-12,Returning,Paid Ads,Halifax,Nova Scotia,Canada,1
+281,Ethan,Morin,ethan.morin687@telus.net,2023-01-01,VIP,Referral,Richmond,British Columbia,Canada,3
+282,Benjamin,Lewis,benjamin.lewis217@hotmail.com,2024-10-22,New,Organic,Halifax,Nova Scotia,Canada,1
+283,Benjamin,Smith,benjamin.smith951@telus.net,2023-07-21,Returning,Organic,Mississauga,Ontario,Canada,2
+284,Grace,Morin,grace.morin964@telus.net,2024-07-28,New,Paid Ads,Toronto,Ontario,Canada,3
+285,Emma,White,emma.white505@gmail.com,2024-01-21,New,Referral,Longueuil,Quebec,Canada,2
+286,Laura,Walker,laura.walker441@shaw.ca,2023-12-13,New,Referral,Halifax,Nova Scotia,Canada,3
+287,Madison,Martin,madison.martin643@gmail.com,2023-06-28,New,Organic,Coquitlam,British Columbia,Canada,4
+288,James,Thompson,james.thompson341@shaw.ca,2024-12-10,New,Organic,Ottawa,Ontario,Canada,1
+289,Emma,Anderson,emma.anderson716@shaw.ca,2023-10-12,Returning,Paid Ads,Mississauga,Ontario,Canada,2
+290,Charlotte,Gagnon,charlotte.gagnon891@shaw.ca,2023-06-05,New,Organic,Halifax,Nova Scotia,Canada,1
+291,Chloe,Chen,chloe.chen984@hotmail.com,2023-03-25,New,Email,Longueuil,Quebec,Canada,6
+292,Chloe,Hall,chloe.hall580@gmail.com,2023-12-08,New,Organic,Edmonton,Alberta,Canada,1
+293,Ethan,Wilson,ethan.wilson460@gmail.com,2023-11-23,Returning,Organic,Ottawa,Ontario,Canada,6
+294,James,Brown,james.brown138@telus.net,2023-08-03,New,Email,Hamilton,Ontario,Canada,3
+295,Olivia,Young,olivia.young729@gmail.com,2023-11-14,New,Organic,Toronto,Ontario,Canada,1
+296,Daniel,Patel,daniel.patel560@gmail.com,2024-03-04,New,Email,Longueuil,Quebec,Canada,3
+297,Julia,Roy,julia.roy719@hotmail.com,2023-01-18,New,Referral,Winnipeg,Manitoba,Canada,2
+298,Oliver,Patel,oliver.patel205@telus.net,2023-07-13,Returning,Organic,Calgary,Alberta,Canada,2
+299,Sarah,Tremblay,sarah.tremblay140@shaw.ca,2023-08-10,Returning,Referral,Toronto,Ontario,Canada,4
+300,Ava,Lewis,ava.lewis472@shaw.ca,2023-09-21,VIP,Referral,Longueuil,Quebec,Canada,3
+301,Liam,Morin,liam.morin893@telus.net,2024-04-02,VIP,Paid Ads,Hamilton,Ontario,Canada,4
+302,Noah,Clark,noah.clark167@hotmail.com,2023-03-28,VIP,Email,Winnipeg,Manitoba,Canada,2
+303,Noah,Taylor,noah.taylor358@hotmail.com,2024-01-26,Returning,Organic,Winnipeg,Manitoba,Canada,1
+304,Zoe,Bouchard,zoe.bouchard183@hotmail.com,2024-03-18,Returning,Email,Halifax,Nova Scotia,Canada,6
+305,Alexander,Clark,alexander.clark771@hotmail.com,2023-08-27,Returning,Referral,Edmonton,Alberta,Canada,1
+306,Grace,Clark,grace.clark417@gmail.com,2024-08-26,New,Paid Ads,Laval,Quebec,Canada,3
+307,William,King,william.king786@shaw.ca,2023-04-06,VIP,Email,Halifax,Nova Scotia,Canada,6
+308,Grace,Pelletier,grace.pelletier620@telus.net,2024-05-05,VIP,Email,Halifax,Nova Scotia,Canada,5
+309,Liam,Smith,liam.smith319@shaw.ca,2023-07-01,New,Referral,Ottawa,Ontario,Canada,2
+310,Noah,Gagnon,noah.gagnon240@shaw.ca,2023-01-07,Returning,Organic,Laval,Quebec,Canada,5
+311,Charlotte,Brown,charlotte.brown777@gmail.com,2023-05-27,New,Referral,Toronto,Ontario,Canada,4
+312,Noah,Tremblay,noah.tremblay257@telus.net,2023-10-12,New,Paid Ads,Winnipeg,Manitoba,Canada,1
+313,Amelia,Martin,amelia.martin144@telus.net,2024-12-09,New,Paid Ads,Halifax,Nova Scotia,Canada,2
+314,Lucas,Young,lucas.young725@telus.net,2024-12-07,Returning,Email,Halifax,Nova Scotia,Canada,4
+315,Ella,Gagnon,ella.gagnon646@shaw.ca,2023-09-18,New,Email,Halifax,Nova Scotia,Canada,6
+316,Ava,Walker,ava.walker794@hotmail.com,2023-08-14,VIP,Referral,Laval,Quebec,Canada,4
+317,Alexander,Lopez,alexander.lopez614@telus.net,2024-05-20,Returning,Email,Quebec City,Quebec,Canada,1
+318,James,Wright,james.wright993@shaw.ca,2024-12-14,Returning,Referral,Calgary,Alberta,Canada,6
+319,Mia,Johnson,mia.johnson667@hotmail.com,2023-05-08,New,Paid Ads,Halifax,Nova Scotia,Canada,3
+320,Julia,Taylor,julia.taylor185@hotmail.com,2023-07-28,New,Email,Halifax,Nova Scotia,Canada,2
+321,Madison,Martin,madison.martin950@shaw.ca,2023-08-25,New,Organic,Hamilton,Ontario,Canada,6
+322,Lucas,Brown,lucas.brown127@hotmail.com,2023-10-05,Returning,Email,Edmonton,Alberta,Canada,2
+323,Lucas,Johnson,lucas.johnson495@shaw.ca,2024-03-17,VIP,Paid Ads,Quebec City,Quebec,Canada,5
+324,Sophia,Young,sophia.young201@hotmail.com,2023-03-16,Returning,Email,Calgary,Alberta,Canada,5
+325,Rachel,Lewis,rachel.lewis240@shaw.ca,2023-02-11,Returning,Paid Ads,Halifax,Nova Scotia,Canada,2
+326,Olivia,Walker,olivia.walker559@telus.net,2023-01-17,New,Paid Ads,Laval,Quebec,Canada,2
+327,Daniel,Smith,daniel.smith320@hotmail.com,2024-08-10,New,Paid Ads,Vancouver,British Columbia,Canada,6
+328,Rachel,Anderson,rachel.anderson894@gmail.com,2023-01-27,VIP,Paid Ads,Winnipeg,Manitoba,Canada,3
+329,Ella,White,ella.white344@gmail.com,2023-06-17,New,Organic,Toronto,Ontario,Canada,1
+330,Lucas,Wilson,lucas.wilson213@gmail.com,2024-03-30,Returning,Organic,Winnipeg,Manitoba,Canada,2
+331,Rachel,Tremblay,rachel.tremblay835@shaw.ca,2024-04-20,Returning,Paid Ads,Montreal,Quebec,Canada,2
+332,Charlotte,Walker,charlotte.walker346@hotmail.com,2023-12-29,New,Organic,Montreal,Quebec,Canada,4
+333,Alexander,Wright,alexander.wright636@gmail.com,2024-01-06,New,Organic,Red Deer,Alberta,Canada,3
+334,Liam,Brown,liam.brown994@telus.net,2023-10-23,New,Email,Winnipeg,Manitoba,Canada,1
+335,Oliver,Johnson,oliver.johnson359@hotmail.com,2023-07-06,New,Referral,Halifax,Nova Scotia,Canada,6
+336,Zoe,Smith,zoe.smith346@hotmail.com,2023-04-08,New,Email,Toronto,Ontario,Canada,6
+337,Zoe,Clark,zoe.clark236@hotmail.com,2024-02-10,Returning,Organic,Halifax,Nova Scotia,Canada,2
+338,Olivia,Young,olivia.young950@shaw.ca,2024-07-01,Returning,Referral,Winnipeg,Manitoba,Canada,3
+339,Madison,Clark,madison.clark930@shaw.ca,2023-09-01,New,Paid Ads,Longueuil,Quebec,Canada,3
+340,Charlotte,Brown,charlotte.brown400@gmail.com,2023-12-31,New,Organic,Halifax,Nova Scotia,Canada,2
+341,Isabella,Johnson,isabella.johnson417@hotmail.com,2024-03-25,New,Organic,Calgary,Alberta,Canada,1
+342,James,King,james.king137@hotmail.com,2024-10-02,New,Referral,Winnipeg,Manitoba,Canada,2
+343,Madison,Wilson,madison.wilson982@hotmail.com,2023-01-25,New,Referral,Edmonton,Alberta,Canada,2
+344,Madison,Johnson,madison.johnson227@hotmail.com,2023-08-17,New,Referral,Halifax,Nova Scotia,Canada,6
+345,Sarah,Young,sarah.young495@telus.net,2023-04-12,Returning,Referral,Longueuil,Quebec,Canada,5
+346,Noah,Martin,noah.martin916@hotmail.com,2023-02-13,Returning,Organic,Longueuil,Quebec,Canada,5
+347,James,Lee,james.lee540@gmail.com,2023-01-17,VIP,Referral,Surrey,British Columbia,Canada,1
+348,Daniel,Pelletier,daniel.pelletier428@hotmail.com,2023-01-12,Returning,Email,Red Deer,Alberta,Canada,3
+349,Emma,Brown,emma.brown556@hotmail.com,2024-10-22,Returning,Organic,Ottawa,Ontario,Canada,6
+350,Daniel,Lewis,daniel.lewis459@telus.net,2024-12-10,VIP,Paid Ads,Laval,Quebec,Canada,1
+351,Ethan,Johnson,ethan.johnson381@telus.net,2023-09-25,New,Paid Ads,Halifax,Nova Scotia,Canada,1
+352,Chloe,Roy,chloe.roy472@telus.net,2024-06-21,New,Paid Ads,Vancouver,British Columbia,Canada,1
+353,James,Roy,james.roy246@gmail.com,2023-03-27,VIP,Paid Ads,Halifax,Nova Scotia,Canada,5
+354,Laura,Nguyen,laura.nguyen229@gmail.com,2024-06-02,New,Email,Halifax,Nova Scotia,Canada,2
+355,Sophia,White,sophia.white492@hotmail.com,2024-04-21,New,Paid Ads,Halifax,Nova Scotia,Canada,4
+356,Alexander,Johnson,alexander.johnson479@telus.net,2024-02-06,Returning,Referral,Winnipeg,Manitoba,Canada,1
+357,Liam,Lopez,liam.lopez642@shaw.ca,2024-06-09,Returning,Referral,Coquitlam,British Columbia,Canada,4
+358,Liam,King,liam.king216@shaw.ca,2023-07-07,New,Referral,Ottawa,Ontario,Canada,5
+359,Emily,Roberts,emily.roberts675@telus.net,2023-06-20,New,Referral,Edmonton,Alberta,Canada,4
+360,Emma,Lee,emma.lee726@shaw.ca,2023-02-08,New,Organic,Hamilton,Ontario,Canada,4
+361,Ella,Lewis,ella.lewis238@gmail.com,2023-12-15,Returning,Organic,Laval,Quebec,Canada,2
+362,Laura,Brown,laura.brown189@telus.net,2023-06-10,VIP,Paid Ads,Laval,Quebec,Canada,4
+363,Sarah,Clark,sarah.clark663@gmail.com,2024-03-25,New,Paid Ads,Ottawa,Ontario,Canada,2
+364,William,Walker,william.walker912@shaw.ca,2024-02-18,New,Organic,Mississauga,Ontario,Canada,5
+365,Liam,Patel,liam.patel911@shaw.ca,2023-10-01,VIP,Referral,Calgary,Alberta,Canada,3
+366,Charlotte,White,charlotte.white667@hotmail.com,2023-02-08,New,Organic,Montreal,Quebec,Canada,6
+367,Alexander,Young,alexander.young167@gmail.com,2024-04-21,New,Email,Laval,Quebec,Canada,1
+368,Ella,King,ella.king887@telus.net,2023-09-29,VIP,Referral,Halifax,Nova Scotia,Canada,1
+369,Lucas,Pelletier,lucas.pelletier424@shaw.ca,2023-09-23,New,Referral,Winnipeg,Manitoba,Canada,4
+370,Chloe,Brown,chloe.brown231@hotmail.com,2024-01-24,Returning,Organic,Longueuil,Quebec,Canada,3
+371,Natalie,Pelletier,natalie.pelletier543@shaw.ca,2024-03-04,New,Paid Ads,Winnipeg,Manitoba,Canada,2
+372,James,Morin,james.morin411@shaw.ca,2023-11-20,Returning,Organic,Vancouver,British Columbia,Canada,1
+373,Amelia,Martin,amelia.martin631@hotmail.com,2024-03-07,New,Paid Ads,Mississauga,Ontario,Canada,1
+374,Natalie,Walker,natalie.walker750@shaw.ca,2024-02-03,New,Email,Richmond,British Columbia,Canada,4
+375,William,Lee,william.lee729@hotmail.com,2023-05-20,VIP,Organic,Red Deer,Alberta,Canada,5
+376,William,Brown,william.brown275@shaw.ca,2024-01-15,New,Email,Winnipeg,Manitoba,Canada,6
+377,Hannah,Nguyen,hannah.nguyen945@gmail.com,2023-12-10,New,Organic,Halifax,Nova Scotia,Canada,2
+378,Laura,Smith,laura.smith766@hotmail.com,2023-06-02,Returning,Email,Vancouver,British Columbia,Canada,3
+379,Isabella,Gagnon,isabella.gagnon609@gmail.com,2024-08-06,VIP,Referral,Winnipeg,Manitoba,Canada,6
+380,Natalie,Wilson,natalie.wilson594@hotmail.com,2023-08-31,Returning,Paid Ads,Winnipeg,Manitoba,Canada,3
+381,Ava,Roy,ava.roy564@hotmail.com,2023-08-14,New,Organic,Halifax,Nova Scotia,Canada,1
+382,Sophia,Lewis,sophia.lewis525@telus.net,2024-05-20,Returning,Paid Ads,Burnaby,British Columbia,Canada,5
+383,Oliver,Lopez,oliver.lopez420@shaw.ca,2023-02-23,VIP,Organic,Edmonton,Alberta,Canada,1
+384,Laura,Lewis,laura.lewis233@telus.net,2023-04-09,Returning,Organic,Ottawa,Ontario,Canada,5
+385,Madison,Young,madison.young347@hotmail.com,2024-05-04,Returning,Paid Ads,Winnipeg,Manitoba,Canada,6
+386,Ethan,Taylor,ethan.taylor244@shaw.ca,2023-05-25,New,Email,Hamilton,Ontario,Canada,3
+387,Emma,Johnson,emma.johnson354@telus.net,2023-04-30,Returning,Organic,Hamilton,Ontario,Canada,1
+388,Laura,Tremblay,laura.tremblay294@hotmail.com,2024-08-02,Returning,Paid Ads,Edmonton,Alberta,Canada,3
+389,Madison,Martin,madison.martin415@telus.net,2024-09-08,New,Referral,Longueuil,Quebec,Canada,4
+390,Oliver,Smith,oliver.smith346@telus.net,2024-06-24,VIP,Organic,Surrey,British Columbia,Canada,2
+391,Isabella,Kaur,isabella.kaur388@gmail.com,2023-11-28,New,Referral,Toronto,Ontario,Canada,1
+392,Oliver,Nguyen,oliver.nguyen649@hotmail.com,2023-09-18,Returning,Paid Ads,Halifax,Nova Scotia,Canada,4
+393,Emily,Bouchard,emily.bouchard370@shaw.ca,2023-02-07,New,Organic,Surrey,British Columbia,Canada,2
+394,Zoe,Young,zoe.young510@gmail.com,2024-03-29,VIP,Email,Quebec City,Quebec,Canada,5
+395,Olivia,Kaur,olivia.kaur666@hotmail.com,2024-08-15,New,Organic,Winnipeg,Manitoba,Canada,6
+396,Ella,Brown,ella.brown945@hotmail.com,2023-12-15,VIP,Referral,Longueuil,Quebec,Canada,2
+397,Daniel,Clark,daniel.clark199@shaw.ca,2023-02-09,Returning,Organic,Winnipeg,Manitoba,Canada,1
+398,Benjamin,Young,benjamin.young873@hotmail.com,2023-09-19,Returning,Email,London,Ontario,Canada,4
+399,Charlotte,Thompson,charlotte.thompson146@gmail.com,2023-12-19,New,Email,Winnipeg,Manitoba,Canada,1
+400,Olivia,Anderson,olivia.anderson631@telus.net,2023-12-29,New,Organic,Halifax,Nova Scotia,Canada,2
+401,Ethan,Anderson,ethan.anderson727@hotmail.com,2023-12-22,Returning,Paid Ads,Winnipeg,Manitoba,Canada,4
+402,Noah,Martin,noah.martin619@hotmail.com,2023-01-07,VIP,Organic,Quebec City,Quebec,Canada,2
+403,Rachel,Patel,rachel.patel586@hotmail.com,2023-01-31,Returning,Paid Ads,Winnipeg,Manitoba,Canada,3
+404,Rachel,Smith,rachel.smith526@gmail.com,2024-03-12,Returning,Referral,Ottawa,Ontario,Canada,2
+405,Alexander,Walker,alexander.walker371@telus.net,2023-12-22,Returning,Organic,Halifax,Nova Scotia,Canada,5
+406,Chloe,Roy,chloe.roy697@gmail.com,2024-06-07,New,Email,Winnipeg,Manitoba,Canada,5
+407,Oliver,Martin,oliver.martin941@shaw.ca,2023-02-15,New,Organic,Winnipeg,Manitoba,Canada,1
+408,Hannah,White,hannah.white295@gmail.com,2023-12-26,New,Email,Coquitlam,British Columbia,Canada,5
+409,Emily,Lopez,emily.lopez522@shaw.ca,2024-11-05,New,Referral,Hamilton,Ontario,Canada,6
+410,Grace,Thompson,grace.thompson822@gmail.com,2024-03-30,Returning,Email,Longueuil,Quebec,Canada,2
+411,Charlotte,Patel,charlotte.patel778@hotmail.com,2024-02-16,Returning,Paid Ads,Red Deer,Alberta,Canada,5
+412,Oliver,Patel,oliver.patel570@shaw.ca,2023-10-05,VIP,Email,Quebec City,Quebec,Canada,4
+413,Julia,Singh,julia.singh792@hotmail.com,2023-08-30,VIP,Email,London,Ontario,Canada,1
+414,Madison,Bouchard,madison.bouchard296@telus.net,2024-06-07,New,Paid Ads,Halifax,Nova Scotia,Canada,6
+415,Ava,Lee,ava.lee404@shaw.ca,2024-12-05,New,Email,Winnipeg,Manitoba,Canada,3
+416,Madison,Walker,madison.walker424@telus.net,2023-07-29,VIP,Email,Halifax,Nova Scotia,Canada,5
+417,Oliver,Young,oliver.young224@hotmail.com,2024-12-16,Returning,Referral,Winnipeg,Manitoba,Canada,4
+418,Alexander,Clark,alexander.clark938@telus.net,2024-01-16,New,Organic,Winnipeg,Manitoba,Canada,3
+419,Liam,Gagnon,liam.gagnon394@gmail.com,2023-02-02,New,Referral,Edmonton,Alberta,Canada,3
+420,Grace,Brown,grace.brown865@hotmail.com,2024-04-03,Returning,Paid Ads,Hamilton,Ontario,Canada,2
+421,Oliver,Thompson,oliver.thompson675@hotmail.com,2024-03-05,New,Email,Red Deer,Alberta,Canada,1
+422,Grace,Lee,grace.lee348@shaw.ca,2023-04-09,New,Referral,Calgary,Alberta,Canada,5
+423,Olivia,Clark,olivia.clark153@shaw.ca,2023-06-06,New,Email,Winnipeg,Manitoba,Canada,2
+424,Emma,Wright,emma.wright797@gmail.com,2024-11-17,Returning,Paid Ads,Hamilton,Ontario,Canada,3
+425,Madison,Anderson,madison.anderson516@shaw.ca,2024-06-22,VIP,Paid Ads,Coquitlam,British Columbia,Canada,4
+426,Chloe,Morin,chloe.morin874@shaw.ca,2024-03-15,New,Organic,Longueuil,Quebec,Canada,5
+427,Ella,Hall,ella.hall767@gmail.com,2023-03-25,New,Organic,Toronto,Ontario,Canada,5
+428,Alexander,White,alexander.white527@shaw.ca,2024-01-22,New,Paid Ads,Winnipeg,Manitoba,Canada,4
+429,Natalie,Pelletier,natalie.pelletier906@telus.net,2024-06-10,Returning,Referral,Calgary,Alberta,Canada,1
+430,Oliver,Martin,oliver.martin109@gmail.com,2024-06-07,Returning,Email,Halifax,Nova Scotia,Canada,3
+431,Ella,Kaur,ella.kaur391@hotmail.com,2024-08-06,New,Organic,Winnipeg,Manitoba,Canada,1
+432,Ethan,Wilson,ethan.wilson971@shaw.ca,2024-08-27,Returning,Referral,Winnipeg,Manitoba,Canada,3
+433,James,Lopez,james.lopez438@gmail.com,2024-11-16,Returning,Referral,Mississauga,Ontario,Canada,3
+434,Amelia,Roberts,amelia.roberts114@shaw.ca,2023-12-15,New,Organic,Quebec City,Quebec,Canada,4
+435,Zoe,Hall,zoe.hall279@shaw.ca,2024-01-13,Returning,Paid Ads,London,Ontario,Canada,1
+436,Daniel,Bouchard,daniel.bouchard627@telus.net,2023-07-25,Returning,Paid Ads,Halifax,Nova Scotia,Canada,4
+437,Noah,Brown,noah.brown243@shaw.ca,2024-06-04,New,Organic,Montreal,Quebec,Canada,4
+438,Oliver,Hall,oliver.hall492@hotmail.com,2024-05-15,New,Email,Calgary,Alberta,Canada,3
+439,Ava,Lopez,ava.lopez696@hotmail.com,2023-03-05,New,Email,Ottawa,Ontario,Canada,5
+440,Zoe,Kaur,zoe.kaur809@hotmail.com,2023-10-01,Returning,Paid Ads,Richmond,British Columbia,Canada,6
+441,Ava,Johnson,ava.johnson414@telus.net,2024-05-09,Returning,Email,Halifax,Nova Scotia,Canada,3
+442,Amelia,King,amelia.king754@gmail.com,2023-10-28,Returning,Email,Halifax,Nova Scotia,Canada,6
+443,Julia,Walker,julia.walker324@shaw.ca,2024-02-29,New,Paid Ads,London,Ontario,Canada,3
+444,Charlotte,Chen,charlotte.chen525@hotmail.com,2023-03-29,New,Email,Edmonton,Alberta,Canada,1
+445,Grace,Singh,grace.singh796@shaw.ca,2023-02-15,New,Email,Laval,Quebec,Canada,6
+446,Madison,Nguyen,madison.nguyen640@telus.net,2023-03-27,New,Organic,Coquitlam,British Columbia,Canada,2
+447,Grace,Young,grace.young163@gmail.com,2023-08-30,New,Paid Ads,Coquitlam,British Columbia,Canada,1
+448,Rachel,Singh,rachel.singh268@shaw.ca,2024-08-11,New,Paid Ads,Winnipeg,Manitoba,Canada,2
+449,Noah,Bouchard,noah.bouchard796@gmail.com,2023-06-15,Returning,Paid Ads,Winnipeg,Manitoba,Canada,2
+450,Isabella,Lewis,isabella.lewis622@gmail.com,2023-05-23,New,Referral,Winnipeg,Manitoba,Canada,4
+451,Ethan,Roy,ethan.roy625@shaw.ca,2023-11-01,VIP,Organic,Surrey,British Columbia,Canada,3
+452,Lucas,Lopez,lucas.lopez788@telus.net,2024-09-26,New,Paid Ads,Winnipeg,Manitoba,Canada,1
+453,Sarah,Walker,sarah.walker360@telus.net,2023-12-25,Returning,Organic,Halifax,Nova Scotia,Canada,2
+454,Rachel,Smith,rachel.smith146@gmail.com,2024-12-16,VIP,Paid Ads,Halifax,Nova Scotia,Canada,4
+455,Lucas,Young,lucas.young170@gmail.com,2023-11-14,Returning,Referral,Halifax,Nova Scotia,Canada,3
+456,Julia,Chen,julia.chen284@telus.net,2024-01-18,New,Email,Richmond,British Columbia,Canada,4
+457,Madison,Anderson,madison.anderson491@hotmail.com,2024-01-25,Returning,Paid Ads,Halifax,Nova Scotia,Canada,3
+458,Ethan,Bouchard,ethan.bouchard799@gmail.com,2023-05-07,Returning,Paid Ads,Longueuil,Quebec,Canada,6
+459,Hannah,Bouchard,hannah.bouchard221@hotmail.com,2023-01-12,New,Organic,Winnipeg,Manitoba,Canada,1
+460,Amelia,Singh,amelia.singh954@shaw.ca,2023-10-28,Returning,Referral,Laval,Quebec,Canada,6
+461,Emily,Gagnon,emily.gagnon789@telus.net,2023-12-22,Returning,Organic,Richmond,British Columbia,Canada,5
+462,Zoe,Singh,zoe.singh353@shaw.ca,2024-11-25,New,Email,Longueuil,Quebec,Canada,2
+463,Ethan,Young,ethan.young996@shaw.ca,2024-10-23,New,Email,Edmonton,Alberta,Canada,1
+464,Zoe,Gagnon,zoe.gagnon729@telus.net,2023-02-28,Returning,Paid Ads,Vancouver,British Columbia,Canada,3
+465,Madison,Morin,madison.morin168@shaw.ca,2023-02-04,New,Paid Ads,Burnaby,British Columbia,Canada,1
+466,Emma,Nguyen,emma.nguyen350@gmail.com,2023-11-28,New,Organic,Surrey,British Columbia,Canada,2
+467,Zoe,Johnson,zoe.johnson652@shaw.ca,2023-01-24,New,Email,Longueuil,Quebec,Canada,4
+468,Isabella,Gagnon,isabella.gagnon339@hotmail.com,2023-12-30,Returning,Email,Burnaby,British Columbia,Canada,2
+469,Rachel,Morin,rachel.morin342@hotmail.com,2024-11-19,Returning,Organic,Halifax,Nova Scotia,Canada,4
+470,Ella,Tremblay,ella.tremblay523@shaw.ca,2023-09-07,Returning,Email,Red Deer,Alberta,Canada,4
+471,Ella,Lee,ella.lee741@shaw.ca,2024-07-31,Returning,Email,Coquitlam,British Columbia,Canada,6
+472,Hannah,Wright,hannah.wright452@gmail.com,2023-10-22,New,Referral,Winnipeg,Manitoba,Canada,2
+473,Chloe,Clark,chloe.clark518@telus.net,2023-09-03,New,Referral,Quebec City,Quebec,Canada,5
+474,Charlotte,Walker,charlotte.walker346@telus.net,2024-06-13,Returning,Referral,Laval,Quebec,Canada,1
+475,Laura,White,laura.white159@telus.net,2024-06-03,New,Paid Ads,Mississauga,Ontario,Canada,2
+476,William,Wright,william.wright348@telus.net,2024-06-09,VIP,Referral,Laval,Quebec,Canada,5
+477,Mia,Thompson,mia.thompson967@telus.net,2024-07-06,New,Email,Toronto,Ontario,Canada,5
+478,Liam,Brown,liam.brown374@gmail.com,2024-09-14,Returning,Referral,Winnipeg,Manitoba,Canada,1
+479,Benjamin,Clark,benjamin.clark292@gmail.com,2023-03-25,Returning,Paid Ads,Winnipeg,Manitoba,Canada,1
+480,Sarah,Gagnon,sarah.gagnon313@telus.net,2023-01-28,New,Organic,Winnipeg,Manitoba,Canada,5
+481,Laura,Morin,laura.morin316@gmail.com,2024-03-24,Returning,Email,Ottawa,Ontario,Canada,4
+482,Julia,Thompson,julia.thompson348@telus.net,2023-10-28,New,Referral,Halifax,Nova Scotia,Canada,3
+483,Grace,Nguyen,grace.nguyen345@telus.net,2023-01-10,New,Paid Ads,Halifax,Nova Scotia,Canada,2
+484,William,Hall,william.hall646@telus.net,2024-08-27,New,Paid Ads,Hamilton,Ontario,Canada,1
+485,Chloe,Young,chloe.young625@hotmail.com,2023-09-14,New,Email,Ottawa,Ontario,Canada,3
+486,Natalie,Chen,natalie.chen879@telus.net,2024-05-27,New,Paid Ads,Montreal,Quebec,Canada,4
+487,Rachel,Hall,rachel.hall523@hotmail.com,2023-10-11,New,Organic,Edmonton,Alberta,Canada,5
+488,Olivia,Kaur,olivia.kaur116@shaw.ca,2023-07-23,New,Organic,Red Deer,Alberta,Canada,4
+489,Mia,Singh,mia.singh256@hotmail.com,2023-06-05,VIP,Paid Ads,Winnipeg,Manitoba,Canada,4
+490,Isabella,Hall,isabella.hall611@shaw.ca,2023-09-08,New,Paid Ads,Edmonton,Alberta,Canada,6
+491,William,Wilson,william.wilson881@hotmail.com,2024-10-03,New,Organic,Halifax,Nova Scotia,Canada,4
+492,Rachel,Chen,rachel.chen272@telus.net,2023-10-09,New,Referral,Halifax,Nova Scotia,Canada,3
+493,Zoe,Roy,zoe.roy837@shaw.ca,2023-07-17,New,Referral,Mississauga,Ontario,Canada,5
+494,William,Chen,william.chen636@gmail.com,2023-06-10,Returning,Paid Ads,Red Deer,Alberta,Canada,4
+495,Olivia,Pelletier,olivia.pelletier522@gmail.com,2024-05-04,New,Paid Ads,Vancouver,British Columbia,Canada,3
+496,Charlotte,Pelletier,charlotte.pelletier824@gmail.com,2023-05-06,VIP,Paid Ads,Halifax,Nova Scotia,Canada,5
+497,Charlotte,Smith,charlotte.smith482@telus.net,2023-07-04,Returning,Email,Red Deer,Alberta,Canada,3
+498,Olivia,Nguyen,olivia.nguyen116@telus.net,2023-06-27,New,Paid Ads,Halifax,Nova Scotia,Canada,4
+499,Emily,Singh,emily.singh117@gmail.com,2023-05-31,New,Organic,Winnipeg,Manitoba,Canada,4
+500,James,Roberts,james.roberts117@hotmail.com,2023-12-02,VIP,Email,London,Ontario,Canada,2
+501,James,Pelletier,james.pelletier209@shaw.ca,2023-12-07,New,Email,Halifax,Nova Scotia,Canada,5
+502,Julia,Taylor,julia.taylor296@shaw.ca,2023-12-18,New,Referral,Winnipeg,Manitoba,Canada,6
+503,Daniel,Patel,daniel.patel914@hotmail.com,2023-06-24,Returning,Referral,Ottawa,Ontario,Canada,2
+504,Benjamin,Brown,benjamin.brown678@telus.net,2024-03-02,Returning,Paid Ads,Hamilton,Ontario,Canada,2
+505,Ava,Lewis,ava.lewis769@gmail.com,2023-05-25,Returning,Referral,Edmonton,Alberta,Canada,1
+506,Laura,Wilson,laura.wilson488@telus.net,2024-08-10,New,Organic,Vancouver,British Columbia,Canada,6
+507,Benjamin,Singh,benjamin.singh819@gmail.com,2023-01-01,New,Email,Montreal,Quebec,Canada,6
+508,Amelia,Brown,amelia.brown679@hotmail.com,2023-02-22,Returning,Organic,Longueuil,Quebec,Canada,2
+509,Laura,Taylor,laura.taylor316@shaw.ca,2023-08-08,New,Email,Winnipeg,Manitoba,Canada,6
+510,Natalie,Bouchard,natalie.bouchard147@hotmail.com,2024-07-28,VIP,Organic,Halifax,Nova Scotia,Canada,1
+511,Julia,Brown,julia.brown283@gmail.com,2024-11-18,Returning,Organic,Halifax,Nova Scotia,Canada,5
+512,Julia,Bouchard,julia.bouchard701@shaw.ca,2023-06-08,Returning,Email,Toronto,Ontario,Canada,2
+513,Charlotte,Gagnon,charlotte.gagnon406@gmail.com,2024-01-16,Returning,Email,Halifax,Nova Scotia,Canada,6
+514,Amelia,Kaur,amelia.kaur793@telus.net,2023-01-19,Returning,Paid Ads,Red Deer,Alberta,Canada,5
+515,Natalie,Singh,natalie.singh909@shaw.ca,2023-10-06,New,Referral,Hamilton,Ontario,Canada,1
+516,Grace,Roberts,grace.roberts154@hotmail.com,2023-12-10,New,Referral,Coquitlam,British Columbia,Canada,1
+517,Emma,Wright,emma.wright719@hotmail.com,2024-10-16,Returning,Paid Ads,Calgary,Alberta,Canada,5
+518,Madison,Nguyen,madison.nguyen130@hotmail.com,2024-08-27,New,Organic,Winnipeg,Manitoba,Canada,1
+519,Chloe,Lee,chloe.lee464@shaw.ca,2023-10-18,New,Paid Ads,Longueuil,Quebec,Canada,3
+520,William,King,william.king187@telus.net,2024-09-13,Returning,Paid Ads,Laval,Quebec,Canada,6
+521,Madison,Nguyen,madison.nguyen184@gmail.com,2023-01-03,Returning,Email,Mississauga,Ontario,Canada,2
+522,Mia,Anderson,mia.anderson424@telus.net,2024-03-29,VIP,Organic,Laval,Quebec,Canada,2
+523,Liam,Taylor,liam.taylor555@hotmail.com,2024-10-26,New,Paid Ads,Vancouver,British Columbia,Canada,5
+524,Liam,Gagnon,liam.gagnon189@shaw.ca,2023-10-27,New,Referral,Toronto,Ontario,Canada,6
+525,Amelia,Wright,amelia.wright126@gmail.com,2024-05-12,Returning,Referral,Longueuil,Quebec,Canada,5
+526,Sophia,Young,sophia.young984@hotmail.com,2023-01-21,New,Referral,Winnipeg,Manitoba,Canada,5
+527,Benjamin,Smith,benjamin.smith897@telus.net,2023-05-04,VIP,Email,Hamilton,Ontario,Canada,3
+528,Sophia,Roberts,sophia.roberts801@shaw.ca,2023-02-20,New,Organic,Winnipeg,Manitoba,Canada,5
+529,Benjamin,Martin,benjamin.martin374@hotmail.com,2024-04-14,New,Paid Ads,Edmonton,Alberta,Canada,5
+530,Oliver,Anderson,oliver.anderson382@telus.net,2024-01-08,New,Referral,Burnaby,British Columbia,Canada,5
+531,Lucas,Walker,lucas.walker357@hotmail.com,2023-06-05,Returning,Email,Montreal,Quebec,Canada,2
+532,Ava,Roberts,ava.roberts568@shaw.ca,2024-02-24,Returning,Paid Ads,Halifax,Nova Scotia,Canada,1
+533,Emma,Anderson,emma.anderson440@telus.net,2024-08-11,New,Organic,Toronto,Ontario,Canada,6
+534,Rachel,Nguyen,rachel.nguyen442@telus.net,2024-04-03,New,Email,Quebec City,Quebec,Canada,2
+535,Lucas,Pelletier,lucas.pelletier428@hotmail.com,2023-02-08,Returning,Referral,Halifax,Nova Scotia,Canada,1
+536,Daniel,Lewis,daniel.lewis281@hotmail.com,2024-03-20,New,Email,Edmonton,Alberta,Canada,4
+537,Benjamin,Hall,benjamin.hall433@shaw.ca,2024-03-27,New,Paid Ads,Hamilton,Ontario,Canada,1
+538,Benjamin,Lee,benjamin.lee677@gmail.com,2023-06-21,New,Paid Ads,Quebec City,Quebec,Canada,3
+539,Isabella,Kaur,isabella.kaur844@gmail.com,2023-05-21,Returning,Paid Ads,Winnipeg,Manitoba,Canada,5
+540,Ethan,Lewis,ethan.lewis951@hotmail.com,2023-08-08,New,Organic,Edmonton,Alberta,Canada,2
+541,Grace,Brown,grace.brown748@shaw.ca,2024-01-13,New,Paid Ads,Longueuil,Quebec,Canada,1
+542,Ella,White,ella.white908@telus.net,2023-06-03,New,Email,Mississauga,Ontario,Canada,2
+543,Benjamin,Brown,benjamin.brown647@telus.net,2024-10-25,Returning,Email,Longueuil,Quebec,Canada,2
+544,James,Morin,james.morin909@gmail.com,2023-05-26,Returning,Paid Ads,Halifax,Nova Scotia,Canada,1
+545,Liam,Lewis,liam.lewis887@gmail.com,2024-03-14,Returning,Referral,Winnipeg,Manitoba,Canada,1
+546,Ava,Clark,ava.clark762@shaw.ca,2024-04-27,VIP,Organic,Halifax,Nova Scotia,Canada,5
+547,Daniel,Johnson,daniel.johnson915@hotmail.com,2024-10-23,New,Referral,Winnipeg,Manitoba,Canada,3
+548,Lucas,Taylor,lucas.taylor327@hotmail.com,2024-03-30,Returning,Paid Ads,Vancouver,British Columbia,Canada,1
+549,James,Roberts,james.roberts483@telus.net,2024-08-12,Returning,Organic,Winnipeg,Manitoba,Canada,6
+550,Benjamin,Lopez,benjamin.lopez125@hotmail.com,2023-11-16,New,Organic,Halifax,Nova Scotia,Canada,2
+551,Oliver,Taylor,oliver.taylor218@gmail.com,2024-07-07,New,Referral,Hamilton,Ontario,Canada,1
+552,Rachel,Roberts,rachel.roberts451@hotmail.com,2024-04-03,VIP,Email,Edmonton,Alberta,Canada,6
+553,Ethan,Roy,ethan.roy456@telus.net,2024-06-14,Returning,Paid Ads,Red Deer,Alberta,Canada,2
+554,Oliver,Taylor,oliver.taylor168@hotmail.com,2023-10-15,New,Paid Ads,Longueuil,Quebec,Canada,4
+555,Ella,Johnson,ella.johnson969@gmail.com,2023-12-19,Returning,Organic,Halifax,Nova Scotia,Canada,1
+556,Noah,Wilson,noah.wilson628@shaw.ca,2023-03-11,New,Email,Burnaby,British Columbia,Canada,5
+557,Amelia,Singh,amelia.singh573@telus.net,2024-07-14,Returning,Email,Edmonton,Alberta,Canada,5
+558,Ava,Roy,ava.roy755@shaw.ca,2024-03-03,New,Organic,Laval,Quebec,Canada,6
+559,Hannah,Wright,hannah.wright560@shaw.ca,2024-12-12,Returning,Paid Ads,Montreal,Quebec,Canada,4
+560,Alexander,Wright,alexander.wright310@shaw.ca,2024-01-16,New,Paid Ads,Montreal,Quebec,Canada,6
+561,Mia,Gagnon,mia.gagnon918@gmail.com,2023-05-10,VIP,Paid Ads,Halifax,Nova Scotia,Canada,6
+562,Laura,Singh,laura.singh301@hotmail.com,2023-07-28,VIP,Referral,Edmonton,Alberta,Canada,6
+563,Ethan,Taylor,ethan.taylor711@hotmail.com,2023-04-26,New,Email,Hamilton,Ontario,Canada,2
+564,Benjamin,Nguyen,benjamin.nguyen460@hotmail.com,2024-07-01,VIP,Organic,Montreal,Quebec,Canada,1
+565,Laura,Lopez,laura.lopez729@hotmail.com,2023-11-07,Returning,Paid Ads,Winnipeg,Manitoba,Canada,6
+566,Alexander,Brown,alexander.brown220@hotmail.com,2024-09-24,Returning,Email,Halifax,Nova Scotia,Canada,1
+567,Ava,Walker,ava.walker810@hotmail.com,2024-02-04,Returning,Email,Burnaby,British Columbia,Canada,3
+568,Charlotte,Patel,charlotte.patel688@shaw.ca,2024-10-17,New,Referral,Longueuil,Quebec,Canada,4
+569,Benjamin,Wright,benjamin.wright668@shaw.ca,2024-09-18,New,Organic,Edmonton,Alberta,Canada,4
+570,Amelia,Chen,amelia.chen422@shaw.ca,2023-09-05,Returning,Organic,Mississauga,Ontario,Canada,6
+571,Rachel,Lopez,rachel.lopez109@hotmail.com,2023-05-29,New,Paid Ads,Winnipeg,Manitoba,Canada,2
+572,Oliver,Anderson,oliver.anderson518@telus.net,2024-03-31,Returning,Organic,Edmonton,Alberta,Canada,5
+573,Hannah,Chen,hannah.chen271@telus.net,2024-04-04,Returning,Paid Ads,Longueuil,Quebec,Canada,5
+574,Sophia,Kaur,sophia.kaur133@hotmail.com,2024-10-15,New,Referral,Burnaby,British Columbia,Canada,2
+575,Mia,White,mia.white899@shaw.ca,2024-07-31,New,Paid Ads,Winnipeg,Manitoba,Canada,3
+576,Ethan,Kaur,ethan.kaur686@gmail.com,2024-03-24,New,Email,Halifax,Nova Scotia,Canada,6
+577,Emma,Lee,emma.lee878@gmail.com,2024-02-11,VIP,Paid Ads,Winnipeg,Manitoba,Canada,6
+578,Zoe,Lopez,zoe.lopez204@telus.net,2024-02-23,Returning,Referral,Winnipeg,Manitoba,Canada,6
+579,Zoe,Pelletier,zoe.pelletier995@hotmail.com,2023-11-12,VIP,Paid Ads,Halifax,Nova Scotia,Canada,4
+580,Olivia,Lopez,olivia.lopez549@gmail.com,2023-08-27,New,Paid Ads,Ottawa,Ontario,Canada,2
+581,Laura,Taylor,laura.taylor981@hotmail.com,2024-03-04,New,Email,Calgary,Alberta,Canada,2
+582,Grace,Nguyen,grace.nguyen730@shaw.ca,2024-10-31,Returning,Referral,Halifax,Nova Scotia,Canada,4
+583,Charlotte,Roy,charlotte.roy683@gmail.com,2024-06-09,New,Organic,Calgary,Alberta,Canada,3
+584,Liam,Singh,liam.singh431@shaw.ca,2024-07-31,New,Referral,London,Ontario,Canada,2
+585,Grace,Walker,grace.walker978@hotmail.com,2023-07-25,VIP,Email,London,Ontario,Canada,2
+586,James,Tremblay,james.tremblay868@shaw.ca,2024-06-20,Returning,Organic,Halifax,Nova Scotia,Canada,6
+587,Sarah,Wright,sarah.wright818@shaw.ca,2023-10-16,VIP,Paid Ads,Richmond,British Columbia,Canada,1
+588,Laura,Anderson,laura.anderson948@hotmail.com,2023-04-20,VIP,Paid Ads,Calgary,Alberta,Canada,5
+589,Ava,Gagnon,ava.gagnon245@telus.net,2024-03-11,Returning,Organic,Halifax,Nova Scotia,Canada,6
+590,Alexander,Wilson,alexander.wilson562@telus.net,2023-01-25,Returning,Paid Ads,Hamilton,Ontario,Canada,5
+591,Sophia,Wilson,sophia.wilson811@hotmail.com,2024-06-20,New,Organic,Surrey,British Columbia,Canada,4
+592,Julia,Tremblay,julia.tremblay435@telus.net,2023-01-12,VIP,Email,Hamilton,Ontario,Canada,4
+593,Alexander,Smith,alexander.smith750@telus.net,2024-10-14,VIP,Email,Halifax,Nova Scotia,Canada,2
+594,Hannah,Lewis,hannah.lewis323@telus.net,2024-03-22,Returning,Organic,Toronto,Ontario,Canada,3
+595,Lucas,Pelletier,lucas.pelletier430@hotmail.com,2023-09-11,Returning,Referral,Edmonton,Alberta,Canada,3
+596,Rachel,Walker,rachel.walker679@shaw.ca,2023-10-14,New,Referral,London,Ontario,Canada,2
+597,Laura,Chen,laura.chen201@gmail.com,2023-12-11,New,Referral,Toronto,Ontario,Canada,2
+598,Chloe,Roy,chloe.roy978@gmail.com,2023-09-10,Returning,Referral,Montreal,Quebec,Canada,1
+599,Amelia,Lopez,amelia.lopez307@telus.net,2023-03-24,New,Organic,Montreal,Quebec,Canada,1
+600,Grace,Morin,grace.morin262@hotmail.com,2023-06-05,New,Referral,Red Deer,Alberta,Canada,4
+601,Laura,Morin,laura.morin356@hotmail.com,2024-08-31,Returning,Referral,Toronto,Ontario,Canada,1
+602,Sophia,Young,sophia.young505@gmail.com,2023-04-11,Returning,Email,Halifax,Nova Scotia,Canada,5
+603,Chloe,Walker,chloe.walker771@telus.net,2024-02-24,Returning,Referral,Halifax,Nova Scotia,Canada,2
+604,Sophia,Lewis,sophia.lewis588@shaw.ca,2023-03-04,Returning,Referral,Vancouver,British Columbia,Canada,6
+605,Sophia,Anderson,sophia.anderson109@telus.net,2024-04-27,New,Email,Winnipeg,Manitoba,Canada,6
+606,Emily,Lewis,emily.lewis810@telus.net,2024-06-09,New,Organic,Toronto,Ontario,Canada,6
+607,Charlotte,Chen,charlotte.chen191@telus.net,2024-10-06,New,Paid Ads,Burnaby,British Columbia,Canada,6
+608,Zoe,Roy,zoe.roy476@hotmail.com,2024-02-09,New,Referral,Vancouver,British Columbia,Canada,5
+609,Natalie,Walker,natalie.walker756@shaw.ca,2024-10-11,Returning,Email,Edmonton,Alberta,Canada,5
+610,Hannah,Anderson,hannah.anderson724@gmail.com,2023-03-06,New,Paid Ads,Coquitlam,British Columbia,Canada,2
+611,Chloe,Martin,chloe.martin743@shaw.ca,2024-05-07,VIP,Paid Ads,Quebec City,Quebec,Canada,5
+612,Zoe,Anderson,zoe.anderson188@shaw.ca,2023-06-22,New,Organic,Longueuil,Quebec,Canada,3
+613,Natalie,Taylor,natalie.taylor459@telus.net,2024-05-11,Returning,Referral,Calgary,Alberta,Canada,5
+614,Lucas,Hall,lucas.hall760@hotmail.com,2023-11-04,New,Organic,Calgary,Alberta,Canada,2
+615,Sophia,White,sophia.white968@gmail.com,2024-05-24,New,Email,Winnipeg,Manitoba,Canada,4
+616,Laura,Clark,laura.clark865@shaw.ca,2024-08-16,New,Organic,Mississauga,Ontario,Canada,5
+617,Benjamin,Walker,benjamin.walker606@shaw.ca,2024-03-11,VIP,Paid Ads,Halifax,Nova Scotia,Canada,5
+618,Benjamin,Taylor,benjamin.taylor640@gmail.com,2024-07-07,VIP,Organic,Edmonton,Alberta,Canada,1
+619,Natalie,Smith,natalie.smith496@shaw.ca,2023-04-30,New,Organic,Ottawa,Ontario,Canada,2
+620,Laura,Pelletier,laura.pelletier659@hotmail.com,2024-07-25,New,Organic,Winnipeg,Manitoba,Canada,2
+621,Hannah,Martin,hannah.martin701@gmail.com,2023-08-30,New,Email,Montreal,Quebec,Canada,5
+622,Sophia,Smith,sophia.smith161@gmail.com,2023-10-11,Returning,Paid Ads,Mississauga,Ontario,Canada,3
+623,Sarah,King,sarah.king533@telus.net,2023-07-19,New,Organic,Winnipeg,Manitoba,Canada,4
+624,Grace,King,grace.king384@shaw.ca,2023-06-22,New,Email,Coquitlam,British Columbia,Canada,4
+625,Sophia,Walker,sophia.walker927@shaw.ca,2024-03-24,New,Email,Coquitlam,British Columbia,Canada,5
+626,Charlotte,Singh,charlotte.singh417@gmail.com,2023-07-19,New,Referral,Hamilton,Ontario,Canada,1
+627,Grace,Wright,grace.wright350@gmail.com,2024-09-12,Returning,Referral,Halifax,Nova Scotia,Canada,1
+628,Sophia,Morin,sophia.morin726@telus.net,2024-10-06,Returning,Email,Montreal,Quebec,Canada,2
+629,Daniel,Johnson,daniel.johnson112@gmail.com,2024-01-01,VIP,Email,Mississauga,Ontario,Canada,3
+630,Grace,Anderson,grace.anderson608@shaw.ca,2024-01-26,Returning,Referral,Halifax,Nova Scotia,Canada,3
+631,Liam,Patel,liam.patel480@shaw.ca,2024-03-17,New,Paid Ads,Winnipeg,Manitoba,Canada,6
+632,Charlotte,Roberts,charlotte.roberts443@gmail.com,2023-12-18,New,Paid Ads,Toronto,Ontario,Canada,6
+633,Sarah,Wright,sarah.wright369@gmail.com,2024-09-14,New,Email,London,Ontario,Canada,1
+634,Grace,Kaur,grace.kaur566@telus.net,2023-08-11,Returning,Email,Halifax,Nova Scotia,Canada,1
+635,James,Young,james.young476@shaw.ca,2023-11-25,New,Paid Ads,Surrey,British Columbia,Canada,3
+636,Amelia,Lee,amelia.lee333@gmail.com,2024-07-14,New,Email,Coquitlam,British Columbia,Canada,6
+637,Zoe,Patel,zoe.patel350@gmail.com,2024-09-08,Returning,Paid Ads,Vancouver,British Columbia,Canada,6
+638,Olivia,Chen,olivia.chen283@shaw.ca,2024-01-05,New,Email,Hamilton,Ontario,Canada,4
+639,Julia,Bouchard,julia.bouchard329@telus.net,2024-05-02,New,Organic,Coquitlam,British Columbia,Canada,5
+640,Noah,White,noah.white945@hotmail.com,2023-06-09,Returning,Email,Quebec City,Quebec,Canada,4
+641,Sophia,Kaur,sophia.kaur283@gmail.com,2023-08-14,New,Referral,Toronto,Ontario,Canada,1
+642,Ava,Roy,ava.roy170@telus.net,2024-02-06,New,Organic,Winnipeg,Manitoba,Canada,3
+643,Natalie,Lopez,natalie.lopez188@hotmail.com,2023-05-04,New,Paid Ads,Ottawa,Ontario,Canada,6
+644,William,Lopez,william.lopez398@shaw.ca,2024-02-18,VIP,Email,Richmond,British Columbia,Canada,3
+645,Alexander,Roy,alexander.roy575@shaw.ca,2024-11-16,New,Organic,London,Ontario,Canada,3
+646,Liam,Kaur,liam.kaur254@shaw.ca,2023-05-02,Returning,Referral,Laval,Quebec,Canada,1
+647,Emily,Morin,emily.morin654@shaw.ca,2023-08-21,Returning,Organic,Montreal,Quebec,Canada,5
+648,Liam,Wilson,liam.wilson101@hotmail.com,2024-10-22,VIP,Paid Ads,Halifax,Nova Scotia,Canada,6
+649,Madison,Clark,madison.clark310@gmail.com,2024-10-08,New,Email,Quebec City,Quebec,Canada,3
+650,James,White,james.white245@gmail.com,2023-09-13,Returning,Referral,Longueuil,Quebec,Canada,1
+651,Grace,Lee,grace.lee965@shaw.ca,2024-06-17,Returning,Organic,Vancouver,British Columbia,Canada,2
+652,James,Wright,james.wright865@telus.net,2024-06-24,Returning,Email,Halifax,Nova Scotia,Canada,3
+653,Sophia,Kaur,sophia.kaur752@shaw.ca,2024-07-15,New,Referral,Coquitlam,British Columbia,Canada,4
+654,Rachel,King,rachel.king545@gmail.com,2024-04-05,New,Organic,Coquitlam,British Columbia,Canada,5
+655,Hannah,Anderson,hannah.anderson971@hotmail.com,2023-12-19,Returning,Referral,Edmonton,Alberta,Canada,6
+656,Noah,Morin,noah.morin563@hotmail.com,2023-01-19,New,Paid Ads,Quebec City,Quebec,Canada,4
+657,Mia,White,mia.white898@shaw.ca,2024-01-02,VIP,Organic,Burnaby,British Columbia,Canada,2
+658,Madison,Kaur,madison.kaur268@gmail.com,2023-07-05,New,Organic,Burnaby,British Columbia,Canada,4
+659,Ethan,Lopez,ethan.lopez648@gmail.com,2023-09-18,VIP,Email,Hamilton,Ontario,Canada,3
+660,Liam,Gagnon,liam.gagnon574@hotmail.com,2023-08-12,VIP,Paid Ads,Edmonton,Alberta,Canada,3
+661,Mia,Bouchard,mia.bouchard926@shaw.ca,2024-04-17,Returning,Email,Vancouver,British Columbia,Canada,6
+662,Hannah,Walker,hannah.walker955@shaw.ca,2023-08-19,Returning,Paid Ads,Halifax,Nova Scotia,Canada,1
+663,Laura,Hall,laura.hall464@shaw.ca,2023-04-22,Returning,Email,Calgary,Alberta,Canada,4
+664,Benjamin,Patel,benjamin.patel939@hotmail.com,2024-08-20,Returning,Paid Ads,Richmond,British Columbia,Canada,6
+665,Amelia,Smith,amelia.smith196@shaw.ca,2023-01-12,Returning,Paid Ads,Longueuil,Quebec,Canada,1
+666,Ethan,Taylor,ethan.taylor163@gmail.com,2024-02-22,Returning,Email,Calgary,Alberta,Canada,3
+667,Rachel,Gagnon,rachel.gagnon943@shaw.ca,2023-03-11,VIP,Organic,Calgary,Alberta,Canada,2
+668,Benjamin,Young,benjamin.young932@hotmail.com,2023-05-12,New,Email,Halifax,Nova Scotia,Canada,4
+669,Sophia,Smith,sophia.smith928@telus.net,2024-06-19,New,Paid Ads,Burnaby,British Columbia,Canada,5
+670,Charlotte,Brown,charlotte.brown572@gmail.com,2024-04-13,New,Referral,Toronto,Ontario,Canada,5
+671,Olivia,Martin,olivia.martin608@telus.net,2023-07-21,Returning,Email,Winnipeg,Manitoba,Canada,4
+672,Emily,King,emily.king462@shaw.ca,2023-02-26,New,Organic,Halifax,Nova Scotia,Canada,4
+673,Isabella,Morin,isabella.morin556@hotmail.com,2023-08-09,Returning,Email,Edmonton,Alberta,Canada,5
+674,Natalie,Anderson,natalie.anderson762@shaw.ca,2023-12-02,New,Email,Coquitlam,British Columbia,Canada,4
+675,Ella,Chen,ella.chen189@gmail.com,2024-06-19,Returning,Paid Ads,Longueuil,Quebec,Canada,3
+676,Mia,King,mia.king758@shaw.ca,2023-06-08,New,Referral,Edmonton,Alberta,Canada,1
+677,Natalie,Roy,natalie.roy491@gmail.com,2023-11-15,New,Paid Ads,Winnipeg,Manitoba,Canada,5
+678,Sarah,Lewis,sarah.lewis452@telus.net,2023-03-17,Returning,Paid Ads,Hamilton,Ontario,Canada,5
+679,Julia,Kaur,julia.kaur376@telus.net,2024-12-04,Returning,Organic,Winnipeg,Manitoba,Canada,4
+680,Amelia,Smith,amelia.smith130@shaw.ca,2023-12-16,New,Referral,London,Ontario,Canada,1
+681,Natalie,Roy,natalie.roy642@telus.net,2023-05-26,New,Organic,Toronto,Ontario,Canada,3
+682,Liam,Gagnon,liam.gagnon202@shaw.ca,2024-04-20,Returning,Referral,Winnipeg,Manitoba,Canada,1
+683,Ava,Clark,ava.clark882@gmail.com,2023-04-28,Returning,Organic,Edmonton,Alberta,Canada,6
+684,Ava,Kaur,ava.kaur280@shaw.ca,2023-09-17,New,Referral,Quebec City,Quebec,Canada,3
+685,Ava,Kaur,ava.kaur820@gmail.com,2024-02-03,New,Paid Ads,Ottawa,Ontario,Canada,4
+686,Grace,Young,grace.young956@shaw.ca,2023-03-16,Returning,Paid Ads,Winnipeg,Manitoba,Canada,5
+687,Sarah,Tremblay,sarah.tremblay602@shaw.ca,2024-05-19,Returning,Paid Ads,Quebec City,Quebec,Canada,2
+688,Olivia,Brown,olivia.brown120@shaw.ca,2024-09-10,New,Paid Ads,Burnaby,British Columbia,Canada,6
+689,James,Chen,james.chen925@shaw.ca,2024-12-10,Returning,Organic,Richmond,British Columbia,Canada,3
+690,Charlotte,Hall,charlotte.hall160@hotmail.com,2024-03-01,VIP,Paid Ads,Halifax,Nova Scotia,Canada,3
+691,Emily,Anderson,emily.anderson966@gmail.com,2024-08-03,Returning,Organic,Winnipeg,Manitoba,Canada,4
+692,James,Bouchard,james.bouchard821@hotmail.com,2023-02-18,New,Email,Toronto,Ontario,Canada,5
+693,Hannah,King,hannah.king409@hotmail.com,2023-12-22,New,Email,Winnipeg,Manitoba,Canada,6
+694,Noah,Anderson,noah.anderson910@telus.net,2023-10-22,New,Organic,Red Deer,Alberta,Canada,1
+695,Chloe,Chen,chloe.chen824@shaw.ca,2024-09-03,Returning,Paid Ads,Halifax,Nova Scotia,Canada,6
+696,William,Lewis,william.lewis781@shaw.ca,2023-12-30,New,Referral,Winnipeg,Manitoba,Canada,4
+697,Alexander,Pelletier,alexander.pelletier851@hotmail.com,2024-10-25,New,Organic,Edmonton,Alberta,Canada,6
+698,Grace,Walker,grace.walker818@gmail.com,2024-02-12,New,Paid Ads,Calgary,Alberta,Canada,6
+699,Alexander,King,alexander.king716@shaw.ca,2023-08-08,New,Referral,Winnipeg,Manitoba,Canada,4
+700,Noah,Morin,noah.morin608@gmail.com,2023-09-27,New,Email,Winnipeg,Manitoba,Canada,6
+701,Charlotte,Hall,charlotte.hall455@shaw.ca,2024-09-09,Returning,Paid Ads,Halifax,Nova Scotia,Canada,4
+702,Noah,Martin,noah.martin557@hotmail.com,2023-08-16,New,Email,Halifax,Nova Scotia,Canada,2
+703,Emily,Lee,emily.lee458@gmail.com,2023-09-07,Returning,Organic,Calgary,Alberta,Canada,4
+704,Mia,Roy,mia.roy495@gmail.com,2024-11-20,New,Referral,Vancouver,British Columbia,Canada,6
+705,Ethan,Roberts,ethan.roberts604@telus.net,2024-09-30,New,Email,Laval,Quebec,Canada,3
+706,Natalie,King,natalie.king203@telus.net,2023-05-28,New,Email,London,Ontario,Canada,5
+707,Rachel,Chen,rachel.chen562@shaw.ca,2024-03-01,Returning,Email,Winnipeg,Manitoba,Canada,6
+708,Sophia,Roy,sophia.roy426@gmail.com,2023-11-09,New,Organic,Richmond,British Columbia,Canada,2
+709,Mia,Taylor,mia.taylor484@shaw.ca,2024-08-03,Returning,Paid Ads,Richmond,British Columbia,Canada,5
+710,Amelia,Roberts,amelia.roberts446@gmail.com,2023-11-01,New,Organic,Coquitlam,British Columbia,Canada,5
+711,Daniel,Nguyen,daniel.nguyen769@telus.net,2024-01-19,VIP,Organic,Montreal,Quebec,Canada,1
+712,Amelia,Nguyen,amelia.nguyen203@gmail.com,2023-06-10,New,Email,Laval,Quebec,Canada,2
+713,Noah,Thompson,noah.thompson776@hotmail.com,2023-11-23,Returning,Organic,Edmonton,Alberta,Canada,1
+714,Ella,Walker,ella.walker502@gmail.com,2024-10-25,New,Paid Ads,Calgary,Alberta,Canada,4
+715,Alexander,Singh,alexander.singh469@gmail.com,2023-02-12,New,Paid Ads,Laval,Quebec,Canada,1
+716,Emily,Wright,emily.wright304@telus.net,2024-06-12,Returning,Paid Ads,Richmond,British Columbia,Canada,6
+717,Emma,Smith,emma.smith183@hotmail.com,2024-09-01,New,Organic,Calgary,Alberta,Canada,5
+718,Oliver,Bouchard,oliver.bouchard582@telus.net,2024-05-28,Returning,Organic,Richmond,British Columbia,Canada,2
+719,Oliver,Tremblay,oliver.tremblay757@gmail.com,2023-04-08,VIP,Referral,Halifax,Nova Scotia,Canada,5
+720,William,King,william.king478@telus.net,2024-11-09,Returning,Email,Edmonton,Alberta,Canada,6
+721,Amelia,Lopez,amelia.lopez576@telus.net,2024-07-24,New,Email,Richmond,British Columbia,Canada,3
+722,Mia,White,mia.white254@gmail.com,2024-07-14,New,Referral,London,Ontario,Canada,5
+723,Madison,Lewis,madison.lewis784@gmail.com,2024-06-15,Returning,Email,Halifax,Nova Scotia,Canada,6
+724,Liam,Roy,liam.roy666@shaw.ca,2023-08-02,New,Email,Winnipeg,Manitoba,Canada,5
+725,Olivia,Pelletier,olivia.pelletier686@telus.net,2023-03-20,VIP,Email,Longueuil,Quebec,Canada,6
+726,Natalie,White,natalie.white504@gmail.com,2024-01-16,New,Paid Ads,Quebec City,Quebec,Canada,4
+727,Natalie,Bouchard,natalie.bouchard223@shaw.ca,2023-01-26,Returning,Paid Ads,Halifax,Nova Scotia,Canada,1
+728,Madison,Lopez,madison.lopez927@shaw.ca,2023-09-11,New,Email,Calgary,Alberta,Canada,1
+729,Isabella,Anderson,isabella.anderson799@gmail.com,2024-07-07,New,Paid Ads,Surrey,British Columbia,Canada,4
+730,Lucas,Thompson,lucas.thompson427@hotmail.com,2024-08-23,New,Referral,Halifax,Nova Scotia,Canada,3
+731,Julia,Roberts,julia.roberts669@telus.net,2024-12-09,VIP,Email,Vancouver,British Columbia,Canada,4
+732,Benjamin,Singh,benjamin.singh994@telus.net,2024-08-08,New,Email,Ottawa,Ontario,Canada,4
+733,Emily,Roy,emily.roy524@gmail.com,2023-10-24,Returning,Organic,Halifax,Nova Scotia,Canada,1
+734,Charlotte,Anderson,charlotte.anderson676@gmail.com,2024-07-12,New,Paid Ads,Winnipeg,Manitoba,Canada,2
+735,Madison,Taylor,madison.taylor998@hotmail.com,2024-07-07,New,Paid Ads,London,Ontario,Canada,4
+736,Lucas,Lee,lucas.lee138@telus.net,2024-01-21,New,Referral,Longueuil,Quebec,Canada,5
+737,Amelia,Lee,amelia.lee139@telus.net,2023-09-16,VIP,Referral,Laval,Quebec,Canada,6
+738,Benjamin,Tremblay,benjamin.tremblay863@gmail.com,2023-08-08,New,Email,Mississauga,Ontario,Canada,5
+739,Oliver,Morin,oliver.morin445@gmail.com,2024-11-18,New,Email,Ottawa,Ontario,Canada,6
+740,Rachel,Roy,rachel.roy963@hotmail.com,2024-01-01,New,Email,Ottawa,Ontario,Canada,1
+741,Oliver,Bouchard,oliver.bouchard237@shaw.ca,2024-06-07,Returning,Referral,Halifax,Nova Scotia,Canada,1
+742,Ella,Roberts,ella.roberts846@hotmail.com,2024-07-28,New,Organic,Quebec City,Quebec,Canada,5
+743,Lucas,Nguyen,lucas.nguyen552@shaw.ca,2024-10-31,Returning,Email,Halifax,Nova Scotia,Canada,4
+744,Isabella,Morin,isabella.morin940@hotmail.com,2023-04-12,VIP,Referral,Longueuil,Quebec,Canada,3
+745,Olivia,Patel,olivia.patel826@hotmail.com,2024-06-20,New,Email,Calgary,Alberta,Canada,1
+746,James,King,james.king277@gmail.com,2024-10-27,New,Organic,Red Deer,Alberta,Canada,3
+747,Isabella,Tremblay,isabella.tremblay133@shaw.ca,2024-12-01,New,Organic,Calgary,Alberta,Canada,4
+748,Ethan,Johnson,ethan.johnson477@hotmail.com,2024-04-30,Returning,Referral,Mississauga,Ontario,Canada,4
+749,Rachel,Lopez,rachel.lopez797@gmail.com,2024-01-12,New,Referral,Winnipeg,Manitoba,Canada,4
+750,Emily,White,emily.white281@telus.net,2024-04-01,New,Paid Ads,Hamilton,Ontario,Canada,6
+751,Laura,Chen,laura.chen267@hotmail.com,2023-05-11,VIP,Paid Ads,Winnipeg,Manitoba,Canada,2
+752,Rachel,Tremblay,rachel.tremblay128@hotmail.com,2023-10-04,New,Paid Ads,Toronto,Ontario,Canada,6
+753,Benjamin,Johnson,benjamin.johnson977@shaw.ca,2024-02-21,New,Email,Red Deer,Alberta,Canada,2
+754,Ava,Wilson,ava.wilson375@shaw.ca,2023-02-10,Returning,Paid Ads,Red Deer,Alberta,Canada,2
+755,Chloe,Wright,chloe.wright585@gmail.com,2023-03-16,Returning,Email,Winnipeg,Manitoba,Canada,6
+756,Julia,Anderson,julia.anderson329@gmail.com,2023-09-30,Returning,Referral,Halifax,Nova Scotia,Canada,6
+757,Mia,Nguyen,mia.nguyen485@telus.net,2023-10-16,New,Email,Ottawa,Ontario,Canada,2
+758,Laura,Young,laura.young577@shaw.ca,2023-03-07,New,Email,Quebec City,Quebec,Canada,4
+759,Ella,Clark,ella.clark107@gmail.com,2023-02-16,New,Organic,Winnipeg,Manitoba,Canada,4
+760,James,Clark,james.clark405@hotmail.com,2023-05-04,VIP,Referral,London,Ontario,Canada,3
+761,Hannah,Taylor,hannah.taylor383@hotmail.com,2024-05-30,VIP,Referral,Montreal,Quebec,Canada,6
+762,Chloe,Hall,chloe.hall292@hotmail.com,2023-05-23,New,Referral,Ottawa,Ontario,Canada,1
+763,Charlotte,Patel,charlotte.patel776@telus.net,2024-09-20,New,Email,Calgary,Alberta,Canada,6
+764,Noah,Clark,noah.clark771@gmail.com,2024-04-04,New,Organic,Red Deer,Alberta,Canada,3
+765,Oliver,Walker,oliver.walker497@telus.net,2023-07-26,New,Organic,Hamilton,Ontario,Canada,6
+766,Zoe,Johnson,zoe.johnson843@hotmail.com,2023-09-08,New,Referral,Winnipeg,Manitoba,Canada,3
+767,Grace,White,grace.white619@hotmail.com,2023-12-20,New,Paid Ads,Halifax,Nova Scotia,Canada,6
+768,Ella,Bouchard,ella.bouchard400@shaw.ca,2024-09-03,New,Paid Ads,Red Deer,Alberta,Canada,3
+769,Emma,Chen,emma.chen842@hotmail.com,2024-10-20,VIP,Paid Ads,Red Deer,Alberta,Canada,3
+770,Sarah,Singh,sarah.singh770@hotmail.com,2024-08-18,New,Email,Red Deer,Alberta,Canada,6
+771,Sophia,White,sophia.white530@hotmail.com,2023-06-03,VIP,Paid Ads,Mississauga,Ontario,Canada,1
+772,Sarah,Tremblay,sarah.tremblay699@hotmail.com,2023-03-24,VIP,Referral,Ottawa,Ontario,Canada,2
+773,Ella,Lopez,ella.lopez987@gmail.com,2023-10-02,Returning,Email,Surrey,British Columbia,Canada,5
+774,Chloe,Kaur,chloe.kaur299@telus.net,2023-11-23,Returning,Organic,Winnipeg,Manitoba,Canada,3
+775,James,Taylor,james.taylor523@hotmail.com,2024-09-27,Returning,Email,Halifax,Nova Scotia,Canada,3
+776,Olivia,Bouchard,olivia.bouchard450@shaw.ca,2024-02-02,New,Organic,Calgary,Alberta,Canada,5
+777,Lucas,Kaur,lucas.kaur983@hotmail.com,2024-11-06,New,Paid Ads,Laval,Quebec,Canada,1
+778,Grace,Martin,grace.martin746@hotmail.com,2023-11-16,Returning,Email,Surrey,British Columbia,Canada,1
+779,Amelia,Hall,amelia.hall562@gmail.com,2024-10-15,Returning,Referral,Halifax,Nova Scotia,Canada,1
+780,Mia,Thompson,mia.thompson601@shaw.ca,2023-11-30,Returning,Email,Red Deer,Alberta,Canada,3
+781,Sarah,Gagnon,sarah.gagnon748@telus.net,2023-03-09,VIP,Paid Ads,Burnaby,British Columbia,Canada,1
+782,Lucas,King,lucas.king104@telus.net,2024-09-28,Returning,Organic,Longueuil,Quebec,Canada,5
+783,Olivia,Singh,olivia.singh114@hotmail.com,2023-03-03,Returning,Paid Ads,Red Deer,Alberta,Canada,4
+784,Natalie,Hall,natalie.hall792@gmail.com,2023-02-04,New,Paid Ads,Winnipeg,Manitoba,Canada,2
+785,Emily,Wilson,emily.wilson810@shaw.ca,2024-04-13,Returning,Organic,Halifax,Nova Scotia,Canada,4
+786,Natalie,Young,natalie.young492@gmail.com,2024-11-14,New,Organic,Mississauga,Ontario,Canada,1
+787,James,Kaur,james.kaur943@gmail.com,2024-03-20,New,Referral,Mississauga,Ontario,Canada,1
+788,Olivia,Walker,olivia.walker544@hotmail.com,2024-04-26,VIP,Organic,Hamilton,Ontario,Canada,5
+789,Natalie,Clark,natalie.clark467@telus.net,2023-12-09,New,Email,Edmonton,Alberta,Canada,6
+790,Madison,Thompson,madison.thompson333@gmail.com,2024-08-10,New,Referral,Edmonton,Alberta,Canada,1
+791,Ava,Roberts,ava.roberts703@gmail.com,2024-10-20,VIP,Organic,Calgary,Alberta,Canada,6
+792,James,Martin,james.martin484@gmail.com,2023-08-20,VIP,Paid Ads,Richmond,British Columbia,Canada,4
+793,Natalie,Wilson,natalie.wilson708@gmail.com,2024-05-19,Returning,Email,London,Ontario,Canada,4
+794,Olivia,Clark,olivia.clark806@gmail.com,2024-06-23,New,Email,Vancouver,British Columbia,Canada,5
+795,Emma,Wright,emma.wright660@gmail.com,2024-08-01,Returning,Paid Ads,Longueuil,Quebec,Canada,2
+796,Mia,Chen,mia.chen811@shaw.ca,2023-12-13,Returning,Organic,Halifax,Nova Scotia,Canada,6
+797,Hannah,Wilson,hannah.wilson777@telus.net,2023-09-19,VIP,Paid Ads,Richmond,British Columbia,Canada,1
+798,Emma,Clark,emma.clark528@shaw.ca,2024-07-26,New,Paid Ads,Winnipeg,Manitoba,Canada,3
+799,Rachel,Tremblay,rachel.tremblay389@gmail.com,2024-10-09,New,Paid Ads,Coquitlam,British Columbia,Canada,1
+800,Emma,Roy,emma.roy723@shaw.ca,2024-03-16,New,Organic,Surrey,British Columbia,Canada,3
+801,Isabella,Gagnon,isabella.gagnon466@shaw.ca,2024-02-28,New,Email,London,Ontario,Canada,5
+802,Grace,Wright,grace.wright661@gmail.com,2024-11-19,Returning,Paid Ads,Mississauga,Ontario,Canada,1
+803,Oliver,Morin,oliver.morin438@telus.net,2023-10-29,New,Email,Red Deer,Alberta,Canada,3
+804,Ava,Smith,ava.smith955@gmail.com,2024-02-08,New,Paid Ads,Vancouver,British Columbia,Canada,5
+805,Alexander,Clark,alexander.clark898@gmail.com,2024-12-04,Returning,Referral,Laval,Quebec,Canada,6
+806,James,Brown,james.brown759@hotmail.com,2024-01-17,New,Email,Halifax,Nova Scotia,Canada,5
+807,Ava,Lopez,ava.lopez151@telus.net,2024-07-06,Returning,Organic,Ottawa,Ontario,Canada,3
+808,Emma,Pelletier,emma.pelletier468@hotmail.com,2024-07-24,Returning,Organic,Calgary,Alberta,Canada,5
+809,Sarah,Clark,sarah.clark197@gmail.com,2024-12-04,Returning,Referral,Hamilton,Ontario,Canada,3
+810,Laura,Gagnon,laura.gagnon779@shaw.ca,2023-11-29,VIP,Organic,Vancouver,British Columbia,Canada,1
+811,Chloe,Martin,chloe.martin736@telus.net,2023-06-17,New,Email,Ottawa,Ontario,Canada,5
+812,Mia,Tremblay,mia.tremblay934@hotmail.com,2023-04-19,Returning,Email,Halifax,Nova Scotia,Canada,1
+813,Noah,Martin,noah.martin567@telus.net,2023-10-28,Returning,Email,Surrey,British Columbia,Canada,2
+814,Mia,Pelletier,mia.pelletier764@telus.net,2024-03-28,New,Referral,Longueuil,Quebec,Canada,6
+815,Natalie,Roy,natalie.roy812@shaw.ca,2023-12-09,Returning,Referral,Calgary,Alberta,Canada,1
+816,Zoe,Johnson,zoe.johnson704@telus.net,2024-11-17,VIP,Paid Ads,Calgary,Alberta,Canada,2
+817,Oliver,Roy,oliver.roy725@shaw.ca,2023-11-20,New,Referral,Winnipeg,Manitoba,Canada,4
+818,Benjamin,Gagnon,benjamin.gagnon983@gmail.com,2024-08-16,New,Referral,London,Ontario,Canada,4
+819,Hannah,Tremblay,hannah.tremblay599@telus.net,2023-03-25,VIP,Email,Halifax,Nova Scotia,Canada,2
+820,Emma,Tremblay,emma.tremblay164@gmail.com,2024-10-16,Returning,Paid Ads,Longueuil,Quebec,Canada,5
+821,Mia,Wilson,mia.wilson785@shaw.ca,2023-04-15,Returning,Referral,Toronto,Ontario,Canada,3
+822,Laura,Hall,laura.hall777@telus.net,2023-09-23,Returning,Referral,Winnipeg,Manitoba,Canada,6
+823,Zoe,White,zoe.white252@telus.net,2024-12-13,Returning,Email,Quebec City,Quebec,Canada,3
+824,Rachel,Pelletier,rachel.pelletier758@gmail.com,2023-03-25,Returning,Organic,Winnipeg,Manitoba,Canada,2
+825,Julia,Martin,julia.martin990@telus.net,2024-08-27,New,Email,Winnipeg,Manitoba,Canada,6
+826,Amelia,Brown,amelia.brown438@shaw.ca,2023-10-23,Returning,Organic,Quebec City,Quebec,Canada,6
+827,Mia,Johnson,mia.johnson512@telus.net,2023-09-25,New,Organic,Winnipeg,Manitoba,Canada,5
+828,Rachel,White,rachel.white920@telus.net,2023-12-23,New,Organic,Surrey,British Columbia,Canada,1
+829,Alexander,Lopez,alexander.lopez423@telus.net,2023-10-06,Returning,Paid Ads,Surrey,British Columbia,Canada,4
+830,Emma,Chen,emma.chen513@gmail.com,2023-10-04,Returning,Paid Ads,Halifax,Nova Scotia,Canada,4
+831,Lucas,Johnson,lucas.johnson910@gmail.com,2024-09-02,New,Organic,Winnipeg,Manitoba,Canada,5
+832,Daniel,Nguyen,daniel.nguyen770@shaw.ca,2024-09-25,Returning,Email,Halifax,Nova Scotia,Canada,2
+833,Hannah,Lopez,hannah.lopez936@gmail.com,2024-03-26,New,Email,Ottawa,Ontario,Canada,1
+834,Ava,Bouchard,ava.bouchard833@telus.net,2023-03-04,New,Referral,Quebec City,Quebec,Canada,2
+835,Hannah,Young,hannah.young199@gmail.com,2023-04-28,Returning,Organic,Halifax,Nova Scotia,Canada,2
+836,Madison,Clark,madison.clark463@hotmail.com,2024-03-15,New,Referral,Calgary,Alberta,Canada,4
+837,Rachel,Wilson,rachel.wilson818@hotmail.com,2024-02-25,VIP,Organic,London,Ontario,Canada,4
+838,Emma,Johnson,emma.johnson941@shaw.ca,2024-10-30,Returning,Paid Ads,Edmonton,Alberta,Canada,4
+839,Grace,Roberts,grace.roberts360@gmail.com,2024-02-23,New,Referral,Halifax,Nova Scotia,Canada,3
+840,Daniel,Thompson,daniel.thompson320@telus.net,2023-05-06,Returning,Organic,Calgary,Alberta,Canada,6
+841,Ethan,Pelletier,ethan.pelletier210@hotmail.com,2024-07-29,Returning,Paid Ads,Red Deer,Alberta,Canada,4
+842,Madison,Wright,madison.wright890@gmail.com,2024-03-15,VIP,Organic,Coquitlam,British Columbia,Canada,4
+843,Natalie,Lopez,natalie.lopez104@telus.net,2024-09-16,New,Organic,Laval,Quebec,Canada,6
+844,James,Roberts,james.roberts958@telus.net,2024-01-11,VIP,Referral,Coquitlam,British Columbia,Canada,3
+845,Alexander,Chen,alexander.chen848@shaw.ca,2024-07-10,New,Referral,Winnipeg,Manitoba,Canada,6
+846,Rachel,Anderson,rachel.anderson616@hotmail.com,2023-12-29,New,Paid Ads,Surrey,British Columbia,Canada,3
+847,Natalie,King,natalie.king507@hotmail.com,2023-09-19,Returning,Referral,Laval,Quebec,Canada,5
+848,Noah,Walker,noah.walker522@shaw.ca,2024-06-25,New,Paid Ads,Laval,Quebec,Canada,5
+849,Daniel,Lewis,daniel.lewis828@hotmail.com,2024-07-02,VIP,Organic,Halifax,Nova Scotia,Canada,3
+850,Zoe,Morin,zoe.morin314@shaw.ca,2023-03-28,New,Paid Ads,Winnipeg,Manitoba,Canada,4
+851,Daniel,Lewis,daniel.lewis827@shaw.ca,2023-07-20,VIP,Organic,Ottawa,Ontario,Canada,3
+852,Chloe,Martin,chloe.martin879@gmail.com,2024-03-06,New,Organic,Winnipeg,Manitoba,Canada,5
+853,Liam,Singh,liam.singh998@hotmail.com,2023-10-05,Returning,Organic,Longueuil,Quebec,Canada,1
+854,Laura,Wright,laura.wright125@gmail.com,2023-11-01,Returning,Organic,Coquitlam,British Columbia,Canada,6
+855,Benjamin,Anderson,benjamin.anderson373@shaw.ca,2024-01-14,Returning,Referral,Vancouver,British Columbia,Canada,2
+856,Madison,Roy,madison.roy249@hotmail.com,2023-12-20,New,Referral,Edmonton,Alberta,Canada,2
+857,Rachel,Johnson,rachel.johnson871@shaw.ca,2024-05-11,Returning,Referral,Halifax,Nova Scotia,Canada,4
+858,William,Johnson,william.johnson730@gmail.com,2024-06-16,VIP,Referral,Hamilton,Ontario,Canada,4
+859,Laura,Clark,laura.clark343@telus.net,2024-05-13,New,Referral,Halifax,Nova Scotia,Canada,5
+860,James,Roy,james.roy490@gmail.com,2024-04-27,New,Paid Ads,Halifax,Nova Scotia,Canada,3
+861,Benjamin,Wright,benjamin.wright113@gmail.com,2024-03-10,Returning,Referral,Halifax,Nova Scotia,Canada,4
+862,Zoe,Lee,zoe.lee949@telus.net,2023-04-14,New,Email,Red Deer,Alberta,Canada,2
+863,Ava,Morin,ava.morin894@shaw.ca,2023-06-14,Returning,Email,Halifax,Nova Scotia,Canada,4
+864,Zoe,Thompson,zoe.thompson799@shaw.ca,2024-05-31,New,Email,Hamilton,Ontario,Canada,6
+865,Sophia,Martin,sophia.martin486@gmail.com,2024-10-20,New,Referral,Red Deer,Alberta,Canada,5
+866,Olivia,Wright,olivia.wright233@hotmail.com,2023-09-24,New,Referral,London,Ontario,Canada,4
+867,Amelia,Kaur,amelia.kaur577@hotmail.com,2023-09-03,New,Referral,Toronto,Ontario,Canada,4
+868,Grace,Morin,grace.morin430@shaw.ca,2024-05-31,Returning,Email,Calgary,Alberta,Canada,1
+869,Daniel,Johnson,daniel.johnson908@telus.net,2024-07-11,New,Paid Ads,Halifax,Nova Scotia,Canada,1
+870,Alexander,Singh,alexander.singh638@hotmail.com,2023-05-27,Returning,Email,Toronto,Ontario,Canada,4
+871,Ava,Martin,ava.martin525@shaw.ca,2024-08-04,Returning,Paid Ads,Winnipeg,Manitoba,Canada,4
+872,William,Singh,william.singh326@hotmail.com,2023-04-12,Returning,Paid Ads,Montreal,Quebec,Canada,3
+873,Natalie,Thompson,natalie.thompson469@hotmail.com,2024-12-15,VIP,Referral,Halifax,Nova Scotia,Canada,2
+874,Ella,Thompson,ella.thompson217@gmail.com,2024-04-09,VIP,Paid Ads,Winnipeg,Manitoba,Canada,3
+875,Hannah,Young,hannah.young140@shaw.ca,2023-03-23,New,Referral,Laval,Quebec,Canada,4
+876,Hannah,Tremblay,hannah.tremblay495@gmail.com,2023-12-31,New,Referral,Hamilton,Ontario,Canada,1
+877,Mia,Singh,mia.singh629@gmail.com,2023-04-26,New,Organic,Halifax,Nova Scotia,Canada,1
+878,Rachel,Gagnon,rachel.gagnon598@telus.net,2023-05-27,New,Referral,London,Ontario,Canada,3
+879,Olivia,Walker,olivia.walker626@hotmail.com,2023-01-13,VIP,Organic,Halifax,Nova Scotia,Canada,2
+880,Sophia,Taylor,sophia.taylor741@gmail.com,2024-04-24,VIP,Paid Ads,Red Deer,Alberta,Canada,3
+881,Sophia,Thompson,sophia.thompson955@telus.net,2024-07-19,Returning,Email,Halifax,Nova Scotia,Canada,6
+882,Emma,Thompson,emma.thompson864@gmail.com,2023-10-04,New,Paid Ads,Winnipeg,Manitoba,Canada,1
+883,Hannah,Anderson,hannah.anderson138@hotmail.com,2024-10-25,Returning,Paid Ads,Surrey,British Columbia,Canada,1
+884,Sophia,Brown,sophia.brown671@hotmail.com,2023-10-30,VIP,Paid Ads,Burnaby,British Columbia,Canada,2
+885,Sophia,Kaur,sophia.kaur497@telus.net,2023-04-23,New,Paid Ads,Edmonton,Alberta,Canada,3
+886,Ethan,Wilson,ethan.wilson117@hotmail.com,2023-03-06,New,Organic,Longueuil,Quebec,Canada,1
+887,Benjamin,Clark,benjamin.clark756@gmail.com,2024-07-02,New,Email,Coquitlam,British Columbia,Canada,5
+888,Zoe,Nguyen,zoe.nguyen817@gmail.com,2023-07-07,Returning,Referral,Coquitlam,British Columbia,Canada,1
+889,Laura,Brown,laura.brown396@gmail.com,2024-11-06,Returning,Referral,London,Ontario,Canada,1
+890,Sarah,Clark,sarah.clark388@gmail.com,2024-01-19,Returning,Referral,London,Ontario,Canada,6
+891,Madison,Morin,madison.morin941@telus.net,2023-03-16,New,Referral,Longueuil,Quebec,Canada,6
+892,Hannah,Smith,hannah.smith239@shaw.ca,2023-07-07,Returning,Email,Laval,Quebec,Canada,2
+893,Zoe,King,zoe.king405@shaw.ca,2023-02-14,VIP,Referral,Winnipeg,Manitoba,Canada,6
+894,Hannah,Tremblay,hannah.tremblay666@gmail.com,2024-06-11,Returning,Organic,Halifax,Nova Scotia,Canada,2
+895,Laura,Singh,laura.singh105@gmail.com,2024-01-15,Returning,Email,Calgary,Alberta,Canada,2
+896,Alexander,Nguyen,alexander.nguyen315@hotmail.com,2024-03-25,Returning,Email,Montreal,Quebec,Canada,4
+897,Zoe,Roberts,zoe.roberts522@shaw.ca,2023-10-17,New,Email,Halifax,Nova Scotia,Canada,6
+898,Natalie,Wilson,natalie.wilson288@shaw.ca,2024-09-23,New,Referral,Winnipeg,Manitoba,Canada,6
+899,Ava,Nguyen,ava.nguyen285@gmail.com,2023-08-19,New,Organic,Mississauga,Ontario,Canada,1
+900,Hannah,Roy,hannah.roy760@telus.net,2023-08-21,New,Organic,Winnipeg,Manitoba,Canada,5
+901,William,Brown,william.brown200@hotmail.com,2024-02-07,New,Organic,Toronto,Ontario,Canada,1
+902,Isabella,Roberts,isabella.roberts465@hotmail.com,2023-01-31,VIP,Referral,Winnipeg,Manitoba,Canada,6
+903,Charlotte,Clark,charlotte.clark391@gmail.com,2023-03-15,Returning,Email,Halifax,Nova Scotia,Canada,6
+904,Daniel,Brown,daniel.brown561@telus.net,2024-07-17,Returning,Paid Ads,Edmonton,Alberta,Canada,6
+905,Noah,Nguyen,noah.nguyen679@shaw.ca,2023-06-27,Returning,Email,Halifax,Nova Scotia,Canada,5
+906,Alexander,Young,alexander.young104@shaw.ca,2024-02-12,New,Paid Ads,Hamilton,Ontario,Canada,4
+907,Noah,White,noah.white383@telus.net,2023-07-24,VIP,Email,Red Deer,Alberta,Canada,2
+908,Rachel,Young,rachel.young998@hotmail.com,2023-01-12,New,Paid Ads,Red Deer,Alberta,Canada,2
+909,Oliver,Lopez,oliver.lopez598@hotmail.com,2023-12-20,Returning,Organic,Quebec City,Quebec,Canada,4
+910,William,Taylor,william.taylor961@gmail.com,2024-07-14,New,Referral,Red Deer,Alberta,Canada,1
+911,Mia,Bouchard,mia.bouchard369@shaw.ca,2023-06-03,Returning,Paid Ads,Red Deer,Alberta,Canada,6
+912,Zoe,Tremblay,zoe.tremblay119@gmail.com,2023-07-28,New,Paid Ads,Halifax,Nova Scotia,Canada,1
+913,Laura,Patel,laura.patel887@telus.net,2024-01-25,New,Organic,Halifax,Nova Scotia,Canada,5
+914,Alexander,Thompson,alexander.thompson656@hotmail.com,2024-10-29,New,Organic,Coquitlam,British Columbia,Canada,3
+915,Natalie,Singh,natalie.singh501@hotmail.com,2024-10-20,Returning,Paid Ads,Laval,Quebec,Canada,4
+916,Ava,Tremblay,ava.tremblay575@shaw.ca,2024-03-27,Returning,Referral,Winnipeg,Manitoba,Canada,3
+917,James,Patel,james.patel614@hotmail.com,2023-05-21,New,Paid Ads,Surrey,British Columbia,Canada,4
+918,Emily,Clark,emily.clark875@shaw.ca,2024-11-21,New,Paid Ads,Red Deer,Alberta,Canada,2
+919,James,Anderson,james.anderson679@shaw.ca,2024-09-23,Returning,Referral,Laval,Quebec,Canada,5
+920,Alexander,Clark,alexander.clark467@telus.net,2023-08-23,Returning,Organic,Red Deer,Alberta,Canada,4
+921,Olivia,White,olivia.white370@gmail.com,2024-06-06,VIP,Referral,Laval,Quebec,Canada,1
+922,Liam,White,liam.white497@hotmail.com,2024-08-28,New,Email,Burnaby,British Columbia,Canada,3
+923,Oliver,Morin,oliver.morin764@gmail.com,2024-10-13,VIP,Organic,Montreal,Quebec,Canada,5
+924,Noah,Taylor,noah.taylor692@hotmail.com,2024-05-16,VIP,Email,Halifax,Nova Scotia,Canada,1
+925,William,Kaur,william.kaur474@telus.net,2023-12-21,New,Paid Ads,Edmonton,Alberta,Canada,6
+926,Alexander,Wilson,alexander.wilson485@hotmail.com,2023-08-15,New,Email,Coquitlam,British Columbia,Canada,1
+927,Julia,White,julia.white936@hotmail.com,2023-01-13,New,Organic,Winnipeg,Manitoba,Canada,4
+928,Laura,Young,laura.young613@gmail.com,2023-01-31,Returning,Organic,Longueuil,Quebec,Canada,1
+929,Natalie,Anderson,natalie.anderson178@shaw.ca,2023-06-15,New,Email,Laval,Quebec,Canada,6
+930,James,Wilson,james.wilson291@shaw.ca,2023-04-10,Returning,Organic,Mississauga,Ontario,Canada,5
+931,Amelia,Young,amelia.young524@shaw.ca,2023-06-11,New,Email,Winnipeg,Manitoba,Canada,4
+932,Sarah,Hall,sarah.hall791@telus.net,2023-10-01,Returning,Paid Ads,Halifax,Nova Scotia,Canada,4
+933,Oliver,Chen,oliver.chen762@shaw.ca,2023-05-29,Returning,Paid Ads,Red Deer,Alberta,Canada,6
+934,Rachel,Wright,rachel.wright230@gmail.com,2023-03-06,VIP,Email,Burnaby,British Columbia,Canada,3
+935,Alexander,Kaur,alexander.kaur686@gmail.com,2023-08-15,Returning,Organic,Calgary,Alberta,Canada,6
+936,Charlotte,Johnson,charlotte.johnson629@shaw.ca,2023-02-23,Returning,Email,Edmonton,Alberta,Canada,5
+937,Benjamin,Nguyen,benjamin.nguyen187@hotmail.com,2024-08-08,New,Organic,Winnipeg,Manitoba,Canada,6
+938,Isabella,Lopez,isabella.lopez274@telus.net,2024-02-02,New,Organic,Winnipeg,Manitoba,Canada,3
+939,Ava,Pelletier,ava.pelletier738@shaw.ca,2023-04-21,New,Email,Laval,Quebec,Canada,6
+940,Hannah,Patel,hannah.patel564@hotmail.com,2024-06-19,Returning,Organic,Mississauga,Ontario,Canada,4
+941,Daniel,Kaur,daniel.kaur494@telus.net,2024-01-13,Returning,Paid Ads,Burnaby,British Columbia,Canada,1
+942,Charlotte,Taylor,charlotte.taylor946@telus.net,2023-04-29,Returning,Referral,Burnaby,British Columbia,Canada,1
+943,Charlotte,Nguyen,charlotte.nguyen729@telus.net,2023-04-14,New,Email,Burnaby,British Columbia,Canada,3
+944,Daniel,Johnson,daniel.johnson593@gmail.com,2024-05-16,New,Referral,Winnipeg,Manitoba,Canada,6
+945,Hannah,Anderson,hannah.anderson634@telus.net,2024-11-04,New,Referral,Winnipeg,Manitoba,Canada,5
+946,Lucas,Young,lucas.young334@telus.net,2024-10-26,Returning,Paid Ads,Coquitlam,British Columbia,Canada,4
+947,Sarah,Chen,sarah.chen535@gmail.com,2024-09-29,Returning,Email,Quebec City,Quebec,Canada,3
+948,Charlotte,Lee,charlotte.lee390@gmail.com,2024-01-08,Returning,Referral,Laval,Quebec,Canada,4
+949,Daniel,Tremblay,daniel.tremblay293@hotmail.com,2024-09-14,Returning,Email,Winnipeg,Manitoba,Canada,3
+950,Emily,Lewis,emily.lewis632@gmail.com,2023-08-13,Returning,Email,Halifax,Nova Scotia,Canada,5
+951,Emily,King,emily.king518@hotmail.com,2023-08-02,New,Email,Halifax,Nova Scotia,Canada,3
+952,Liam,Taylor,liam.taylor367@hotmail.com,2024-05-03,VIP,Paid Ads,Edmonton,Alberta,Canada,4
+953,Laura,Singh,laura.singh796@hotmail.com,2023-07-24,Returning,Referral,Quebec City,Quebec,Canada,4
+954,Benjamin,Gagnon,benjamin.gagnon283@telus.net,2023-08-06,Returning,Email,Edmonton,Alberta,Canada,1
+955,Liam,Singh,liam.singh414@hotmail.com,2024-09-22,Returning,Email,Winnipeg,Manitoba,Canada,4
+956,Alexander,Young,alexander.young975@shaw.ca,2024-03-09,Returning,Email,Halifax,Nova Scotia,Canada,4
+957,Laura,Clark,laura.clark901@telus.net,2023-10-05,New,Referral,Burnaby,British Columbia,Canada,2
+958,Grace,Martin,grace.martin904@telus.net,2024-05-06,Returning,Organic,Burnaby,British Columbia,Canada,2
+959,Noah,Roy,noah.roy498@shaw.ca,2023-01-25,Returning,Organic,Winnipeg,Manitoba,Canada,3
+960,Chloe,Smith,chloe.smith714@telus.net,2023-09-24,VIP,Email,Burnaby,British Columbia,Canada,4
+961,Lucas,Brown,lucas.brown479@shaw.ca,2024-02-16,Returning,Organic,Richmond,British Columbia,Canada,1
+962,Sophia,Nguyen,sophia.nguyen728@telus.net,2024-11-17,VIP,Email,Surrey,British Columbia,Canada,6
+963,Chloe,Patel,chloe.patel892@gmail.com,2024-11-30,Returning,Referral,London,Ontario,Canada,1
+964,Rachel,Martin,rachel.martin110@telus.net,2024-11-16,New,Organic,Halifax,Nova Scotia,Canada,2
+965,Isabella,Bouchard,isabella.bouchard134@shaw.ca,2023-01-05,New,Organic,Halifax,Nova Scotia,Canada,3
+966,Sarah,Nguyen,sarah.nguyen790@shaw.ca,2023-09-05,New,Paid Ads,Winnipeg,Manitoba,Canada,6
+967,Olivia,Young,olivia.young261@gmail.com,2023-01-15,New,Paid Ads,Red Deer,Alberta,Canada,5
+968,Sophia,Lee,sophia.lee515@telus.net,2024-07-11,New,Paid Ads,Quebec City,Quebec,Canada,6
+969,Alexander,Thompson,alexander.thompson192@gmail.com,2024-08-20,Returning,Paid Ads,Winnipeg,Manitoba,Canada,2
+970,William,Walker,william.walker935@hotmail.com,2023-10-29,New,Paid Ads,Halifax,Nova Scotia,Canada,3
+971,Mia,White,mia.white513@telus.net,2024-06-01,New,Email,Winnipeg,Manitoba,Canada,5
+972,Alexander,Smith,alexander.smith618@telus.net,2023-08-23,Returning,Organic,Mississauga,Ontario,Canada,3
+973,Emma,Singh,emma.singh448@hotmail.com,2023-11-29,Returning,Referral,Coquitlam,British Columbia,Canada,4
+974,Emma,Roy,emma.roy810@hotmail.com,2024-05-06,VIP,Email,Winnipeg,Manitoba,Canada,4
+975,Ethan,King,ethan.king875@shaw.ca,2023-09-09,VIP,Email,Winnipeg,Manitoba,Canada,3
+976,Noah,Gagnon,noah.gagnon593@gmail.com,2023-03-31,Returning,Email,Longueuil,Quebec,Canada,3
+977,Emma,Lee,emma.lee793@shaw.ca,2023-12-23,New,Referral,Surrey,British Columbia,Canada,6
+978,Grace,White,grace.white628@hotmail.com,2023-06-03,New,Email,Hamilton,Ontario,Canada,3
+979,William,Smith,william.smith394@shaw.ca,2024-07-24,New,Organic,Halifax,Nova Scotia,Canada,3
+980,Sophia,King,sophia.king667@gmail.com,2023-09-02,VIP,Paid Ads,Halifax,Nova Scotia,Canada,5
+981,Julia,Martin,julia.martin323@hotmail.com,2023-12-28,New,Email,Quebec City,Quebec,Canada,4
+982,Natalie,Kaur,natalie.kaur610@shaw.ca,2024-05-09,New,Referral,Mississauga,Ontario,Canada,1
+983,Zoe,Thompson,zoe.thompson993@shaw.ca,2023-07-06,VIP,Paid Ads,Red Deer,Alberta,Canada,6
+984,Mia,Thompson,mia.thompson956@shaw.ca,2023-04-03,New,Organic,Calgary,Alberta,Canada,5
+985,Daniel,Young,daniel.young180@gmail.com,2023-03-15,Returning,Email,Calgary,Alberta,Canada,4
+986,Hannah,Clark,hannah.clark968@gmail.com,2023-09-12,Returning,Email,Montreal,Quebec,Canada,2
+987,Oliver,Young,oliver.young688@telus.net,2023-11-18,Returning,Email,Winnipeg,Manitoba,Canada,3
+988,Laura,Lee,laura.lee507@hotmail.com,2024-09-04,New,Organic,Laval,Quebec,Canada,3
+989,Ava,Gagnon,ava.gagnon638@gmail.com,2024-10-14,New,Email,Winnipeg,Manitoba,Canada,1
+990,Sarah,Wright,sarah.wright503@hotmail.com,2024-03-13,New,Referral,Montreal,Quebec,Canada,2
+991,Laura,Clark,laura.clark815@gmail.com,2024-05-13,New,Organic,Edmonton,Alberta,Canada,5
+992,James,Lopez,james.lopez790@gmail.com,2023-11-23,New,Email,Toronto,Ontario,Canada,4
+993,Isabella,King,isabella.king470@hotmail.com,2024-09-20,New,Referral,Winnipeg,Manitoba,Canada,1
+994,Daniel,Bouchard,daniel.bouchard342@hotmail.com,2023-12-25,Returning,Paid Ads,Mississauga,Ontario,Canada,1
+995,Mia,Chen,mia.chen288@hotmail.com,2023-10-01,VIP,Organic,Winnipeg,Manitoba,Canada,4
+996,Oliver,Wright,oliver.wright473@hotmail.com,2024-11-23,New,Email,Edmonton,Alberta,Canada,1
+997,Laura,King,laura.king685@shaw.ca,2023-04-24,VIP,Paid Ads,Hamilton,Ontario,Canada,5
+998,Charlotte,Kaur,charlotte.kaur838@gmail.com,2024-02-08,New,Paid Ads,Halifax,Nova Scotia,Canada,3
+999,Mia,Roy,mia.roy976@telus.net,2024-12-15,Returning,Organic,Red Deer,Alberta,Canada,2
+1000,Benjamin,Thompson,benjamin.thompson584@shaw.ca,2023-07-12,New,Paid Ads,Red Deer,Alberta,Canada,5

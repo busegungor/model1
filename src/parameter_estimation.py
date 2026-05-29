@@ -1,0 +1,238 @@
+"""
+parameter_estimation.py — Per-category parameter estimation and cost setup.
+
+Computes everything the SAA / Bayesian solvers need, separating clearly:
+  - ESTIMATED FROM DATA:   r_hat, k_hat (frequentist MLE, from the panel)
+                           p, c        (category mean price / cost)
+  - DERIVED:               s  = s_pct * c
+                           pG, pN, gN  (revenue / shortage params)
+  - CONSTANT (config):     s_pct, g, d
+
+NOTE on Bayesian: r_hat and k_hat here are the FREQUENTIST point estimates
+used by SAA. The Bayesian solver (Step 14) replaces them with Beta
+posteriors; their posterior means converge to these r_hat/k_hat as m→∞.
+This module is the SAA-side parameter source AND a sanity reference for
+the Bayesian posteriors.
+
+────────────────────────────────────────────────────────────────────
+Cost-parameter formulas (paper Section 2; Colab lines 338-360):
+  r_hat = Σ u_t / Σ G_t
+  k_hat = Σ k_obs_t / Σ u_t
+  pG = (1-r)·p + r·k·(p-d) + r·(1-k)·(s-d)         # expected gross rev / unit
+  pN = pG / (1 - r·k)                               # rev per net-demand unit
+  gN = g  / (1 - r·k)                               # shortage cost per net unit
+  Well-posed: gN + pN > c > s >= 0
+────────────────────────────────────────────────────────────────────
+"""
+
+import numpy as np
+import pandas as pd
+
+from config import COST_PARAMS, ORDER_STATUS_FILTER
+
+
+def estimate_rates(panel: pd.DataFrame) -> dict:
+    """
+    Frequentist MLE of return and resalability probabilities from a panel.
+
+    Parameters
+    ----------
+    panel : pd.DataFrame
+        Per-category panel from preprocessing.build_category_datasets,
+        with columns [G_t, u_t, k_obs_t].
+
+    Returns
+    -------
+    dict with keys: r_hat, k_hat, total_G, total_u, total_k
+
+    Colab origin: lines 338-339
+        r_hat = total_u / total_G
+        k_hat = total_k / total_u
+    """
+    total_G = int(panel["G_t"].sum())
+    total_u = int(panel["u_t"].sum())
+    total_k = int(panel["k_obs_t"].sum())
+
+    r_hat = total_u / total_G if total_G > 0 else 0.0
+    k_hat = total_k / total_u if total_u > 0 else 0.0
+
+    return {
+        "r_hat": r_hat,
+        "k_hat": k_hat,
+        "total_G": total_G,
+        "total_u": total_u,
+        "total_k": total_k,
+    }
+
+
+def estimate_price_cost(order_items_clean: pd.DataFrame, category: str) -> dict:
+    """
+    Category-level selling price p and unit cost c.
+
+    Uses the ROW-MEAN of unit_price / unit_cost over fulfilled order_items
+    in the category — i.e. each sold order_item contributes equally,
+    matching the original Colab computation. (unit_price is the catalog
+    price column; item_price is the realized transaction price. The model
+    uses catalog price p.)
+
+    Parameters
+    ----------
+    order_items_clean : pd.DataFrame
+        From data_analysis.py. One row per order_item.
+    category : str
+
+    Returns
+    -------
+    dict with keys: p, c
+
+    Colab origin: per-category p, c via mean of unit_price / unit_cost.
+    """
+    items = order_items_clean.loc[
+        (order_items_clean["order_status"].isin(ORDER_STATUS_FILTER))
+        & (order_items_clean["category_name"] == category),
+        ["unit_price", "unit_cost"],
+    ]
+    p = float(items["unit_price"].mean())
+    c = float(items["unit_cost"].mean())
+    return {"p": p, "c": c}
+
+
+def compute_cost_params(
+    p: float,
+    c: float,
+    r: float,
+    k: float,
+    s_pct: float = None,
+    g: float = None,
+    d: float = None,
+) -> dict:
+    """
+    Compute derived revenue/shortage parameters for the newsvendor cost.
+
+    Parameters
+    ----------
+    p, c : float
+        Selling price and unit cost (from estimate_price_cost).
+    r, k : float
+        Return probability and resalability (from estimate_rates, OR a
+        sensitivity grid value, OR a Bayesian posterior draw).
+    s_pct, g, d : float, optional
+        Cost constants. Default to config.COST_PARAMS if not given.
+
+    Returns
+    -------
+    dict with keys: p, c, s, g, d, r, k, pG, pN, gN, well_posed
+
+    Notes
+    -----
+    Guards against r*k → 1 (division blow-up). If r*k >= 1 - 1e-9, the net-
+    demand transformation is undefined; we clip the denominator. In practice
+    r*k is ~0.02-0.04 here, so this is purely defensive (matters only if a
+    Bayesian draw or extreme sensitivity grid pushes r*k near 1).
+
+    Colab origin: lines 355-360.
+    """
+    if s_pct is None:
+        s_pct = COST_PARAMS["s_pct"]
+    if g is None:
+        g = COST_PARAMS["g"]
+    if d is None:
+        d = COST_PARAMS["d"]
+
+    # Derived salvage value
+    s = s_pct * c
+
+    # Net-demand scaling denominator, guarded
+    denom = 1.0 - r * k
+    if denom < 1e-9:
+        denom = 1e-9  # defensive: avoid division blow-up
+
+    # Expected gross revenue per unit of gross demand (paper Eq. 6)
+    pG = (1 - r) * p + r * k * (p - d) + r * (1 - k) * (s - d)
+
+    # Per net-demand-unit revenue and shortage cost (paper Eq. 7)
+    pN = pG / denom
+    gN = g / denom
+
+    # Well-posedness: gN + pN > c > s >= 0  (paper, end of Section 2)
+    well_posed = (gN + pN > c) and (c > s) and (s >= 0)
+
+    return {
+        "p": p, "c": c, "s": s, "g": g, "d": d, "r": r, "k": k,
+        "pG": pG, "pN": pN, "gN": gN,
+        "well_posed": well_posed,
+    }
+
+
+def build_category_params(
+    datasets: dict,
+    order_items_clean: pd.DataFrame,
+    s_pct: float = None,
+    g: float = None,
+    d: float = None,
+) -> dict:
+    """
+    Assemble the full parameter set for every category.
+
+    Combines estimate_rates + estimate_price_cost + compute_cost_params.
+
+    Parameters
+    ----------
+    datasets : dict
+        Output of preprocessing.build_category_datasets.
+    order_items_clean : pd.DataFrame
+        For price/cost lookup.
+    s_pct, g, d : float, optional
+        Override config defaults if given.
+
+    Returns
+    -------
+    dict
+        {category: {r_hat, k_hat, p, c, s, g, d, pG, pN, gN, well_posed,
+                    total_G, total_u, total_k}}
+    """
+    params = {}
+    for cat, d_cat in datasets.items():
+        rates = estimate_rates(d_cat["panel"])
+        pc = estimate_price_cost(order_items_clean, cat)
+        cost = compute_cost_params(
+            p=pc["p"], c=pc["c"],
+            r=rates["r_hat"], k=rates["k_hat"],
+            s_pct=s_pct, g=g, d=d,
+        )
+        # Merge all into one record
+        params[cat] = {
+            **rates,         # r_hat, k_hat, total_G/u/k
+            **cost,          # p, c, s, g, d, r, k, pG, pN, gN, well_posed
+        }
+    return params
+
+
+# ════════════════════════════════════════════════════════════════════
+# Standalone test (run: python parameter_estimation.py)
+# ════════════════════════════════════════════════════════════════════
+if __name__ == "__main__":
+    from data_analysis import order_items_clean, returns_clean
+    from preprocessing import build_category_datasets
+
+    for per in ["W", "2W", "3W", "4W"]:
+        datasets = build_category_datasets(order_items_clean, returns_clean, period=per)
+        params = build_category_params(datasets, order_items_clean)
+
+        print(f"\n{'='*78}")
+        print(f"PER-CATEGORY PARAMETERS — Period: {per}")
+        print(f"{'='*78}")
+        rows = {}
+        for cat, prm in params.items():
+            rows[cat] = {
+                "r_hat": round(prm["r_hat"], 4),
+                "k_hat": round(prm["k_hat"], 4),
+                "p": round(prm["p"], 2),
+                "c": round(prm["c"], 2),
+                "s": round(prm["s"], 2),
+                "pG": round(prm["pG"], 2),
+                "pN": round(prm["pN"], 2),
+                "gN": round(prm["gN"], 2),
+                "ok": prm["well_posed"],
+            }
+        print(pd.DataFrame(rows).T)

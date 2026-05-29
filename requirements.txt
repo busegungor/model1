@@ -1,0 +1,11 @@
+pandas
+kagglehub == 1.0.0
+python-dotenv
+matplotlib
+ipympl
+tabulate
+fitter
+seaborn
+scipy
+distfit
+gurobipy
