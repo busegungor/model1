@@ -1,44 +1,37 @@
 """
-comparison.py — Step 15: SAA vs Bayesian as a function of data size.
+comparison.py — Method comparison: SAA vs Bayesian (Ban, Gao & Taigel 2019 style).
 
-Two studies, both evaluated against a TRUTH distribution (no train/test
-split; evaluation is against the data-generating truth, in the style of
-Besbes & Mouchtaki 2023, Levi et al. 2015, Berk et al. 2007).
+THIS IS A METHOD COMPARISON, NOT A SENSITIVITY ANALYSIS. The distinction:
+  - sensitivity.py : ONE method (SAA), sweep a parameter, see how Q* moves.
+  - comparison.py  : TWO methods, common metric (out-of-sample relative
+                     regret), see which one decides better and WHEN.
 
-A) REGIME MAP (no bootstrap, descriptive): SAA vs Bayesian across period
-   definitions W/2W/3W/4W at the natural sample size m=101/51/34/26. Reports
-   Q* and the realized recapture rate phi = 1 - E[N]/E[G]. (In-sample cost
-   columns are method-specific and NOT a quality comparison.)
+Because it is a comparison, r and k are NOT swept on a grid: each method
+learns them FROM THE DATA in its own way (SAA: point estimate r_hat,k_hat;
+Bayesian: posterior). Sweeping r,k from a grid would force SAA to use the
+grid value while Bayesian uses its posterior -> the two methods would sit at
+different r,k and the comparison would be unfair. So r,k come from data; we
+only sweep NEUTRAL axes that both methods see identically:
 
-B) SAMPLE-SIZE STUDY (bootstrap-as-truth): run per (period, sequence rule).
-   Within a period the net-demand distribution is fixed and the data size
-   m_train is varied by bootstrap subsampling that period's own historical
-   periods, up to its own m_max. SAA (empirical) and Bayesian (NegBin-Beta
-   posterior) are fit on each resample and their order Q is scored AGAINST
-   that period's full-data empirical net-demand TRUTH.
+  m_train : sample size (bootstrap subsample) -- the core small-data axis
+  g       : shortage penalty -- fixed at a FEW representative policy values
+            {5, 8, 20} (low / baseline / high service), NOT swept. This
+            mirrors Ban, Gao & Taigel (2019) Table 7, which evaluates the
+            methods at a few fixed critical-fractile settings rather than
+            sweeping them; g alone has an obvious comparative-static effect
+            (higher g -> higher Q*), so it is a scenario knob, not an object
+            of study. Cost-layer only, so cheap.
+  period  : W / 2W / 3W / 4W
 
-   Reported per (period, category, rule, m_train, method):
-     cost        = expected newsvendor cost of the fitted Q under the truth
-                   pool  (the quality metric, comparable WITHIN a category)
-     cost_oracle = cost of the truth-optimal Q (best achievable)
-     rel_regret  = cost / cost_oracle - 1  (cost normalized by the oracle)
-   The m_train="all" point is DETERMINISTIC (full panel, no bootstrap), so
-   SAA's asymptote is the genuine full-data fit (cost -> cost_oracle).
+Evaluation (no train/test): each method is fit on a bootstrap subsample of
+size m_train and its order Q is scored against a full-data EMPIRICAL
+net-demand TRUTH pool. Metric = relative regret = cost(Q)/cost(oracle) - 1.
+Truth is empirical (not NegBin-Beta) so SAA is asymptotically exact and any
+Bayesian small-m advantage is earned. Bootstrap = sample-size generator
+(truth = empirical CDF; resampling emulates drawing m samples, Efron 1979).
 
-DESIGN
-------
-- TRUTH = full-data empirical net-demand pool (NOT NegBin-Beta), so SAA is
-  asymptotically exact and any Bayesian small-m advantage is earned.
-- c,s,pN,gN and r_hat,k_hat held at full-data values; only the demand
-  distribution is learned from the subsample (learn_returns=True to also
-  learn r,k).
-- Bootstrap is a sample-size generator, not a held-out evaluator
-  (truth = full-data empirical CDF; resampling emulates drawing m samples —
-  Efron 1979). No train/test.
-- phi = r*k idealization retained (sequencing_recapture_consistency.md).
-
-Q* is the alpha-quantile of the flattened net-demand sample (the exact
-SAA / Bayesian quantile core); matches solve_saa / solve_bayesian.
+m_train="all" is DETERMINISTIC (full panel, no bootstrap) so SAA's asymptote
+is the genuine full-data fit (regret -> 0 up to MC noise).
 """
 
 import numpy as np
@@ -52,69 +45,73 @@ from monte_carlo import (build_net_demand_matrix,
 from bayesian_models import build_posteriors
 
 
-# ════════════════════════════════════════════════════════════════════
-# Cost helpers
-# ════════════════════════════════════════════════════════════════════
+# ── cost helpers ────────────────────────────────────────────────────
 def _alpha(c, s, pN, gN):
-    cu = pN - c + gN
-    co = c - s
+    cu = pN - c + gN; co = c - s
     return cu / (cu + co)
 
 
-def _cost(Q, N_flat, c, s, pN, gN):
-    cu = pN - c + gN
-    co = c - s
-    return float(cu * np.mean(np.maximum(N_flat - Q, 0.0))
-                 + co * np.mean(np.maximum(Q - N_flat, 0.0)))
+def _cost(Q, f, c, s, pN, gN):
+    cu = pN - c + gN; co = c - s
+    return float(cu * np.mean(np.maximum(f - Q, 0.0))
+                 + co * np.mean(np.maximum(Q - f, 0.0)))
 
 
 def build_truth(dataset, r_hat, k_hat, rule, J_truth=3000, seed=12345):
-    """Full-data empirical net-demand pool for this rule (SAA's target)."""
-    N = build_net_demand_matrix(dataset, r_hat, k_hat,
-                                rule=rule, J=J_truth, seed=seed)
-    return N.flatten()
+    """Full-data empirical net-demand pool (the target SAA converges to)."""
+    return build_net_demand_matrix(dataset, r_hat, k_hat, rule=rule,
+                                   J=J_truth, seed=seed).flatten()
 
 
 def _subsample(dataset, pos):
-    panel = dataset["panel"]
-    sub_panel = panel.iloc[pos]
-    at = dataset.get("arrival_times", {})
-    rt = dataset.get("return_arrival_times", {})
-    keys = set(sub_panel.index)
-    sub_at = {p: at[p] for p in keys if p in at}
-    sub_rt = {p: rt[p] for p in keys if p in rt}
-    return {"panel": sub_panel, "arrival_times": sub_at,
-            "return_arrival_times": sub_rt}
+    panel = dataset["panel"]; sp = panel.iloc[pos]
+    at = dataset.get("arrival_times", {}); rt = dataset.get("return_arrival_times", {})
+    keys = set(sp.index)
+    return {"panel": sp,
+            "arrival_times": {p: at[p] for p in keys if p in at},
+            "return_arrival_times": {p: rt[p] for p in keys if p in rt}}
 
 
 def _period_grid(m_max, base=(5, 10, 15, 20, 30, 50, 75)):
+    """Per-period m_train grid: base values below 0.9*m_max, then 'all'."""
     grid = [m for m in base if m < 0.9 * m_max]
-    grid.append(None)              # 'all' = deterministic full-data point
+    grid.append(None)            # 'all' = deterministic full-data point
     return grid
 
 
 # ════════════════════════════════════════════════════════════════════
-# STUDY B — sample-size curve for ONE (category, period, rule)
+# Core: SAA vs Bayesian regret for ONE (category, period), over m_train x g
 # ════════════════════════════════════════════════════════════════════
-def sample_size_curve(dataset, prm, rule="S4", m_grid=None,
-                      B=80, J_fit=100, J_truth=3000,
-                      learn_returns=False, seed=0):
+def compare_one(dataset, prm, rule="S4", m_grid=None, g_grid=(5.0, 8.0, 20.0),
+                B=60, J_fit=100, J_truth=3000, learn_returns=False, seed=0):
     """
-    Returns (df_raw, info). df_raw has one row per
-    (m_train, rep, method) with columns Q, cost, cost_oracle, rel_regret.
+    Returns df_raw: one row per (m_train, g, rep, method) with
+    Q, cost, cost_oracle, rel_regret.
+
+    r,k come FROM DATA (not swept):
+      SAA      : point estimates from the subsample (learn_returns=True) or
+                 full-data r_hat,k_hat held fixed (learn_returns=False, the
+                 clean isolation of demand-distribution learning).
+      Bayesian : posterior from the subsample's demand; r,k posteriors from
+                 full data (learn_returns=False) or subsample (True).
+    g is a POLICY parameter, swept on a grid (cost layer only -> matrices
+    built once per (m_train,rep), reused across all g).
+    The TRUTH is built with the FULL-DATA r_hat,k_hat (the real return
+    structure), independent of g (g doesn't change the demand law).
     """
-    panel = dataset["panel"]
-    m_max = len(panel)
+    panel = dataset["panel"]; m_max = len(panel)
     if m_grid is None:
         m_grid = _period_grid(m_max)
 
-    c, s, pN, gN = prm["c"], prm["s"], prm["pN"], prm["gN"]
+    c, s, p, d = prm["c"], prm["s"], prm["p"], prm["d"]
     r_full, k_full = prm["r_hat"], prm["k_hat"]
-    alpha = _alpha(c, s, pN, gN)
+    rk = r_full * k_full
+    # cost layer pieces that don't depend on g (phi = rk idealization)
+    pG = (1 - r_full) * p + rk * (p - d) + r_full * (1 - k_full) * (s - d)
+    pN = pG / (1 - rk); gN_unit = 1.0 / (1 - rk)     # gN = g * gN_unit
 
+    # TRUTH (full-data return structure, real rule)
     truth = build_truth(dataset, r_full, k_full, rule, J_truth=J_truth)
-    Q_oracle = float(np.quantile(truth, alpha))
-    cost_oracle = _cost(Q_oracle, truth, c, s, pN, gN)
 
     post_full = build_posteriors(panel)
     rng = np.random.default_rng(seed)
@@ -122,15 +119,15 @@ def sample_size_curve(dataset, prm, rule="S4", m_grid=None,
 
     for m_train in m_grid:
         if m_train is None:
-            mt, B_eff, det, label = m_max, 1, True, "all"
+            mt, B_eff, det, lbl = m_max, 1, True, "all"
         else:
-            mt, B_eff, det, label = int(m_train), B, False, int(m_train)
+            mt, B_eff, det, lbl = int(m_train), B, False, int(m_train)
 
         for b in range(B_eff):
             pos = np.arange(m_max) if det else rng.integers(0, m_max, size=mt)
             sub = _subsample(dataset, pos)
 
-            # SAA
+            # r,k FROM DATA (not from any grid)
             if learn_returns:
                 rr = estimate_rates(sub["panel"])
                 r_s = rr.get("r_hat", r_full); k_s = rr.get("k_hat", k_full)
@@ -138,56 +135,112 @@ def sample_size_curve(dataset, prm, rule="S4", m_grid=None,
                 if not np.isfinite(k_s): k_s = k_full
             else:
                 r_s, k_s = r_full, k_full
+
+            # fit matrices ONCE (g doesn't affect them)
             N_saa = build_net_demand_matrix(
                 sub, r_s, k_s, rule=rule, J=J_fit,
                 seed=int(rng.integers(1, 2**31 - 1)))
-            Q_saa = float(np.quantile(N_saa.flatten(), alpha))
-            cost_saa = _cost(Q_saa, truth, c, s, pN, gN)
-
-            # Bayesian
             post_sub = build_posteriors(sub["panel"])
             posteriors = post_sub if learn_returns else {
-                "demand": post_sub["demand"],
-                "r": post_full["r"], "k": post_full["k"]}
+                "demand": post_sub["demand"], "r": post_full["r"], "k": post_full["k"]}
             N_bay = build_bayesian_net_demand_matrix(
                 sub, rule=rule, J=J_fit,
-                seed=int(rng.integers(1, 2**31 - 1)),
-                posteriors=posteriors)
-            Q_bay = float(np.quantile(N_bay.flatten(), alpha))
-            cost_bay = _cost(Q_bay, truth, c, s, pN, gN)
+                seed=int(rng.integers(1, 2**31 - 1)), posteriors=posteriors)
+            f_saa = N_saa.flatten(); f_bay = N_bay.flatten()
 
-            rows.append({"m_train": label, "rep": b, "method": "SAA",
-                         "Q": Q_saa, "cost": cost_saa,
-                         "cost_oracle": cost_oracle,
-                         "rel_regret": cost_saa / cost_oracle - 1.0})
-            rows.append({"m_train": label, "rep": b, "method": "Bayesian",
-                         "Q": Q_bay, "cost": cost_bay,
-                         "cost_oracle": cost_oracle,
-                         "rel_regret": cost_bay / cost_oracle - 1.0})
+            # sweep g cheaply (cost layer only)
+            for g in g_grid:
+                gN = g * gN_unit
+                if not (pN + gN > c > s >= 0):
+                    continue
+                a = _alpha(c, s, pN, gN)
+                co = _cost(np.quantile(truth, a), truth, c, s, pN, gN)
+                Qs = float(np.quantile(f_saa, a)); Qb = float(np.quantile(f_bay, a))
+                cs_ = _cost(Qs, truth, c, s, pN, gN)
+                cb_ = _cost(Qb, truth, c, s, pN, gN)
+                rows.append({"m_train": lbl, "g": g, "rep": b, "method": "SAA",
+                             "Q": Qs, "cost": cs_, "cost_oracle": co,
+                             "rel_regret": cs_ / co - 1})
+                rows.append({"m_train": lbl, "g": g, "rep": b, "method": "Bayesian",
+                             "Q": Qb, "cost": cb_, "cost_oracle": co,
+                             "rel_regret": cb_ / co - 1})
+    return pd.DataFrame(rows)
 
-    info = {"alpha": alpha, "Q_oracle": Q_oracle,
-            "cost_oracle": cost_oracle, "m_max": m_max}
-    return pd.DataFrame(rows), info
 
-
-def summarize_curve(df_raw):
-    """Mean cost, mean regret, std/se per (m_train, method)."""
-    g = (df_raw.groupby(["m_train", "method"])
+def summarize(df_raw):
+    """Mean cost & regret per (m_train, g, method) with standard errors."""
+    g = (df_raw.groupby(["m_train", "g", "method"])
          .agg(cost_mean=("cost", "mean"),
-              cost_se=("cost", lambda x: x.std() / np.sqrt(max(len(x), 1))),
               regret_mean=("rel_regret", "mean"),
               regret_se=("rel_regret", lambda x: x.std() / np.sqrt(max(len(x), 1))),
-              n=("cost", "count"))
-         .reset_index())
+              n=("cost", "count")).reset_index())
     return g
 
 
 # ════════════════════════════════════════════════════════════════════
-# STUDY A — regime map across periods (no bootstrap)
+# Driver: all categories x periods
 # ════════════════════════════════════════════════════════════════════
-def regime_map(order_items_clean, returns_clean,
-               periods=("W", "2W", "3W", "4W"),
-               rules=("S1", "S4", "S3"), J=200, seed=0):
+def run_comparison(periods=("W", "2W", "3W", "4W"), rule="S4",
+                   g_grid=(5.0, 8.0, 20.0),
+                   B=60, J_fit=100, J_truth=3000, learn_returns=False,
+                   seed=0, verbose=True):
+    """
+    SAA vs Bayesian out-of-sample regret across periods, m_train, and g.
+
+    Uses rule="S4" — the EMPIRICAL order-of-arrival netting, i.e. the rule
+    that actually occurs. The method comparison answers "which method decides
+    better", and the real decision is made under S4, so the comparison is run
+    under S4 only. Whether sequencing matters at all (S1 vs S3 vs S4) is a
+    SEPARATE question, answered by sequencing_importance() below — that is a
+    property of the data, not a method-vs-method decision.
+    """
+    from data_analysis import order_items_clean, returns_clean
+    all_rows = []
+    for period in periods:
+        datasets = build_category_datasets(order_items_clean, returns_clean,
+                                            period=period)
+        params = build_category_params(datasets, order_items_clean)
+        for cat, ds in datasets.items():
+            if verbose:
+                print(f"[{period}|{cat}|{rule}] m_max={len(ds['panel'])}")
+            df_raw = compare_one(ds, params[cat], rule=rule, g_grid=g_grid,
+                                 B=B, J_fit=J_fit, J_truth=J_truth,
+                                 learn_returns=learn_returns, seed=seed)
+            s = summarize(df_raw)
+            s.insert(0, "period", period)
+            s.insert(1, "category", cat)
+            s.insert(2, "rule", rule)
+            all_rows.append(s)
+    return pd.concat(all_rows, ignore_index=True)
+
+
+# ════════════════════════════════════════════════════════════════════
+# Sequencing importance — WHEN does sequencing matter (if at all)?
+# ════════════════════════════════════════════════════════════════════
+def sequencing_importance(periods=("W", "2W", "3W", "4W"),
+                          g=8.0, J=2000, seed=0, verbose=True):
+    """
+    NOT a method comparison and NOT a decision — a DATA DIAGNOSTIC.
+
+    The real model always uses S4 (empirical order-of-arrival). S1 (best
+    case: all resalable returns offset demand) and S3 (worst case: none do)
+    are the BOUNDS of the sequencing spectrum, never an operating choice.
+    This function reports, per (period, category), the cost under each bound
+    and where S4 falls, to answer the supervisor's "when does it matter, if
+    at all": if cost_S3 - cost_S1 is small, sequencing is irrelevant and the
+    S4 machinery is not needed; if large, S4 must be modelled carefully.
+
+    All three rules use the SAME upstream binomial draws (same seed) and the
+    SAME cost layer, so differences are purely sequencing. SAA-side only
+    (one method is enough to measure a data property; the method comparison
+    is the separate run_comparison above).
+
+    Reports:
+      cost_S1, cost_S4, cost_S3
+      gap_pct  = (cost_S3 - cost_S1)/cost_S1 * 100   (max impact)
+      S4_pos   = (cost_S4 - cost_S1)/(cost_S3 - cost_S1)  (0=best, 1=worst)
+    """
+    from data_analysis import order_items_clean, returns_clean
     rows = []
     for period in periods:
         datasets = build_category_datasets(order_items_clean, returns_clean,
@@ -195,79 +248,58 @@ def regime_map(order_items_clean, returns_clean,
         params = build_category_params(datasets, order_items_clean)
         for cat, ds in datasets.items():
             prm = params[cat]
-            c, s, pN, gN = prm["c"], prm["s"], prm["pN"], prm["gN"]
-            alpha = _alpha(c, s, pN, gN)
-            m = len(ds["panel"]); G_mean = ds["panel"]["G_t"].mean()
-            for rule in rules:
-                N_saa = build_net_demand_matrix(
-                    ds, prm["r_hat"], prm["k_hat"], rule=rule, J=J, seed=seed)
-                Q_saa = float(np.quantile(N_saa.flatten(), alpha))
-                phi = float(1.0 - N_saa.mean() / G_mean) if G_mean > 0 else np.nan
-                N_bay = build_bayesian_net_demand_matrix(ds, rule=rule, J=J, seed=seed)
-                Q_bay = float(np.quantile(N_bay.flatten(), alpha))
-                rows.append({"period": period, "m": m, "category": cat,
-                             "rule": rule, "alpha": round(alpha, 4),
-                             "Q_SAA": round(Q_saa, 2), "Q_Bay": round(Q_bay, 2),
-                             "Q_gap": round(Q_bay - Q_saa, 2),
-                             "phi_SAA": round(phi, 4),
-                             "rk": round(prm["r_hat"] * prm["k_hat"], 4)})
+            c, s_, p, d = prm["c"], prm["s"], prm["p"], prm["d"]
+            r, k = prm["r_hat"], prm["k_hat"]
+            rk = r * k
+            pG = (1 - r) * p + rk * (p - d) + r * (1 - k) * (s_ - d)
+            pN = pG / (1 - rk); gN = g / (1 - rk)
+            a = _alpha(c, s_, pN, gN)
+            costs = {}
+            for rule in ("S1", "S4", "S3"):
+                # SAME seed across rules -> identical draws -> pure sequencing
+                f = build_net_demand_matrix(ds, r, k, rule=rule,
+                                            J=J, seed=seed).flatten()
+                Q = float(np.quantile(f, a))
+                costs[rule] = _cost(Q, f, c, s_, pN, gN)
+            denom = costs["S3"] - costs["S1"]
+            rows.append({
+                "period": period, "category": cat, "rk": round(rk, 4),
+                "cost_S1": round(costs["S1"], 4),
+                "cost_S4": round(costs["S4"], 4),
+                "cost_S3": round(costs["S3"], 4),
+                "gap_pct": round(100 * denom / costs["S1"], 3),
+                "S4_pos": round((costs["S4"] - costs["S1"]) / denom, 3)
+                          if abs(denom) > 1e-9 else np.nan,
+            })
+            if verbose:
+                print(f"[{period}|{cat}] gap={rows[-1]['gap_pct']:.2f}%  "
+                      f"S4_pos={rows[-1]['S4_pos']}")
     return pd.DataFrame(rows)
 
 
-# ════════════════════════════════════════════════════════════════════
-# Main
-# ════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     from pathlib import Path
-    from data_analysis import order_items_clean, returns_clean
-
     OUT = Path("comparison_outputs"); OUT.mkdir(exist_ok=True)
-    RULES = ("S1", "S4", "S3")
 
-    print("=" * 76)
-    print("STUDY A — REGIME MAP (period x category x rule)")
-    print("=" * 76)
-    df_regime = regime_map(order_items_clean, returns_clean,
-                           rules=RULES, J=MC_SETTINGS["J_baseline"])
-    df_regime.to_csv(OUT / "regime_map.csv", index=False)
-    print(df_regime[df_regime["rule"] == "S4"][
-        ["period", "category", "m", "Q_SAA", "Q_Bay", "Q_gap"]].to_string(index=False))
-    print(f"\nSaved -> {OUT/'regime_map.csv'}")
+    # ── 1. Method comparison: SAA vs Bayesian, S4 only (the real rule) ──
+    df = run_comparison(rule="S4", g_grid=(5.0, 8.0, 20.0),
+                        B=60, J_fit=MC_SETTINGS["J_sensitivity"])
+    df.to_csv(OUT / "method_comparison.csv", index=False)
+    print(f"\nSaved -> {OUT/'method_comparison.csv'}")
+    v = df[(df.period == "W") & (df.g == 8.0)]
+    if len(v):
+        cat0 = v.category.iloc[0]
+        piv = v[v.category == cat0].pivot(index="m_train", columns="method",
+                                          values="regret_mean")
+        print(f"\nMethod comparison — {cat0}, W, S4, g=8: regret vs m_train")
+        print(piv.to_string())
 
-    print("\n" + "=" * 76)
-    print("STUDY B — SAMPLE-SIZE STUDY (cost vs m_train; SAA vs Bayesian)")
-    print("per period x sequence rule; cost = expected cost under truth pool")
-    print("=" * 76)
-
-    all_curves = []
-    for period in ("W", "2W", "3W", "4W"):
-        datasets = build_category_datasets(order_items_clean, returns_clean,
-                                           period=period)
-        params = build_category_params(datasets, order_items_clean)
-        for rule in RULES:
-            print(f"\n############  PERIOD {period}  |  RULE {rule}  ############")
-            for cat, ds in datasets.items():
-                df_raw, info = sample_size_curve(
-                    ds, params[cat], rule=rule,
-                    B=80, J_fit=MC_SETTINGS["J_sensitivity"], J_truth=3000,
-                    learn_returns=False, seed=0)
-                s = summarize_curve(df_raw)
-                s.insert(0, "period", period)
-                s.insert(1, "category", cat)
-                s.insert(2, "rule", rule)
-                all_curves.append(s)
-                print(f"\n{cat}  (m_max={info['m_max']}, alpha={info['alpha']:.4f}, "
-                      f"Q_oracle={info['Q_oracle']:.2f}, cost_oracle={info['cost_oracle']:.4f})")
-                # cost table: SAA vs Bayesian side by side
-                piv = s.pivot(index="m_train", columns="method", values="cost_mean")
-                piv.columns = [f"cost_{c}" for c in piv.columns]
-                pivr = s.pivot(index="m_train", columns="method", values="regret_mean")
-                pivr.columns = [f"regret_{c}" for c in pivr.columns]
-                out = piv.join(pivr)
-                print(out.to_string())
-
-    curve_df = pd.concat(all_curves, ignore_index=True)
-    curve_df.to_csv(OUT / "sample_size_by_period_rule.csv", index=False)
-    print(f"\nSaved -> {OUT/'sample_size_by_period_rule.csv'}")
-    print("Columns: period, category, rule, m_train, method,")
-    print("         cost_mean, cost_se, regret_mean, regret_se, n")
+    # ── 2. Sequencing importance diagnostic: S1/S4/S3 bounds (when matters)
+    print("\n" + "=" * 60)
+    print("SEQUENCING IMPORTANCE (data diagnostic, not a decision)")
+    print("=" * 60)
+    seq = sequencing_importance(g=8.0, J=2000)
+    seq.to_csv(OUT / "sequencing_importance.csv", index=False)
+    print("\nMax sequencing impact (gap_pct = (cost_S3-cost_S1)/cost_S1):")
+    print(seq.groupby("period")["gap_pct"].agg(["mean", "max"]).round(2).to_string())
+    print(f"\nSaved -> {OUT/'sequencing_importance.csv'}")
