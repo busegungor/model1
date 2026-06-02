@@ -161,37 +161,63 @@ def fig_metric_vs_samplesize(df, out_path, value_col, se_col=None,
 # FIGURE 2 — sequencing importance (gap_pct), grouped bars
 # ════════════════════════════════════════════════════════════════════
 def fig_sequencing(seq, out_path):
+    """
+    Sequencing gap_pct = (cost_S3 - cost_S1)/cost_S1, per period panel,
+    SAA vs Bayesian side by side for each category. Small bars in BOTH
+    methods => sequencing is irrelevant in this return regime, and that
+    conclusion does not depend on the demand model.
+    """
     cats = sorted(seq.category.unique())
-    x = np.arange(len(cats)); width = 0.2
-    fig, ax = plt.subplots(figsize=(11, 5.5))
-    colors = plt.cm.viridis(np.linspace(0.15, 0.85, len(PERIODS)))
-    for i, period in enumerate(PERIODS):
-        sub = seq[seq.period == period].set_index("category").reindex(cats)
-        ax.bar(x + (i - 1.5) * width, sub["gap_pct"].values, width,
-               label=period, color=colors[i])
-    ax.axhline(0, color="0.7", linewidth=0.8)
-    ax.set_xticks(x); ax.set_xticklabels(cats, rotation=20, ha="right")
-    ax.set_ylabel("Sequencing gap  (cost$_{S3}$ - cost$_{S1}$)/cost$_{S1}$  [%]")
-    ax.set_title("Maximum impact of intraperiod sequencing\n"
-                 "(small bars -> sequencing irrelevant in this return regime)",
-                 fontsize=12)
-    ax.legend(title="Period", frameon=False); ax.grid(True, axis="y", alpha=0.25)
-    fig.tight_layout(); fig.savefig(out_path, dpi=150, bbox_inches="tight"); plt.close(fig)
+    has_method = "method" in seq.columns
+    methods = ["SAA", "Bayesian"] if has_method else ["(single)"]
+    mcolor = {"SAA": METHOD_COLOR["SAA"], "Bayesian": METHOD_COLOR["Bayesian"],
+              "(single)": "#888780"}
+    x = np.arange(len(cats))
+    width = 0.8 / len(methods)
+    fig, axes = plt.subplots(2, 2, figsize=(13, 9), sharex=True)
+    axes = axes.flatten()
+    for ax, period in zip(axes, PERIODS):
+        sub = seq[seq.period == period]
+        if sub.empty:
+            ax.set_visible(False); continue
+        for j, meth in enumerate(methods):
+            d = (sub[sub.method == meth] if has_method else sub)
+            d = d.set_index("category").reindex(cats)
+            ax.bar(x + (j - (len(methods) - 1) / 2) * width,
+                   d["gap_pct"].values, width, label=meth, color=mcolor[meth])
+        ax.axhline(0, color="0.7", linewidth=0.8)
+        ax.set_title(f"Period {period}", fontsize=12, fontweight="bold")
+        ax.set_xticks(x); ax.set_xticklabels(cats, rotation=20, ha="right", fontsize=8)
+        ax.set_ylabel("gap %  (cost$_{S3}$-cost$_{S1}$)/cost$_{S1}$")
+        ax.grid(True, axis="y", alpha=0.25)
+    if has_method:
+        axes[0].legend(frameon=False, fontsize=9, title="Method")
+    fig.suptitle("Maximum impact of intraperiod sequencing — SAA vs Bayesian\n"
+                 "(small bars in both methods -> sequencing irrelevant here)",
+                 fontsize=12, y=1.02)
+    fig.tight_layout()
+    fig.savefig(out_path, dpi=150, bbox_inches="tight"); plt.close(fig)
     print(f"Saved -> {out_path}")
 
 
 # ════════════════════════════════════════════════════════════════════
 # FIGURE 2b — S1/S4/S3 cost levels side by side (where does S4 sit?)
 # ════════════════════════════════════════════════════════════════════
-def fig_sequencing_levels(seq, out_path):
+def fig_sequencing_levels(seq, out_path, method=None):
     """
     Per-period panel; in each, the three rule costs (S1 best-case netting,
     S4 empirical order-of-arrival, S3 worst-case) shown side by side for
     every category. Lets the reader see directly whether S4 sits near S1
-    (sequencing irrelevant) or near S3 (sequencing matters). Here S4 hugs
-    S1 in short periods, drifting slightly toward S3 as the period lengthens
-    — but the whole S1-S3 band is so narrow that all three nearly coincide.
+    (sequencing irrelevant) or near S3 (sequencing matters).
+
+    If the CSV has a `method` column, pass method="SAA" or "Bayesian" to
+    pick one; the figure title notes which. (Levels are not comparable
+    across methods on the same axis — the demand models give different cost
+    scales — so we draw one method per figure rather than overlaying.)
     """
+    if "method" in seq.columns and method is not None:
+        seq = seq[seq.method == method]
+    mtag = f" — {method}" if method else ""
     cats = sorted(seq.category.unique())
     x = np.arange(len(cats)); width = 0.26
     rule_color = {"cost_S1": "#52B788", "cost_S4": "#1f6feb", "cost_S3": "#E76F51"}
@@ -202,7 +228,8 @@ def fig_sequencing_levels(seq, out_path):
     axes = axes.flatten()
     for ax, period in zip(axes, PERIODS):
         sub = seq[seq.period == period].set_index("category").reindex(cats)
-        if sub.empty:
+        vals = sub[["cost_S1", "cost_S4", "cost_S3"]]
+        if sub.empty or vals.isna().all().all():
             ax.set_visible(False); continue
         for j, col in enumerate(["cost_S1", "cost_S4", "cost_S3"]):
             ax.bar(x + (j - 1) * width, sub[col].values, width,
@@ -210,14 +237,13 @@ def fig_sequencing_levels(seq, out_path):
         ax.set_title(f"Period {period}", fontsize=12, fontweight="bold")
         ax.set_xticks(x); ax.set_xticklabels(cats, rotation=20, ha="right", fontsize=8)
         ax.set_ylabel("Expected cost"); ax.grid(True, axis="y", alpha=0.25)
-        # zoom y-axis to make the tiny S1/S4/S3 differences visible
-        vmin = sub[["cost_S1", "cost_S4", "cost_S3"]].min().min()
-        vmax = sub[["cost_S1", "cost_S4", "cost_S3"]].max().max()
-        pad = (vmax - vmin) * 0.5 + 0.5
-        ax.set_ylim(max(0, vmin - pad), vmax + pad)
+        vmin = np.nanmin(vals.values); vmax = np.nanmax(vals.values)
+        if np.isfinite(vmin) and np.isfinite(vmax):
+            pad = (vmax - vmin) * 0.5 + 0.5
+            ax.set_ylim(max(0, vmin - pad), vmax + pad)
     axes[0].legend(frameon=False, fontsize=9, loc="upper right")
-    fig.suptitle("Sequencing cost levels — S1 / S4 / S3 by period and category\n"
-                 "(S4 sits near S1: empirical timing is close to best-case; "
+    fig.suptitle(f"Sequencing cost levels — S1 / S4 / S3{mtag}\n"
+                 "(S4 near S1: empirical timing close to best-case; "
                  "band is narrow throughout)", fontsize=12, y=1.02)
     fig.tight_layout()
     fig.savefig(out_path, dpi=150, bbox_inches="tight"); plt.close(fig)
@@ -438,7 +464,11 @@ if __name__ == "__main__":
                      "(mean over 5 categories, +/-1 s.e. band)")
     seq = pd.read_csv(OUT / "sequencing_importance.csv")
     fig_sequencing(seq, OUT / "fig_sequencing.png")
-    fig_sequencing_levels(seq, OUT / "fig_sequencing_levels.png")
+    if "method" in seq.columns:
+        for m in seq.method.unique():
+            fig_sequencing_levels(seq, OUT / f"fig_sequencing_levels_{m}.png", method=m)
+    else:
+        fig_sequencing_levels(seq, OUT / "fig_sequencing_levels.png")
 
     # Model-descriptive figures (full-data fits)
     fits = _build_fulldata_fits(period="W", rule="S4")
