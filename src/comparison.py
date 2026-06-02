@@ -168,9 +168,11 @@ def compare_one(dataset, prm, rule="S4", m_grid=None, g_grid=(5.0, 8.0, 20.0),
 
 
 def summarize(df_raw):
-    """Mean cost & regret per (m_train, g, method) with standard errors."""
+    """Mean cost, regret & Q per (m_train, g, method) with standard errors."""
     g = (df_raw.groupby(["m_train", "g", "method"])
          .agg(cost_mean=("cost", "mean"),
+              Q_mean=("Q", "mean"),
+              Q_se=("Q", lambda x: x.std() / np.sqrt(max(len(x), 1))),
               regret_mean=("rel_regret", "mean"),
               regret_se=("rel_regret", lambda x: x.std() / np.sqrt(max(len(x), 1))),
               n=("cost", "count")).reset_index())
@@ -225,17 +227,20 @@ def sequencing_importance(periods=("W", "2W", "3W", "4W"),
     The real model always uses S4 (empirical order-of-arrival). S1 (best
     case: all resalable returns offset demand) and S3 (worst case: none do)
     are the BOUNDS of the sequencing spectrum, never an operating choice.
-    This function reports, per (period, category), the cost under each bound
-    and where S4 falls, to answer the supervisor's "when does it matter, if
-    at all": if cost_S3 - cost_S1 is small, sequencing is irrelevant and the
-    S4 machinery is not needed; if large, S4 must be modelled carefully.
+    This function reports, per (period, category, method), the cost under
+    each bound and where S4 falls, to answer "when does it matter, if at
+    all": if cost_S3 - cost_S1 is small, sequencing is irrelevant.
 
-    All three rules use the SAME upstream binomial draws (same seed) and the
-    SAME cost layer, so differences are purely sequencing. SAA-side only
-    (one method is enough to measure a data property; the method comparison
-    is the separate run_comparison above).
+    All three rules use the SAME upstream draws (same seed) and the SAME
+    cost layer, so differences are purely sequencing. Computed for BOTH
+    methods — SAA (point-estimate r,k, empirical demand) and Bayesian
+    (posterior r,k, NegBin-Beta demand) — so the claim "sequencing is
+    irrelevant in this regime" is shown for each method rather than assumed
+    to transfer from one to the other. Note the two methods estimate r,k
+    differently (point estimate vs posterior mean), so their rk — and hence
+    the band width — can differ slightly even on full data.
 
-    Reports:
+    Reports per method:
       cost_S1, cost_S4, cost_S3
       gap_pct  = (cost_S3 - cost_S1)/cost_S1 * 100   (max impact)
       S4_pos   = (cost_S4 - cost_S1)/(cost_S3 - cost_S1)  (0=best, 1=worst)
@@ -254,26 +259,35 @@ def sequencing_importance(periods=("W", "2W", "3W", "4W"),
             pG = (1 - r) * p + rk * (p - d) + r * (1 - k) * (s_ - d)
             pN = pG / (1 - rk); gN = g / (1 - rk)
             a = _alpha(c, s_, pN, gN)
-            costs = {}
-            for rule in ("S1", "S4", "S3"):
-                # SAME seed across rules -> identical draws -> pure sequencing
-                f = build_net_demand_matrix(ds, r, k, rule=rule,
-                                            J=J, seed=seed).flatten()
-                Q = float(np.quantile(f, a))
-                costs[rule] = _cost(Q, f, c, s_, pN, gN)
-            denom = costs["S3"] - costs["S1"]
-            rows.append({
-                "period": period, "category": cat, "rk": round(rk, 4),
-                "cost_S1": round(costs["S1"], 4),
-                "cost_S4": round(costs["S4"], 4),
-                "cost_S3": round(costs["S3"], 4),
-                "gap_pct": round(100 * denom / costs["S1"], 3),
-                "S4_pos": round((costs["S4"] - costs["S1"]) / denom, 3)
-                          if abs(denom) > 1e-9 else np.nan,
-            })
-            if verbose:
-                print(f"[{period}|{cat}] gap={rows[-1]['gap_pct']:.2f}%  "
-                      f"S4_pos={rows[-1]['S4_pos']}")
+            post = build_posteriors(ds["panel"])
+
+            for method in ("SAA", "Bayesian"):
+                costs = {}
+                for rule in ("S1", "S4", "S3"):
+                    # SAME seed across rules -> identical draws -> pure sequencing
+                    if method == "SAA":
+                        f = build_net_demand_matrix(
+                            ds, r, k, rule=rule, J=J, seed=seed).flatten()
+                    else:
+                        f = build_bayesian_net_demand_matrix(
+                            ds, rule=rule, J=J, seed=seed,
+                            posteriors=post).flatten()
+                    Q = float(np.quantile(f, a))
+                    costs[rule] = _cost(Q, f, c, s_, pN, gN)
+                denom = costs["S3"] - costs["S1"]
+                rows.append({
+                    "period": period, "category": cat, "method": method,
+                    "rk": round(rk, 4),
+                    "cost_S1": round(costs["S1"], 4),
+                    "cost_S4": round(costs["S4"], 4),
+                    "cost_S3": round(costs["S3"], 4),
+                    "gap_pct": round(100 * denom / costs["S1"], 3),
+                    "S4_pos": round((costs["S4"] - costs["S1"]) / denom, 3)
+                              if abs(denom) > 1e-9 else np.nan,
+                })
+                if verbose:
+                    print(f"[{period}|{cat}|{method}] gap={rows[-1]['gap_pct']:.2f}%  "
+                          f"S4_pos={rows[-1]['S4_pos']}")
     return pd.DataFrame(rows)
 
 

@@ -1,22 +1,31 @@
 """
-main.py — Integration test / smoke test for the full pipeline.
+main.py — Full orchestrator for the entire thesis pipeline.
 
-Runs the entire SAA + Bayesian + benchmark pipeline end-to-end for ONE
-period (W) and all 5 categories, verifying that every module hands off
-correctly to the next:
+A single command (`python main.py`) runs everything end to end:
 
+  STAGE A — Pipeline verification (all 4 periods W/2W/3W/4W):
     config -> data_analysis -> preprocessing -> parameter_estimation
            -> monte_carlo (SAA + Bayesian) -> saa_solver / bayesian_solver
-           -> benchmark
+           -> benchmark, with consistency checks (finite Q*, alpha in (0,1),
+           S1<=S4<=S3 spectrum) for every period.
 
-Purpose is VERIFICATION, not full analysis. The full multi-period grid
-(W/2W/3W/4W x m_train x rules x methods) belongs to the comparison step
-(Step 15); parameter sweeps belong to sensitivity (Step 11). Once those
-exist, this file can be extended into a full orchestrator.
+  STAGE B — Method comparison (SAA vs Bayesian, out-of-sample regret):
+    comparison.run_comparison over periods x m_train x g, rule S4.
+    -> comparison_outputs/method_comparison.csv
 
-Run:  python main.py
+  STAGE C — Sequencing importance diagnostic (when does sequencing matter):
+    comparison.sequencing_importance, S1/S4/S3 bounds.
+    -> comparison_outputs/sequencing_importance.csv
+
+This is SLOW (Stage B bootstraps; several minutes). For a quick pipeline
+check only, call run_integration_test(period="W") directly, or run with
+`python main.py --quick` to skip Stages B and C.
+
+Run:  python main.py            (everything)
+      python main.py --quick    (Stage A only, fast smoke test)
 """
 
+import sys
 import numpy as np
 
 from config import COST_PARAMS, MC_SETTINGS
@@ -167,5 +176,64 @@ def run_integration_test(period="W", rule="S4", J=None, seed=0):
     return results
 
 
+def run_all_periods(rule="S4", J=None, seed=0):
+    """STAGE A: pipeline verification for all four periods."""
+    periods = ("W", "2W", "3W", "4W")
+    all_pass = True
+    for period in periods:
+        res = run_integration_test(period=period, rule=rule, J=J, seed=seed)
+        # run_integration_test prints its own PASS/FAIL; collect overall status
+        # (re-derive from the printed checks by re-checking Q* finiteness)
+        ok = all(
+            np.isfinite(res[cat][rl][m]["Q_opt"]) and res[cat][rl][m]["Q_opt"] > 0
+            for cat in res for rl in ("S1", "S3", "S4") for m in ("saa", "bay")
+        )
+        all_pass = all_pass and ok
+    print("\n" + "#" * 78)
+    print("STAGE A COMPLETE — pipeline verified for all periods W/2W/3W/4W"
+          if all_pass else
+          "STAGE A: some periods had issues — inspect output above.")
+    print("#" * 78)
+    return all_pass
+
+
+def run_full_orchestrator(quick=False, seed=0):
+    """
+    Run the entire thesis pipeline. quick=True stops after Stage A.
+    """
+    from pathlib import Path
+    OUT = Path("comparison_outputs"); OUT.mkdir(exist_ok=True)
+
+    # ── STAGE A: pipeline verification, all periods ──────────────────
+    run_all_periods(rule="S4")
+
+    if quick:
+        print("\n[--quick] Stages B and C skipped.")
+        return
+
+    # ── STAGE B: method comparison (SAA vs Bayesian, out-of-sample) ──
+    print("\n" + "#" * 78)
+    print("STAGE B — METHOD COMPARISON (SAA vs Bayesian regret) — several min")
+    print("#" * 78)
+    from comparison import run_comparison, sequencing_importance
+    df = run_comparison(rule="S4", g_grid=(5.0, 8.0, 20.0),
+                        B=60, J_fit=MC_SETTINGS["J_sensitivity"], seed=seed)
+    df.to_csv(OUT / "method_comparison.csv", index=False)
+    print(f"Saved -> {OUT/'method_comparison.csv'}")
+
+    # ── STAGE C: sequencing importance diagnostic ────────────────────
+    print("\n" + "#" * 78)
+    print("STAGE C — SEQUENCING IMPORTANCE (S1/S4/S3 bounds)")
+    print("#" * 78)
+    seq = sequencing_importance(g=8.0, J=2000, seed=seed)
+    seq.to_csv(OUT / "sequencing_importance.csv", index=False)
+    print(f"Saved -> {OUT/'sequencing_importance.csv'}")
+
+    print("\n" + "=" * 78)
+    print("ALL STAGES COMPLETE. Outputs in comparison_outputs/.")
+    print("=" * 78)
+
+
 if __name__ == "__main__":
-    run_integration_test(period="W", rule="S4")
+    quick = "--quick" in sys.argv
+    run_full_orchestrator(quick=quick)
