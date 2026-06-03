@@ -38,7 +38,7 @@ from monte_carlo import (build_net_demand_matrix,
                          summarize_matrix)
 from saa_solver import solve_saa
 from bayesian_solver import solve_bayesian
-from benchmark import netting_benchmark
+
 from bayesian_models import build_posteriors
 
 
@@ -71,7 +71,7 @@ def run_integration_test(period="W", rule="S4", J=None, seed=0):
         print("    WARNING: some categories failed the well-posed check!")
 
 
- # ── Steps 4-7: per-category, ALL rules, SAA / Bayesian / benchmark ─
+ # ── Steps 4-7: per-category, ALL rules, SAA / Bayesian ─
     print(f"\n[4-7] All sequencing rules (S1, S3, S4) — SAA vs Bayesian:")
 
     rules = ["S1", "S3", "S4"]
@@ -81,11 +81,6 @@ def run_integration_test(period="W", rule="S4", J=None, seed=0):
         prm = params[cat]
         results[cat] = {}
 
-        # Deterministic benchmark (rule-independent, SAA side)
-        bench = netting_benchmark(ds["panel"], prm["r_hat"], prm["k_hat"],
-                                  prm["c"], prm["s"], prm["pN"], prm["gN"],
-                                  gurobi_env=env)
-        results[cat]["bench"] = bench
 
         for rule in rules:
             N_saa = build_net_demand_matrix(ds, prm["r_hat"], prm["k_hat"],

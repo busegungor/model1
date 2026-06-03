@@ -5,11 +5,11 @@ import seaborn as sns
 from fitter import Fitter, get_common_distributions, get_distributions
 from collections import Counter
 from scipy import stats
-
+from config import DATA_DIR
 
 pd.set_option('display.max_columns', None)
 pd.set_option("display.width", 500)
-df = pd.read_csv("/Users/busegungor/model1/data/master_data.csv", index_col=0, parse_dates=["order_date", "return_date"])
+df = pd.read_csv(DATA_DIR / "master_data.csv", index_col=0, parse_dates=["order_date", "return_date"])
 df_columns = ['order_item_id', 'order_id', 'order_date', 'order_status', 'product_id', 'quantity', 'item_price', 'product_name', 'category_id', 'category_name', 'unit_cost', 'unit_price', 'return_id', 'return_date', 'return_reason']
 df = df[df_columns]
 
@@ -43,12 +43,12 @@ flags = (
 # temiz veri: flag'li satırları çıkar
 clean = main[~flags].copy()
 
-# clean.to_csv('/Users/busegungor/model1/data/main_clean.csv', index=False)
+# clean.to_csv(DATA_DIR / "main_clean.csv", index=False)
 
 
 
 duplicates = clean[clean["order_item_id"].duplicated(keep=False)].sort_values("order_item_id")
-# duplicates.to_csv('/Users/busegungor/model1/data/duplicates.csv', index=False)
+# duplicates.to_csv(DATA_DIR / "duplicates.csv", index=False)
 
 
 # ════════════════════════════════════════════════════════════
