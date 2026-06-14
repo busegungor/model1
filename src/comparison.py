@@ -32,6 +32,14 @@ Bayesian small-m advantage is earned. Bootstrap = sample-size generator
 
 m_train="all" is DETERMINISTIC (full panel, no bootstrap) so SAA's asymptote
 is the genuine full-data fit (regret -> 0 up to MC noise).
+
+CRITICAL RATIO (v15): the cost layer uses the PRIMITIVE ratio
+alpha = (p+g-c)/(p+g-s) (model_body Eq. 10). Return params r,k enter ONLY
+through the net-demand matrices (recapture lives in N), never through the
+cost coefficients. This matches saa_solver / bayesian_solver, so the SAA vs
+Bayesian comparison and the sequencing diagnostic are run on the SAME ratio
+as the operating solvers. (The earlier MT-scaled pN/gN economics are gone
+from this layer; alpha_MT is only a comparison object in saa_solver.)
 """
 
 import numpy as np
@@ -45,14 +53,14 @@ from monte_carlo import (build_net_demand_matrix,
 from bayesian_models import build_posteriors
 
 
-# ── cost helpers ────────────────────────────────────────────────────
-def _alpha(c, s, pN, gN):
-    cu = pN - c + gN; co = c - s
+# ── cost helpers (PRIMITIVE ratio: cu = p+g-c, co = c-s) ─────────────
+def _alpha(p, c, s, g):
+    cu = p + g - c; co = c - s
     return cu / (cu + co)
 
 
-def _cost(Q, f, c, s, pN, gN):
-    cu = pN - c + gN; co = c - s
+def _cost(Q, f, p, c, s, g):
+    cu = p + g - c; co = c - s
     return float(cu * np.mean(np.maximum(f - Q, 0.0))
                  + co * np.mean(np.maximum(Q - f, 0.0)))
 
@@ -94,8 +102,9 @@ def compare_one(dataset, prm, rule="S4", m_grid=None, g_grid=(5.0, 8.0, 20.0),
                  clean isolation of demand-distribution learning).
       Bayesian : posterior from the subsample's demand; r,k posteriors from
                  full data (learn_returns=False) or subsample (True).
-    g is a POLICY parameter, swept on a grid (cost layer only -> matrices
-    built once per (m_train,rep), reused across all g).
+    g is a POLICY parameter, swept on a grid. Under the PRIMITIVE ratio it
+    enters only alpha=(p+g-c)/(p+g-s); the net-demand matrices are built once
+    per (m_train,rep) and reused across all g (g does not change N).
     The TRUTH is built with the FULL-DATA r_hat,k_hat (the real return
     structure), independent of g (g doesn't change the demand law).
     """
@@ -105,10 +114,9 @@ def compare_one(dataset, prm, rule="S4", m_grid=None, g_grid=(5.0, 8.0, 20.0),
 
     c, s, p, d = prm["c"], prm["s"], prm["p"], prm["d"]
     r_full, k_full = prm["r_hat"], prm["k_hat"]
-    rk = r_full * k_full
-    # cost layer pieces that don't depend on g (phi = rk idealization)
-    pG = (1 - r_full) * p + rk * (p - d) + r_full * (1 - k_full) * (s - d)
-    pN = pG / (1 - rk); gN_unit = 1.0 / (1 - rk)     # gN = g * gN_unit
+    # NOTE (v15): no pN/gN here. Return params enter only through N (built
+    # below); the cost layer uses primitive (p,c,s,g). r,k still parametrize
+    # the net-demand draws (recapture in the quantity dimension).
 
     # TRUTH (full-data return structure, real rule)
     truth = build_truth(dataset, r_full, k_full, rule, J_truth=J_truth)
@@ -148,16 +156,15 @@ def compare_one(dataset, prm, rule="S4", m_grid=None, g_grid=(5.0, 8.0, 20.0),
                 seed=int(rng.integers(1, 2**31 - 1)), posteriors=posteriors)
             f_saa = N_saa.flatten(); f_bay = N_bay.flatten()
 
-            # sweep g cheaply (cost layer only)
+            # sweep g cheaply (primitive ratio: g enters only alpha)
             for g in g_grid:
-                gN = g * gN_unit
-                if not (pN + gN > c > s >= 0):
+                if not (p + g > c > s >= 0):
                     continue
-                a = _alpha(c, s, pN, gN)
-                co = _cost(np.quantile(truth, a), truth, c, s, pN, gN)
+                a = _alpha(p, c, s, g)
+                co = _cost(np.quantile(truth, a), truth, p, c, s, g)
                 Qs = float(np.quantile(f_saa, a)); Qb = float(np.quantile(f_bay, a))
-                cs_ = _cost(Qs, truth, c, s, pN, gN)
-                cb_ = _cost(Qb, truth, c, s, pN, gN)
+                cs_ = _cost(Qs, truth, p, c, s, g)
+                cb_ = _cost(Qb, truth, p, c, s, g)
                 rows.append({"m_train": lbl, "g": g, "rep": b, "method": "SAA",
                              "Q": Qs, "cost": cs_, "cost_oracle": co,
                              "rel_regret": cs_ / co - 1})
@@ -184,7 +191,7 @@ def summarize(df_raw):
 # ════════════════════════════════════════════════════════════════════
 def run_comparison(periods=("W", "2W", "3W", "4W"), rule="S4",
                    g_grid=(5.0, 8.0, 20.0),
-                   B=60, J_fit=100, J_truth=3000, learn_returns=False,
+                   B=60, J_fit=100, J_truth=3000, learn_returns=True,
                    seed=0, verbose=True):
     """
     SAA vs Bayesian out-of-sample regret across periods, m_train, and g.
@@ -240,7 +247,7 @@ def sequencing_importance(periods=("W", "2W", "3W", "4W"),
     differently (point estimate vs posterior mean), so their rk — and hence
     the band width — can differ slightly even on full data.
 
-    Reports per method:
+    Reports per method (PRIMITIVE ratio: cu=p+g-c, co=c-s):
       cost_S1, cost_S4, cost_S3
       gap_pct  = (cost_S3 - cost_S1)/cost_S1 * 100   (max impact)
       S4_pos   = (cost_S4 - cost_S1)/(cost_S3 - cost_S1)  (0=best, 1=worst)
@@ -256,9 +263,9 @@ def sequencing_importance(periods=("W", "2W", "3W", "4W"),
             c, s_, p, d = prm["c"], prm["s"], prm["p"], prm["d"]
             r, k = prm["r_hat"], prm["k_hat"]
             rk = r * k
-            pG = (1 - r) * p + rk * (p - d) + r * (1 - k) * (s_ - d)
-            pN = pG / (1 - rk); gN = g / (1 - rk)
-            a = _alpha(c, s_, pN, gN)
+            # PRIMITIVE ratio (model_body Eq. 10); rk reported only as a
+            # regime indicator (drives the band width via N, not via alpha).
+            a = _alpha(p, c, s_, g)
             post = build_posteriors(ds["panel"])
 
             for method in ("SAA", "Bayesian"):
@@ -273,7 +280,7 @@ def sequencing_importance(periods=("W", "2W", "3W", "4W"),
                             ds, rule=rule, J=J, seed=seed,
                             posteriors=post).flatten()
                     Q = float(np.quantile(f, a))
-                    costs[rule] = _cost(Q, f, c, s_, pN, gN)
+                    costs[rule] = _cost(Q, f, p, c, s_, g)
                 denom = costs["S3"] - costs["S1"]
                 rows.append({
                     "period": period, "category": cat, "method": method,

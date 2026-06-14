@@ -5,8 +5,18 @@ Computes everything the SAA / Bayesian solvers need, separating clearly:
   - ESTIMATED FROM DATA:   r_hat, k_hat (frequentist MLE, from the panel)
                            p, c        (category mean price / cost)
   - DERIVED:               s  = s_pct * c
-                           pG, pN, gN  (revenue / shortage params)
   - CONSTANT (config):     s_pct, g, d
+  - MT-COMPARISON ONLY:    pG, pN, gN  (Mostard-Teunter transformed economics,
+                           model_body Eq. 11 / Prop 3). These are NOT used by
+                           the primitive solver; retained so §5 can report the
+                           alpha_MT vs alpha gap (Eq. 12).
+
+NOTE on the critical ratio (v15). The operating solver uses the PRIMITIVE
+ratio alpha = (p+g-c)/(p+g-s) (model_body Eq. 10); return params r, k enter
+ONLY through the net-demand sample N, never through the cost coefficients.
+The earlier code scaled p, g by 1/(1-rk) (pN, gN) and used alpha_MT — that
+double-counts recapture (N already carries it) and is now confined to the
+comparison path. See saa_solver._solve_with_quantile_mt.
 
 NOTE on Bayesian: r_hat and k_hat here are the FREQUENTIST point estimates
 used by SAA. The Bayesian solver (Step 14) replaces them with Beta
@@ -15,13 +25,16 @@ This module is the SAA-side parameter source AND a sanity reference for
 the Bayesian posteriors.
 
 ────────────────────────────────────────────────────────────────────
-Cost-parameter formulas (paper Section 2; Colab lines 338-360):
-  r_hat = Σ u_t / Σ G_t
+Cost-parameter formulas (model_body §3; Colab lines 338-360):
+  r_hat = Σ u_t / Σ G_t        (line-level; Path L)
   k_hat = Σ k_obs_t / Σ u_t
-  pG = (1-r)·p + r·k·(p-d) + r·(1-k)·(s-d)         # expected gross rev / unit
-  pN = pG / (1 - r·k)                               # rev per net-demand unit
-  gN = g  / (1 - r·k)                               # shortage cost per net unit
-  Well-posed: gN + pN > c > s >= 0
+  s     = s_pct · c
+  PRIMITIVE (operating):  cu = p+g-c,  co = c-s,  alpha = (p+g-c)/(p+g-s)
+  Well-posed: p + g > c > s >= 0
+  MT-COMPARISON (Eq. 11, not operating):
+    pG = (1-r)·p + r·k·(p-d) + r·(1-k)·(s-d)
+    pN = pG / (1 - r·k)
+    gN = g  / (1 - r·k)
 ────────────────────────────────────────────────────────────────────
 """
 
@@ -39,7 +52,7 @@ def estimate_rates(panel: pd.DataFrame) -> dict:
     ----------
     panel : pd.DataFrame
         Per-category panel from preprocessing.build_category_datasets,
-        with columns [G_t, u_t, k_obs_t].
+        with columns [G_t, u_t, k_obs_t] counted at the LINE level (Path L).
 
     Returns
     -------
@@ -107,7 +120,14 @@ def compute_cost_params(
     d: float = None,
 ) -> dict:
     """
-    Compute derived revenue/shortage parameters for the newsvendor cost.
+    Compute the newsvendor cost parameters.
+
+    PRIMITIVE (operating): the solver needs only p, c, s, g — alpha is
+    (p+g-c)/(p+g-s) and contains no r, k (model_body Eq. 10).
+
+    MT-COMPARISON (not operating): pG, pN, gN (model_body Eq. 11) are also
+    returned so saa_solver.compare_critical_ratios can report the alpha_MT
+    gap (Eq. 12). They are NOT consumed by solve_saa.
 
     Parameters
     ----------
@@ -115,7 +135,8 @@ def compute_cost_params(
         Selling price and unit cost (from estimate_price_cost).
     r, k : float
         Return probability and resalability (from estimate_rates, OR a
-        sensitivity grid value, OR a Bayesian posterior draw).
+        sensitivity grid value, OR a Bayesian posterior draw). Used ONLY for
+        the MT-comparison terms; the primitive ratio ignores them.
     s_pct, g, d : float, optional
         Cost constants. Default to config.COST_PARAMS if not given.
 
@@ -125,12 +146,16 @@ def compute_cost_params(
 
     Notes
     -----
-    Guards against r*k → 1 (division blow-up). If r*k >= 1 - 1e-9, the net-
-    demand transformation is undefined; we clip the denominator. In practice
-    r*k is ~0.02-0.04 here, so this is purely defensive (matters only if a
-    Bayesian draw or extreme sensitivity grid pushes r*k near 1).
+    Guards against r*k → 1 (division blow-up) in the MT terms. If r*k >=
+    1 - 1e-9 the net-demand transformation is undefined; we clip the
+    denominator. In practice r*k is ~0.02-0.04 here, so this is purely
+    defensive (matters only for an extreme Bayesian draw / sensitivity grid).
 
-    Colab origin: lines 355-360.
+    well_posed uses the PRIMITIVE condition p + g > c > s >= 0 (the operating
+    ratio's requirement), not the MT condition.
+
+    Colab origin: lines 355-360 (pN/gN now comparison-only; well_posed
+    switched to the primitive condition).
     """
     if s_pct is None:
         s_pct = COST_PARAMS["s_pct"]
@@ -142,20 +167,21 @@ def compute_cost_params(
     # Derived salvage value
     s = s_pct * c
 
-    # Net-demand scaling denominator, guarded
+    # ── PRIMITIVE well-posedness (operating ratio): p + g > c > s >= 0 ──
+    well_posed = (p + g > c) and (c > s) and (s >= 0)
+
+    # ── MT-COMPARISON terms (model_body Eq. 11; NOT used by solve_saa) ──
+    # Net-demand scaling denominator, guarded against r*k → 1.
     denom = 1.0 - r * k
     if denom < 1e-9:
         denom = 1e-9  # defensive: avoid division blow-up
 
-    # Expected gross revenue per unit of gross demand (paper Eq. 6)
+    # Expected gross revenue per unit of gross demand (model_body Eq. 11)
     pG = (1 - r) * p + r * k * (p - d) + r * (1 - k) * (s - d)
 
-    # Per net-demand-unit revenue and shortage cost (paper Eq. 7)
+    # Per net-demand-unit revenue and shortage cost (MT transform, Eq. 11)
     pN = pG / denom
     gN = g / denom
-
-    # Well-posedness: gN + pN > c > s >= 0  (paper, end of Section 2)
-    well_posed = (gN + pN > c) and (c > s) and (s >= 0)
 
     return {
         "p": p, "c": c, "s": s, "g": g, "d": d, "r": r, "k": k,
@@ -224,15 +250,15 @@ if __name__ == "__main__":
         print(f"{'='*78}")
         rows = {}
         for cat, prm in params.items():
+            # primitive critical ratio for reference
+            alpha = (prm["p"] + prm["g"] - prm["c"]) / (prm["p"] + prm["g"] - prm["s"])
             rows[cat] = {
                 "r_hat": round(prm["r_hat"], 4),
                 "k_hat": round(prm["k_hat"], 4),
                 "p": round(prm["p"], 2),
                 "c": round(prm["c"], 2),
                 "s": round(prm["s"], 2),
-                "pG": round(prm["pG"], 2),
-                "pN": round(prm["pN"], 2),
-                "gN": round(prm["gN"], 2),
+                "alpha": round(alpha, 4),
                 "ok": prm["well_posed"],
             }
         print(pd.DataFrame(rows).T)

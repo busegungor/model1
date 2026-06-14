@@ -43,8 +43,8 @@ def _m_to_x(m_series):
     return m_series.map({m: i for i, m in enumerate(M_ORDER)})
 
 
-def _alpha(c, s, pN, gN):
-    cu = pN - c + gN; co = c - s
+def _alpha(p, c, s, g):
+    cu = p + g - c; co = c - s
     return cu / (cu + co)
 
 
@@ -280,7 +280,7 @@ def plot_net_demand_distribution(N_saa, N_bay, Q_saa, Q_bay,
 def plot_cost_curves(all_cost_data: dict, save_path=None):
     """
     Multi-panel EP(Q) curves. all_cost_data:
-      {cat: {N_flat, c, s, pN, gN, Q_saa, Q_bay}}
+      {cat: {N_flat, p, c, s, g, Q_saa, Q_bay}}
     EP(Q) computed on the SAA net-demand pool; both optima marked.
     """
     cats = list(all_cost_data.keys())
@@ -289,7 +289,7 @@ def plot_cost_curves(all_cost_data: dict, save_path=None):
     axf = axes.flatten()
     for i, cat in enumerate(cats):
         ax = axf[i]; d = all_cost_data[cat]
-        N = d["N_flat"]; cu = d["pN"] - d["c"] + d["gN"]; co = d["c"] - d["s"]
+        N = d["N_flat"]; cu = d["p"] + d["g"] - d["c"]; co = d["c"] - d["s"]
         Qg = np.linspace(N.min() * 0.3, N.max() * 1.5, 400)
         EP = np.array([cu * np.mean(np.maximum(N - q, 0))
                        + co * np.mean(np.maximum(q - N, 0)) for q in Qg])
@@ -328,13 +328,13 @@ def _build_fulldata_fits(period="W", rule="S4", J=400, seed=0):
     out = {}
     for cat, ds in datasets.items():
         prm = params[cat]
-        c, s, pN, gN = prm["c"], prm["s"], prm["pN"], prm["gN"]
-        a = _alpha(c, s, pN, gN)
+        c, s, p, g = prm["c"], prm["s"], prm["p"], prm["g"]
+        a = _alpha(p, c, s, g)
         N_saa = build_net_demand_matrix(ds, prm["r_hat"], prm["k_hat"],
                                         rule=rule, J=J, seed=seed)
         N_bay = build_bayesian_net_demand_matrix(ds, rule=rule, J=J, seed=seed)
         out[cat] = {"N_saa": N_saa, "N_bay": N_bay, "N_flat": N_saa.flatten(),
-                    "c": c, "s": s, "pN": pN, "gN": gN,
+                    "p": p, "c": c, "s": s, "g": g,
                     "Q_saa": float(np.quantile(N_saa.flatten(), a)),
                     "Q_bay": float(np.quantile(N_bay.flatten(), a))}
     return out

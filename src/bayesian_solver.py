@@ -7,24 +7,30 @@ The Bayesian net-demand matrix is built in monte_carlo.py
 The solver is identical to the SAA solver (solve_saa) — the quantile
 critical-ratio solution is method-agnostic. Using the same solver
 guarantees that SAA vs Bayesian Q* differences come purely from the
-net-demand matrix (the demand model), not from the optimizer.
+net-demand matrix (the demand model), not from the optimizer. In
+particular both methods now share the SAME PRIMITIVE critical ratio
+alpha = (p+g-c)/(p+g-s) (model_body §3.6): the only object differing
+between the methods is the net-demand sample N.
 
 ────────────────────────────────────────────────────────────────────
 This module is NEW. Matrix construction now lives in monte_carlo.py.
+v15: signature switched to the primitive (p, c, s, g) to match solve_saa.
 ────────────────────────────────────────────────────────────────────
 """
 
 from saa_solver import solve_saa
 
 
-def solve_bayesian(N_matrix, c, s, pN, gN,
+def solve_bayesian(N_matrix, p, c, s, g,
                    gurobi_env=None, verbose=False) -> dict:
     """
     Solve the newsvendor for a Bayesian net-demand matrix.
 
-    Thin wrapper around solve_saa (same quantile core), tagged as Bayesian.
+    Thin wrapper around solve_saa (same primitive quantile core), tagged as
+    Bayesian. Takes the primitive market constants (p, c, s, g); the return
+    parameters r, k are already baked into N_matrix, not the cost ratio.
     """
-    result = solve_saa(N_matrix, c=c, s=s, pN=pN, gN=gN,
+    result = solve_saa(N_matrix, p=p, c=c, s=s, g=g,
                        gurobi_env=gurobi_env, verbose=verbose)
     result["method"] = "Bayesian_NegBinBeta"
     return result
@@ -56,10 +62,10 @@ if __name__ == "__main__":
         prm = params[cat]
         N_saa = build_net_demand_matrix(ds, prm["r_hat"], prm["k_hat"],
                                         rule="S4", J=200, seed=0)
-        rs = solve_saa(N_saa, prm["c"], prm["s"], prm["pN"], prm["gN"],
+        rs = solve_saa(N_saa, prm["p"], prm["c"], prm["s"], prm["g"],
                        gurobi_env=env)
         N_bay = build_bayesian_net_demand_matrix(ds, rule="S4", J=200, seed=0)
-        rb = solve_bayesian(N_bay, prm["c"], prm["s"], prm["pN"], prm["gN"],
+        rb = solve_bayesian(N_bay, prm["p"], prm["c"], prm["s"], prm["g"],
                             gurobi_env=env)
         print(f"{cat:<22}{rs['Q_opt']:>7.1f}{rb['Q_opt']:>7.1f}"
               f"{rs['obj_opt']:>10.3f}{rb['obj_opt']:>10.3f}")

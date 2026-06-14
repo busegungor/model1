@@ -39,7 +39,6 @@ from monte_carlo import (build_net_demand_matrix,
 from saa_solver import solve_saa
 from bayesian_solver import solve_bayesian
 
-from bayesian_models import build_posteriors
 
 
 def run_integration_test(period="W", rule="S4", J=None, seed=0):
@@ -56,7 +55,7 @@ def run_integration_test(period="W", rule="S4", J=None, seed=0):
     print(f"\n[1] Gurobi env: {'available' if env else 'None -> quantile fallback'}")
 
     # ── Step 2: Preprocessing ────────────────────────────────────────
-    print(f"\n[2] Preprocessing (cohort fix, dedup, unit-level timestamps)...")
+    print(f"\n[2] Preprocessing (cohort fix, dedup, line-level timestamps; Path L)...")
     datasets = build_category_datasets(order_items_clean, returns_clean,
                                        period=period)
     print(f"    Categories built: {len(datasets)}")
@@ -85,10 +84,10 @@ def run_integration_test(period="W", rule="S4", J=None, seed=0):
         for rule in rules:
             N_saa = build_net_demand_matrix(ds, prm["r_hat"], prm["k_hat"],
                                             rule=rule, J=J, seed=seed)
-            saa = solve_saa(N_saa, prm["c"], prm["s"], prm["pN"], prm["gN"],
+            saa = solve_saa(N_saa, prm["p"], prm["c"], prm["s"], prm["g"],
                             gurobi_env=env)
             N_bay = build_bayesian_net_demand_matrix(ds, rule=rule, J=J, seed=seed)
-            bay = solve_bayesian(N_bay, prm["c"], prm["s"], prm["pN"], prm["gN"],
+            bay = solve_bayesian(N_bay, prm["p"], prm["c"], prm["s"], prm["g"],
                                  gurobi_env=env)
             results[cat][rule] = {
                 "saa": saa, "bay": bay,

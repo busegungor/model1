@@ -4,7 +4,7 @@ preprocessing.py — Build model-ready category datasets.
 Takes the cleaned dataframes from data_analysis.py and produces, per
 category and per period definition:
   - a cohort-fixed panel of (G_t, u_t, k_obs_t)
-  - intraperiod arrival timestamps (unit-level) for demand and returns
+  - intraperiod arrival timestamps (line-level) for demand and returns
 
 KEY DESIGN DECISIONS:
   1. Data source: data_analysis.py's order_items_clean / returns_clean
@@ -23,16 +23,35 @@ KEY DESIGN DECISIONS:
      (paper Section 2.5), so we keep ONE return per order_item. We prefer
      the RESALABLE record (it carries the information relevant to k), and
      among ties take the earliest return_date. 376 -> 361 returns.
-  6. UNIT-LEVEL TIMESTAMPS (addresses supervisor's question:
-     "Customer demands: do they all take one unit or could it also be
-     more?"). Quantity ranges 1-4 (mean 2.52, 76% of order_items have
-     quantity > 1). An order_item with quantity q expands to q identical
-     arrival fractions, so the netting logic operates on individual units.
+  6. LINE-LEVEL ACCOUNTING (Path L — supersedes the earlier unit-expand
+     design). The atomic ordering AND return unit is the ORDER LINE
+     (order_item), not the physical piece. Rationale: the data records a
+     return per order_item (one return_id per line, no return-quantity
+     column), so a returned line is observed as fully returned. Treating
+     the line as the atomic Bernoulli(r) trial is what the data actually
+     measures and keeps U_t | G_t ~ Binomial(G_t, r) exact (verified:
+     return rate is homogeneous across line sizes q=1..4, ~4-5%, so line
+     size carries no return-relevant information). An order may contain
+     several lines; G_t counts LINES, not pieces. (This reverses the prior
+     quantity-expand approach, which assumed within-line unit independence
+     and produced over-dispersion phi~3.0 against the line-clustered data.)
+  7. DAY-BASED COHORT INDEX (supersedes pd.to_period/period_range). pandas
+     does not support multi-week period frequencies reliably: to_period("2W")
+     silently produces WEEKLY buckets, while period_range(freq="2W") produces
+     true 2-week buckets, so a reindex between them drops >50% of rows for
+     2W/3W/4W. We instead assign each row an INTEGER cohort id =
+     floor((order_date - origin) / period_days), with a single global origin
+     (earliest order_date). The same formula builds the contiguous cohort
+     range, so grouping and reindexing are aligned by construction and every
+     row survives under every period definition. arrival_frac / return_frac
+     (intraperiod timing) are unchanged — they were already day-based.
 
 ────────────────────────────────────────────────────────────────────
 Colab origin: load_real_data(), c_alıs_ır_son_hali_s_u_anlık.py
               lines ~150-310 (refactored to consume cleaned dataframes
-              instead of re-reading raw CSVs; dedup added).
+              instead of re-reading raw CSVs; dedup added; Path-L
+              line-level aggregation replaces unit-expand; day-based
+              cohort index replaces to_period/period_range).
 ────────────────────────────────────────────────────────────────────
 """
 
@@ -42,25 +61,47 @@ import pandas as pd
 from config import RESALABLE_REASONS, ORDER_STATUS_FILTER
 
 
-def _period_fraction(dt_series: pd.Series, period: str) -> np.ndarray:
-    """
-    Normalized position of each timestamp within its period bucket, in [0,1).
+# Period length in days. Single source of truth for both the cohort index
+# and the intraperiod fraction.
+PERIOD_DAYS = {"W": 7, "2W": 14, "3W": 21, "4W": 28}
 
-    For "W" this is essentially day-of-week / 7. For multi-week periods we
-    use (days since bucket start) / (bucket length in days).
 
-    Colab origin: arrival_frac / return_frac computation (~lines 200, 290)
+def _cohort_index(dt_series: pd.Series, period: str, origin: pd.Timestamp) -> np.ndarray:
     """
-    period_days = {"W": 7, "2W": 14, "3W": 21, "4W": 28}
-    if period not in period_days:
+    Integer cohort id for each timestamp: floor((date - origin)/period_days).
+
+    Replaces pd.to_period(period), which is unreliable for multi-week
+    frequencies (to_period("2W") silently yields weekly buckets). Using a
+    day-based integer index makes grouping and the full cohort range share
+    one definition, so reindex never drops rows.
+
+    Colab origin: replaces the to_period() cohorting (~lines 180, 250).
+    """
+    if period not in PERIOD_DAYS:
         raise ValueError(f"Unknown period: {period}")
-    n_days = period_days[period]
+    n_days = PERIOD_DAYS[period]
+    days = (dt_series - origin).dt.total_seconds() / (24 * 3600)
+    return np.floor(days / n_days).astype("int64")
 
-    period_obj = dt_series.dt.to_period(period)
-    period_start = period_obj.dt.start_time
-    days_into = (dt_series - period_start).dt.total_seconds() / (24 * 3600)
-    frac = (days_into / n_days).to_numpy()
-    return np.clip(frac, 0.0, 1.0 - 1e-9)
+
+def _period_fraction(dt_series: pd.Series, period: str, origin: pd.Timestamp) -> np.ndarray:
+    """
+    Normalized position of each timestamp within its cohort bucket, in [0,1).
+
+    Position within the same day-based bucket used by _cohort_index: the
+    fractional part of (days since origin)/period_days. For "W" this is
+    essentially day-of-week / 7; for multi-week periods it is the position
+    within the n-day bucket.
+
+    Colab origin: arrival_frac / return_frac computation (~lines 200, 290),
+    re-anchored to the day-based cohort origin for internal consistency.
+    """
+    if period not in PERIOD_DAYS:
+        raise ValueError(f"Unknown period: {period}")
+    n_days = PERIOD_DAYS[period]
+    days = (dt_series - origin).dt.total_seconds() / (24 * 3600)
+    frac = (days / n_days) % 1.0
+    return np.clip(frac.to_numpy(), 0.0, 1.0 - 1e-9)
 
 
 def _dedup_returns(ret: pd.DataFrame) -> pd.DataFrame:
@@ -115,9 +156,10 @@ def build_category_datasets(
     dict
         {
           category_name: {
-            "panel": DataFrame indexed by sale_period with [G_t, u_t, k_obs_t],
-            "arrival_times": {sale_period: np.ndarray of demand fractions},
-            "return_arrival_times": {sale_period: np.ndarray of return fracs},
+            "panel": DataFrame indexed by cohort (integer id) with
+                     [G_t, u_t, k_obs_t],
+            "arrival_times": {cohort: np.ndarray of demand fractions},
+            "return_arrival_times": {cohort: np.ndarray of return fracs},
           },
           ...
         }
@@ -125,13 +167,18 @@ def build_category_datasets(
     Notes
     -----
     - Returns are deduped to one per order_item (see _dedup_returns).
-    - u_t, k_obs_t clipped so k_obs_t <= u_t <= G_t.
-    - arrival_times are UNIT-LEVEL (quantity-expanded); for each period
-      len(arrival_times[p]) == G_t[p].
+    - G_t, u_t, k_obs_t count ORDER LINES (order_items), not pieces
+      (Path L, decision #6). k_obs_t <= u_t <= G_t.
+    - Cohorts are day-based integer ids from a single global origin
+      (decision #7), so total_G is invariant to the period definition.
+    - arrival_times are LINE-LEVEL (one fraction per order_item line); for
+      each cohort len(arrival_times[c]) == G_t[c].
     - return_arrival_times cover RESALABLE returns only (only resalable
       returns can offset demand in S4 order-of-arrival netting).
     """
-    # ── 1. Fulfilled demand (Completed + Returned) ──────────────────
+    # ── 0. Global cohort origin (earliest fulfilled sale date) ──────
+    # Single origin shared by demand AND returns and across categories, so
+    # all panels live on the same cohort grid (sample-size axis comparable).
     items = order_items_clean.loc[
         order_items_clean["order_status"].isin(ORDER_STATUS_FILTER),
         ["order_item_id", "order_id", "order_date", "product_id",
@@ -141,8 +188,11 @@ def build_category_datasets(
     items["quantity"] = pd.to_numeric(items["quantity"], errors="coerce").fillna(0).astype(int)
     items = items.dropna(subset=["order_date", "category_name"])
 
-    items["sale_period"] = items["order_date"].dt.to_period(period)
-    items["arrival_frac"] = _period_fraction(items["order_date"], period)
+    origin = items["order_date"].min().normalize()
+
+    # ── 1. Fulfilled demand (Completed + Returned) ──────────────────
+    items["cohort"] = _cohort_index(items["order_date"], period, origin)
+    items["arrival_frac"] = _period_fraction(items["order_date"], period, origin)
 
     # ── 2. Returns: clean, classify, DEDUP, cohort-fix ──────────────
     ret = returns_clean.loc[
@@ -160,13 +210,13 @@ def build_category_datasets(
     # DEDUP: one return per order_item (single-cycle assumption)
     ret = _dedup_returns(ret)
 
-    # COHORT FIX: attribute return to the SALE period (order_date),
+    # COHORT FIX: attribute return to the SALE cohort (order_date),
     # not the return period. Keeps U_t | G_t ~ Binomial(G_t, r).
-    ret["sale_period"] = ret["order_date"].dt.to_period(period)
+    ret["cohort"] = _cohort_index(ret["order_date"], period, origin)
 
     # Intraperiod timing of the return uses return_date (when in the cycle
     # it physically arrives); the COHORT (which period) is fixed by sale.
-    ret["return_frac"] = _period_fraction(ret["return_date"], period)
+    ret["return_frac"] = _period_fraction(ret["return_date"], period, origin)
 
     # ── 3. Per-category assembly ────────────────────────────────────
     datasets = {}
@@ -176,39 +226,43 @@ def build_category_datasets(
         items_c = items[items["category_name"] == cat]
         ret_c = ret[ret["category_name"] == cat]
 
-        # ─ 3a. Period aggregates ─────────────────────────────────
-        G = items_c.groupby("sale_period")["quantity"].sum()
-        u = ret_c.groupby("sale_period")["quantity"].sum()
-        k = ret_c[ret_c["is_resalable"]].groupby("sale_period")["quantity"].sum()
+        # ─ 3a. Period aggregates (LINE counts, Path L) ───────────
+        # G_t = number of order lines sold in the cohort
+        # u_t = number of returned lines (one return per order_item)
+        # k_obs_t = number of resalable returned lines
+        G = items_c.groupby("cohort").size()
+        u = ret_c.groupby("cohort").size()
+        k = ret_c[ret_c["is_resalable"]].groupby("cohort").size()
 
-        all_periods = pd.period_range(
-            start=G.index.min(), end=G.index.max(), freq=period
-        )
-        panel = pd.DataFrame(index=all_periods)
-        panel.index.name = "sale_period"
-        panel["G_t"] = G.reindex(all_periods).fillna(0).astype(int)
-        panel["u_t"] = u.reindex(all_periods).fillna(0).astype(int)
-        panel["k_obs_t"] = k.reindex(all_periods).fillna(0).astype(int)
+        # Contiguous cohort range from the SAME day-based index (decision
+        # #7): grouping and reindex are aligned, so no row is dropped.
+        all_cohorts = pd.RangeIndex(int(G.index.min()), int(G.index.max()) + 1)
+        panel = pd.DataFrame(index=all_cohorts)
+        panel.index.name = "cohort"
+        panel["G_t"] = G.reindex(all_cohorts).fillna(0).astype(int)
+        panel["u_t"] = u.reindex(all_cohorts).fillna(0).astype(int)
+        panel["k_obs_t"] = k.reindex(all_cohorts).fillna(0).astype(int)
 
         # ─ 3b. Clip to maintain k_obs_t <= u_t <= G_t ────────────
         panel["u_t"] = np.minimum(panel["u_t"], panel["G_t"])
         panel["k_obs_t"] = np.minimum(panel["k_obs_t"], panel["u_t"])
 
-        # ─ 3c. Unit-level arrival timestamps ─────────────────────
-        # Demand: quantity-expanded so one entry per UNIT (addresses the
-        # supervisor's "could a customer take more than one unit?" — yes,
-        # quantity is 1-4, so we expand).
+        # ─ 3c. Line-level arrival timestamps ─────────────────────
+        # Demand: ONE arrival fraction per order line (Path L). The line is
+        # the atomic ordering/return unit, so the netting logic operates on
+        # individual lines, NOT quantity-expanded pieces. (Reverses the
+        # earlier np.repeat(..., quantity) expansion.)
         arrival_times = {}
-        for p, grp in items_c.groupby("sale_period"):
-            fracs = np.repeat(grp["arrival_frac"].values, grp["quantity"].values)
-            arrival_times[p] = np.sort(fracs)
+        for c, grp in items_c.groupby("cohort"):
+            fracs = grp["arrival_frac"].values
+            arrival_times[c] = np.sort(fracs)
 
-        # Resalable returns only, also unit-level.
+        # Resalable returns only, also line-level (one fraction per line).
         return_arrival_times = {}
         res_c = ret_c[ret_c["is_resalable"]]
-        for p, grp in res_c.groupby("sale_period"):
-            fracs = np.repeat(grp["return_frac"].values, grp["quantity"].values)
-            return_arrival_times[p] = np.sort(fracs)
+        for c, grp in res_c.groupby("cohort"):
+            fracs = grp["return_frac"].values
+            return_arrival_times[c] = np.sort(fracs)
 
         datasets[cat] = {
             "panel": panel,
