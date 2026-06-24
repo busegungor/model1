@@ -19,6 +19,8 @@ zaten 'category_name' sütununu içeriyor.
 import pandas as pd
 import numpy as np
 from scipy import stats
+from scipy.optimize import minimize_scalar
+from scipy.special import gammaln
 from collections import Counter
 from data_analysis import order_items_clean
 
@@ -96,21 +98,23 @@ def fit_aic(data):
     except Exception:
         pass
 
-    # NegBin — moment matching (var > mean gerekli)
+
+
+    # NegBin — MLE (r dispersion'ı profile-likelihood ile)
     try:
-        if var > mean and mean > 0:
-            p = mean / var
-            r = mean * p / (1 - p)
-            ll = stats.nbinom.logpmf(data, r, p).sum()
+        if mean > 0:
+            n = len(data); S = data.sum()
+            def negll(r):
+                p = r / (r + mean)          # p'nin r'ye bağlı kapalı-form MLE'si
+                return -(gammaln(data + r) - gammaln(r) - gammaln(data + 1)
+                        + r*np.log(p) + data*np.log1p(-p)).sum()
+            opt = minimize_scalar(negll, bounds=(1e-3, 1e6), method='bounded')
+            r = opt.x; p = r/(r+mean)
+            ll = -negll(r)
             if np.isfinite(ll):
-                results['nbinom'] = {
-                    'aic': 2 * 2 - 2 * ll,
-                    'params': {'r': r, 'p': p},
-                    'k': 2
-                }
+                results['nbinom'] = {'aic': 2*2 - 2*ll, 'params': {'r': r, 'p': p}, 'k': 2}
     except Exception:
         pass
-
     # Geometric — 0-shifted, NegBin(r=1, p) olarak parametrize
     # support {0, 1, 2, ...}, diğer dağılımlarla comparable
     try:
@@ -161,7 +165,7 @@ for freq in candidates:
             "category_name",
             pd.Grouper(key="order_date", freq=freq)
         ])["quantity"]
-        .sum()
+        .size()
         .reset_index()
         .rename(columns={
             "order_date": "cohort_start",
@@ -330,7 +334,7 @@ weekly_demand = (
         "category_name",
         pd.Grouper(key="order_date", freq="W")
     ])["quantity"]
-    .sum()
+    .size()
     .reset_index()
 )
 
