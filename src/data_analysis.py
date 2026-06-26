@@ -56,7 +56,10 @@ duplicates = clean[clean["order_item_id"].duplicated(keep=False)].sort_values("o
 # ════════════════════════════════════════════════════════════
 # ─── Order vs Return level ayrımı ─────────────────────
 
-order_items_clean = clean.drop_duplicates('order_item_id')
+order_items_clean = (
+    clean[clean['order_status'].isin(['Completed', 'Returned'])]
+    .drop_duplicates('order_item_id')
+)
 # Hem return_id var, hem de order_status iade ile uyumlu olsun
 returns_clean = clean[clean['return_id'].notna() & clean['order_status'].isin(['Completed', 'Returned'])].copy()
 
