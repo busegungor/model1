@@ -58,7 +58,7 @@ def fig_crossover(df, out_path, g_values=(5.0, 8.0, 20.0)):
                 se=("regret_se", lambda x: np.sqrt(np.mean(x**2)) / np.sqrt(len(x))))
            .reset_index())
 
-    fig, axes = plt.subplots(2, 2, figsize=(12, 9), sharex=True)
+    fig, axes = plt.subplots(2, 2, figsize=(12, 9), sharex=True, sharey=True)
     axes = axes.flatten()
     for ax, period in zip(axes, PERIODS):
         sub = agg[agg.period == period]
@@ -91,8 +91,7 @@ def fig_crossover(df, out_path, g_values=(5.0, 8.0, 20.0)):
     ]
     fig.legend(handles=legend_elems, loc="upper center", ncol=5,
                frameon=False, fontsize=10, bbox_to_anchor=(0.5, 1.0))
-    fig.suptitle("SAA vs Bayesian — relative regret by sample size and period\n"
-                 "(mean over 5 categories, +/-1 s.e. band)", fontsize=13, y=1.06)
+    fig.suptitle("Relative regret by sample size and period", fontsize=13, y=1.06)
     fig.tight_layout(rect=[0, 0, 1, 0.97])
     fig.savefig(out_path, dpi=150, bbox_inches="tight"); plt.close(fig)
     print(f"Saved -> {out_path}")
@@ -192,8 +191,7 @@ def fig_sequencing(seq, out_path):
         ax.grid(True, axis="y", alpha=0.25)
     if has_method:
         axes[0].legend(frameon=False, fontsize=9, title="Method")
-    fig.suptitle("Maximum impact of intraperiod sequencing — SAA vs Bayesian\n"
-                 "(small bars in both methods -> sequencing irrelevant here)",
+    fig.suptitle("Maximum impact of intraperiod sequencing — SAA vs Bayesian",
                  fontsize=12, y=1.02)
     fig.tight_layout()
     fig.savefig(out_path, dpi=150, bbox_inches="tight"); plt.close(fig)
@@ -242,9 +240,7 @@ def fig_sequencing_levels(seq, out_path, method=None):
             pad = (vmax - vmin) * 0.5 + 0.5
             ax.set_ylim(max(0, vmin - pad), vmax + pad)
     axes[0].legend(frameon=False, fontsize=9, loc="upper right")
-    fig.suptitle(f"Sequencing cost levels — S1 / S4 / S3{mtag}\n"
-                 "(S4 near S1: empirical timing close to best-case; "
-                 "band is narrow throughout)", fontsize=12, y=1.02)
+    fig.suptitle(f"Sequencing cost levels — S1 / S4 / S3{mtag}", fontsize=12, y=1.02)
     fig.tight_layout()
     fig.savefig(out_path, dpi=150, bbox_inches="tight"); plt.close(fig)
     print(f"Saved -> {out_path}")
@@ -266,7 +262,7 @@ def plot_net_demand_distribution(N_saa, N_bay, Q_saa, Q_bay,
     ax.axvline(Q_bay, color=METHOD_COLOR["Bayesian"], ls="--", lw=2,
                label=f"$Q^*$ Bayesian = {Q_bay:.1f}")
     ax.set_xlabel("Net Demand"); ax.set_ylabel("Density")
-    ax.set_title(f"Net Demand Distribution — {title}")
+    ax.set_title(f"Net demand with $Q^*$ — {title} (representative)")
     ax.legend(); ax.grid(True, alpha=0.3)
     plt.tight_layout()
     if save_path:
@@ -302,12 +298,16 @@ def plot_cost_curves(all_cost_data: dict, save_path=None):
         ax.axvline(d["Q_bay"], color=METHOD_COLOR["Bayesian"], ls="--", lw=1.8,
                    label=f"$Q^*_{{Bay}}$={d['Q_bay']:.0f}")
         ax.scatter(d["Q_bay"], ep(d["Q_bay"]), color=METHOD_COLOR["Bayesian"], s=60, zorder=5)
+        EPmin = EP.min()
+        ax.set_ylim(EPmin * 0.92, EPmin * 3.0)
+        Qctr = 0.5 * (d["Q_saa"] + d["Q_bay"])
+        ax.set_xlim(Qctr - 12, Qctr + 12)
         ax.set_title(cat, fontsize=11, fontweight="bold")
         ax.set_xlabel("Order Quantity $Q$"); ax.set_ylabel("Expected Cost $EP(Q)$")
         ax.legend(fontsize=8, loc="upper right"); ax.grid(True, alpha=0.3, ls="--")
     for ax in axf[n:]:
         ax.set_visible(False)
-    fig.suptitle("Expected Cost Curve $EP(Q)$ — SAA vs Bayesian optima (full data, W)",
+    fig.suptitle("Expected cost $EP(Q)$ — SAA vs Bayesian optima (full data, W)",
                  fontsize=13, fontweight="bold", y=1.01)
     plt.tight_layout()
     if save_path:
@@ -316,7 +316,7 @@ def plot_cost_curves(all_cost_data: dict, save_path=None):
 
 
 # ════════════════════════════════════════════════════════════════════
-def _build_fulldata_fits(period="W", rule="S4", J=400, seed=0):
+def _build_fulldata_fits(period="W", rule="S4", J=200, seed=0):
     """Helper: full-data SAA & Bayesian fits per category for figs 3-4."""
     from data_analysis import order_items_clean, returns_clean
     from preprocessing import build_category_datasets
@@ -382,9 +382,8 @@ def fig_posterior_shrinkage(out_path, category=None, period="W",
     pname = {"r": "return probability  r", "k": "resalability  k"}[param]
     ax.set_xlabel(f"Posterior of {pname}")
     ax.set_ylabel("Posterior density")
-    ax.set_title(f"Posterior shrinkage with sample size — {pname}\n"
-                 f"({category}, {period}; wider at small m, "
-                 f"narrowing toward the data value as m grows)", fontsize=11)
+    ax.set_title(f"Posterior shrinkage — {pname}\n"
+                 f"({category}, {period}; representative)", fontsize=11)
     ax.legend(frameon=False, title="Training size")
     ax.grid(True, alpha=0.25)
     fig.tight_layout()
@@ -434,9 +433,7 @@ def fig_demand_overdispersion(out_path, period="W", J=20000, seed=0):
     ax.set_xlim(0, lim); ax.set_ylim(0, lim)
     ax.set_xlabel("VMR of observed demand (data)")
     ax.set_ylabel("VMR of NegBin-Beta posterior predictive")
-    ax.set_title("Demand model captures overdispersion\n"
-                 "(points on y=x: NegBin reproduces the observed spread; "
-                 "a Poisson model would sit on the dotted line)", fontsize=11)
+    ax.set_title("Demand model captures overdispersion", fontsize=11)
     ax.legend(frameon=False, loc="upper left")
     ax.grid(True, alpha=0.25)
     fig.tight_layout()
@@ -454,14 +451,12 @@ if __name__ == "__main__":
     fig_metric_vs_samplesize(
         df, OUT / "fig_cost_vs_samplesize.png",
         value_col="cost_mean", se_col=None, ylabel="Expected cost",
-        suptitle="SAA vs Bayesian — expected cost by sample size and period\n"
-                 "(mean over 5 categories)")
+        suptitle="Expected cost by sample size and period")
     if "Q_mean" in df.columns:
         fig_metric_vs_samplesize(
             df, OUT / "fig_Q_vs_samplesize.png",
             value_col="Q_mean", se_col="Q_se", ylabel="Order quantity  $Q^*$",
-            suptitle="SAA vs Bayesian — order quantity $Q^*$ by sample size and period\n"
-                     "(mean over 5 categories, +/-1 s.e. band)")
+            suptitle="Order quantity $Q^*$ by sample size and period")
     seq = pd.read_csv(OUT / "sequencing_importance.csv")
     fig_sequencing(seq, OUT / "fig_sequencing.png")
     if "method" in seq.columns:
