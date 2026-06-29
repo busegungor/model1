@@ -249,8 +249,12 @@ def sequencing_importance(periods=("W", "2W", "3W", "4W"),
 
     Reports per method (PRIMITIVE ratio: cu=p+g-c, co=c-s):
       cost_S1, cost_S4, cost_S3
-      gap_pct  = (cost_S3 - cost_S1)/cost_S1 * 100   (max impact)
-      S4_pos   = (cost_S4 - cost_S1)/(cost_S3 - cost_S1)  (0=best, 1=worst)
+      gap_pct     = (max{cost_S1,cost_S4,cost_S3}
+               - min{cost_S1,cost_S4,cost_S3})
+              / min{cost_S1,cost_S4,cost_S3} * 100
+
+      S4_cost_pos = relative position of cost_S4 inside this cost band    
+              (0 = lowest cost among the three rules, 1 = highest)
     """
     from data_analysis import order_items_clean, returns_clean
     rows = []
@@ -281,20 +285,33 @@ def sequencing_importance(periods=("W", "2W", "3W", "4W"),
                             posteriors=post).flatten()
                     Q = float(np.quantile(f, a))
                     costs[rule] = _cost(Q, f, p, c, s_, g)
-                denom = costs["S3"] - costs["S1"]
+                                # Nonnegative sequencing cost band.
+                # We do NOT assume cost_S3 >= cost_S1, because each rule is
+                # optimized under its own induced net-demand distribution.
+                cost_values = np.array([costs["S1"], costs["S4"], costs["S3"]],
+                                       dtype=float)
+
+                c_min = float(cost_values.min())
+                c_max = float(cost_values.max())
+                band = c_max - c_min
+
+                gap_pct = 100 * band / c_min if c_min > 1e-12 else np.nan
+                s4_cost_pos = ((costs["S4"] - c_min) / band
+                               if band > 1e-12 else np.nan)
+
                 rows.append({
                     "period": period, "category": cat, "method": method,
                     "rk": round(rk, 4),
                     "cost_S1": round(costs["S1"], 4),
                     "cost_S4": round(costs["S4"], 4),
                     "cost_S3": round(costs["S3"], 4),
-                    "gap_pct": round(100 * denom / costs["S1"], 3),
-                    "S4_pos": round((costs["S4"] - costs["S1"]) / denom, 3)
-                              if abs(denom) > 1e-9 else np.nan,
+                    "gap_pct": round(gap_pct, 3),
+                    "S4_cost_pos": round(s4_cost_pos, 3)
+                                   if np.isfinite(s4_cost_pos) else np.nan,
                 })
                 if verbose:
-                    print(f"[{period}|{cat}|{method}] gap={rows[-1]['gap_pct']:.2f}%  "
-                          f"S4_pos={rows[-1]['S4_pos']}")
+                    print(f"[{period}|{cat}|{method}] band={rows[-1]['gap_pct']:.2f}%  "
+                          f"S4_cost_pos={rows[-1]['S4_cost_pos']}")
     return pd.DataFrame(rows)
 
 
@@ -321,6 +338,6 @@ if __name__ == "__main__":
     print("=" * 60)
     seq = sequencing_importance(g=8.0, J=2000)
     seq.to_csv(OUT / "sequencing_importance.csv", index=False)
-    print("\nMax sequencing impact (gap_pct = (cost_S3-cost_S1)/cost_S1):")
+    print("\nMax sequencing impact (gap_pct = normalized max-min cost band):")
     print(seq.groupby("period")["gap_pct"].agg(["mean", "max"]).round(2).to_string())
     print(f"\nSaved -> {OUT/'sequencing_importance.csv'}")

@@ -1,41 +1,41 @@
-period,category,method,rk,cost_S1,cost_S4,cost_S3,gap_pct,S4_pos
+period,category,method,rk,cost_S1,cost_S4,cost_S3,gap_pct,S4_cost_pos
 W,Classic Scrunchies,SAA,0.0265,13.3076,13.3297,13.603,2.22,0.075
-W,Classic Scrunchies,Bayesian,0.0265,14.0746,14.068,14.3056,1.641,-0.028
-W,Luxury Silk Scrunchies,SAA,0.025,18.4462,18.4456,18.809,1.967,-0.002
-W,Luxury Silk Scrunchies,Bayesian,0.025,19.6448,19.5867,19.9365,1.485,-0.199
-W,Mini Scrunchies,SAA,0.0279,18.539,18.5103,18.9253,2.084,-0.074
-W,Mini Scrunchies,Bayesian,0.0279,18.8696,18.7948,19.2536,2.035,-0.195
-W,Scrunchie Bundles,SAA,0.0236,19.0577,19.0686,19.0612,0.018,3.132
+W,Classic Scrunchies,Bayesian,0.0265,14.0746,14.068,14.3056,1.689,0.0
+W,Luxury Silk Scrunchies,SAA,0.025,18.4462,18.4456,18.809,1.97,0.0
+W,Luxury Silk Scrunchies,Bayesian,0.025,19.6448,19.5867,19.9365,1.786,0.0
+W,Mini Scrunchies,SAA,0.0279,18.539,18.5103,18.9253,2.242,0.0
+W,Mini Scrunchies,Bayesian,0.0279,18.8696,18.7948,19.2536,2.441,0.0
+W,Scrunchie Bundles,SAA,0.0236,19.0577,19.0686,19.0612,0.057,1.0
 W,Scrunchie Bundles,Bayesian,0.0236,20.2972,20.3905,20.7016,1.992,0.231
 W,Seasonal Prints,SAA,0.0191,19.2428,19.2751,19.5501,1.597,0.105
 W,Seasonal Prints,Bayesian,0.0191,18.9722,18.9881,19.1577,0.978,0.086
-2W,Classic Scrunchies,SAA,0.0265,18.2329,18.222,18.4916,1.419,-0.042
-2W,Classic Scrunchies,Bayesian,0.0265,19.0039,18.9548,19.3156,1.64,-0.157
+2W,Classic Scrunchies,SAA,0.0265,18.2329,18.222,18.4916,1.479,0.0
+2W,Classic Scrunchies,Bayesian,0.0265,19.0039,18.9548,19.3156,1.903,0.0
 2W,Luxury Silk Scrunchies,SAA,0.025,22.859,22.867,23.2621,1.763,0.02
-2W,Luxury Silk Scrunchies,Bayesian,0.025,27.3217,27.3079,27.7824,1.686,-0.03
-2W,Mini Scrunchies,SAA,0.0279,25.0895,25.0477,25.3512,1.043,-0.16
+2W,Luxury Silk Scrunchies,Bayesian,0.025,27.3217,27.3079,27.7824,1.738,0.0
+2W,Mini Scrunchies,SAA,0.0279,25.0895,25.0477,25.3512,1.212,0.0
 2W,Mini Scrunchies,Bayesian,0.0279,24.9758,25.0958,25.425,1.799,0.267
-2W,Scrunchie Bundles,SAA,0.0236,25.2214,25.2157,25.5121,1.153,-0.02
-2W,Scrunchie Bundles,Bayesian,0.0236,27.368,27.357,27.7692,1.466,-0.027
-2W,Seasonal Prints,SAA,0.0191,20.1372,20.125,20.1733,0.18,-0.338
+2W,Scrunchie Bundles,SAA,0.0236,25.2214,25.2157,25.5121,1.175,0.0
+2W,Scrunchie Bundles,Bayesian,0.0236,27.368,27.357,27.7692,1.507,0.0
+2W,Seasonal Prints,SAA,0.0191,20.1372,20.125,20.1733,0.24,0.0
 2W,Seasonal Prints,Bayesian,0.0191,22.813,22.9368,23.0576,1.072,0.506
-3W,Classic Scrunchies,SAA,0.0265,20.4743,20.4453,20.6237,0.73,-0.194
-3W,Classic Scrunchies,Bayesian,0.0265,24.4428,24.4352,24.8485,1.66,-0.019
-3W,Luxury Silk Scrunchies,SAA,0.025,31.6109,31.4991,31.8263,0.681,-0.519
-3W,Luxury Silk Scrunchies,Bayesian,0.025,40.6414,40.4812,41.4752,2.052,-0.192
+3W,Classic Scrunchies,SAA,0.0265,20.4743,20.4453,20.6237,0.873,0.0
+3W,Classic Scrunchies,Bayesian,0.0265,24.4428,24.4352,24.8485,1.692,0.0
+3W,Luxury Silk Scrunchies,SAA,0.025,31.6109,31.4991,31.8263,1.039,0.0
+3W,Luxury Silk Scrunchies,Bayesian,0.025,40.6414,40.4812,41.4752,2.455,0.0
 3W,Mini Scrunchies,SAA,0.0279,30.2996,30.3276,30.4383,0.458,0.202
-3W,Mini Scrunchies,Bayesian,0.0279,41.6826,41.5649,42.6088,2.222,-0.127
-3W,Scrunchie Bundles,SAA,0.0236,27.7092,27.6293,28.0381,1.187,-0.243
-3W,Scrunchie Bundles,Bayesian,0.0236,36.5273,36.1635,37.1303,1.651,-0.603
-3W,Seasonal Prints,SAA,0.0191,22.8683,22.8507,23.1014,1.019,-0.075
-3W,Seasonal Prints,Bayesian,0.0191,30.2667,30.2022,30.6677,1.325,-0.161
-4W,Classic Scrunchies,SAA,0.0265,24.8266,24.7242,25.0468,0.887,-0.465
-4W,Classic Scrunchies,Bayesian,0.0265,25.4668,25.4563,25.7417,1.08,-0.038
-4W,Luxury Silk Scrunchies,SAA,0.025,35.4419,35.3017,35.4982,0.159,-2.491
-4W,Luxury Silk Scrunchies,Bayesian,0.025,38.7449,38.227,39.4319,1.773,-0.754
-4W,Mini Scrunchies,SAA,0.0279,33.8481,33.7583,34.409,1.657,-0.16
-4W,Mini Scrunchies,Bayesian,0.0279,34.5116,34.1697,34.9262,1.201,-0.824
+3W,Mini Scrunchies,Bayesian,0.0279,41.6826,41.5649,42.6088,2.511,0.0
+3W,Scrunchie Bundles,SAA,0.0236,27.7092,27.6293,28.0381,1.48,0.0
+3W,Scrunchie Bundles,Bayesian,0.0236,36.5273,36.1635,37.1303,2.673,0.0
+3W,Seasonal Prints,SAA,0.0191,22.8683,22.8507,23.1014,1.097,0.0
+3W,Seasonal Prints,Bayesian,0.0191,30.2667,30.2022,30.6677,1.541,0.0
+4W,Classic Scrunchies,SAA,0.0265,24.8266,24.7242,25.0468,1.305,0.0
+4W,Classic Scrunchies,Bayesian,0.0265,25.4668,25.4563,25.7417,1.121,0.0
+4W,Luxury Silk Scrunchies,SAA,0.025,35.4419,35.3017,35.4982,0.557,0.0
+4W,Luxury Silk Scrunchies,Bayesian,0.025,38.7449,38.227,39.4319,3.152,0.0
+4W,Mini Scrunchies,SAA,0.0279,33.8481,33.7583,34.409,1.927,0.0
+4W,Mini Scrunchies,Bayesian,0.0279,34.5116,34.1697,34.9262,2.214,0.0
 4W,Scrunchie Bundles,SAA,0.0236,37.7313,37.7617,38.2464,1.365,0.059
-4W,Scrunchie Bundles,Bayesian,0.0236,41.9098,41.3652,42.6456,1.756,-0.74
-4W,Seasonal Prints,SAA,0.0191,23.7826,23.8073,23.7265,-0.236,-0.439
-4W,Seasonal Prints,Bayesian,0.0191,27.7056,27.6738,27.9604,0.92,-0.125
+4W,Scrunchie Bundles,Bayesian,0.0236,41.9098,41.3652,42.6456,3.095,0.0
+4W,Seasonal Prints,SAA,0.0191,23.7826,23.8073,23.7265,0.34,1.0
+4W,Seasonal Prints,Bayesian,0.0191,27.7056,27.6738,27.9604,1.036,0.0

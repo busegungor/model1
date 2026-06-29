@@ -187,7 +187,7 @@ def fig_sequencing(seq, out_path):
         ax.axhline(0, color="0.7", linewidth=0.8)
         ax.set_title(f"Period {period}", fontsize=12, fontweight="bold")
         ax.set_xticks(x); ax.set_xticklabels(cats, rotation=20, ha="right", fontsize=8)
-        ax.set_ylabel("gap %  (cost$_{S3}$-cost$_{S1}$)/cost$_{S1}$")
+        ax.set_ylabel(r"Sequencing cost band (%)")
         ax.grid(True, axis="y", alpha=0.25)
     if has_method:
         axes[0].legend(frameon=False, fontsize=9, title="Method")
