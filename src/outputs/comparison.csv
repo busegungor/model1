@@ -1,0 +1,4 @@
+method,n_history,seed,fitted_objective,order,mean_mismatch_cost,mean_net_cash_cost,mean_lost_sales,mean_sales,mean_returns,mean_resales_available,mean_late_resalable,mean_nonresalable,mean_leftover,fill_rate,regret_vs_reference_MC_oracle
+SAA,24,20261026,1166.125,69,1244.244,-342.672,17.22,76.128,39.144,15.124,12.272,11.748,7.996,0.8155289883018383,0.1959999999999127
+Bayesian,24,20261026,1149.4464285714287,70,1245.15,-341.766,16.676,76.672,39.436,15.204,12.396,11.836,8.532,0.8213566439559498,1.1020000000000891
+reference_MC_oracle,24,20261026,1273.276,66,1244.048,-342.868,18.968,74.38,38.264,14.928,11.868,11.468,6.548,0.7968033594720829,0.0
