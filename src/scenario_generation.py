@@ -1,80 +1,94 @@
-"""Make policy-independent counterfactual scenarios using only *eligible history*.
-
-Observed historical returns are not copied as fixed aggregate totals for new Q values.
-Each potential demand event gets a new, privately sampled mark. Those marks only
-become sales/returns if the simulated inventory actually serves the event.
+"""Model-based and empirical predictive scenarios use OBSERVED history only.
+No true return probability or DGP mean enters the estimators. The Bayesian
+dispersion and prior are predeclared MODEL assumptions (require sensitivity).
 """
 import numpy as np
 from config import ExperimentConfig
-from data_generation import HistoricalSeason, ResolvedSale
-from simulation import Scenario, PotentialMark
+from simulation import Scenario,PotentialMark
+from data_generation import completed_sale_cohort,HistoricalSeason
 
 
-def empirical_scenarios(history: list[HistoricalSeason], completed: list[ResolvedSale],
-                        count: int, rng: np.random.Generator, cfg: ExperimentConfig) -> list[Scenario]:
-    if not history or not completed:
-        raise ValueError("SAA requires at least one complete historical sale")
-    output = []
+def empirical_scenarios(history,count,rng,cfg):
+    sales=completed_sale_cohort(history,cfg)
+    scenarios=[]
     for _ in range(count):
-        times = history[int(rng.integers(len(history)))].demand_times
-        marks = []
-        for _ in times:
-            record = completed[int(rng.integers(len(completed)))]
-            marks.append(PotentialMark(record.returned, record.resalable,
-                                       record.return_delay, record.processing_delay))
-        output.append(Scenario(times, tuple(marks), cfg.selling_days))
-    return output
+        ts=history[int(rng.integers(len(history)))].demand_times
+        marks=[sales[int(rng.integers(len(sales)))].mark for _ in ts]
+        scenarios.append(Scenario(ts,tuple(marks),cfg.season_days))
+    return scenarios
 
 
-def bayesian_scenarios(history: list[HistoricalSeason], completed: list[ResolvedSale],
-                       count: int, rng: np.random.Generator, cfg: ExperimentConfig,
-                       beta_prior: tuple[float, float] = (1., 1.)) -> list[Scenario]:
-    """Baseline Bayesian posterior predictive model.
+def _weekly_counts(history,cfg):
+    d=np.zeros(len(history)*int(cfg.season_days//7),dtype=int)
+    for i,s in enumerate(history):
+        for t in s.demand_times: d[i*int(cfg.season_days//7)+int(t//7)]+=1
+    return d
 
-    Demand: Bayesian bootstrap over observed complete trajectories (limited support).
-    Returns/resalability: independent Beta--Bernoulli posteriors.
-    Delay: smoothed discrete categorical posterior on declared support values.
 
-    Bayesian bootstrap with risk-neutral expected cost has the same *marginal mean*
-    demand distribution as empirical resampling. Differences mostly reflect return/
-    condition/delay smoothing; alternative demand likelihoods are a research choice.
+def demand_probability_posterior(history, cfg, prior_alpha=1.0, prior_beta=1.0):
+    """Exact Beta conjugate update for NB demand with fixed assumed dispersion.
+
+    For Y ~ NB(kappa, phi), P(Y=y) proportional to
+    phi**kappa * (1-phi)**y, and E[Y] = kappa*(1-phi)/phi.
+    The prior is on NB probability phi, NOT directly on demand mean.
+    The assumed dispersion is an estimator input, not read from DGP truth.
     """
-    if not history or not completed:
-        raise ValueError("Bayesian baseline requires historical observations")
-    a, b = beta_prior
-    if a<=0 or b<=0:
-        raise ValueError("Beta hyperparameters must be positive")
-    nr = sum(row.returned for row in completed)
-    nret = len(completed)
-    ngood = sum(row.resalable for row in completed if row.returned)
-    ralpha, rbeta = a+nr, b+(nret-nr)
-    kalpha, kbeta = a+ngood, b+(nr-ngood)
-    return_pool = [row.return_delay for row in completed if row.returned]
-    processing_pool = [row.processing_delay for row in completed if row.returned and row.resalable]
-    # Prior masses on fixed permitted delays allow nonzero predictive support even
-    # if a particular empirical delay has not yet occurred.
-    def smoothed_choices(support, observed):
-        arr=np.asarray(support,dtype=float)
-        mass=np.ones(len(arr),dtype=float)
-        for val in observed:
-            matches=np.flatnonzero(np.isclose(arr, val))
-            if len(matches): mass[matches[0]] += 1.
-        return arr, mass/mass.sum()
-    lags, lag_weights = smoothed_choices(cfg.return_delays, return_pool)
-    proc, proc_weights = smoothed_choices(cfg.processing_delays, processing_pool)
-    output=[]
+    if prior_alpha <= 0 or prior_beta <= 0:
+        raise ValueError('Beta prior parameters must be positive')
+    counts = _weekly_counts(history, cfg)
+    if len(counts) == 0:
+        raise ValueError('Historical demand observations required')
+    kappa = cfg.bayesian_assumed_dispersion
+    return (float(prior_alpha + len(counts)*kappa),
+            float(prior_beta + counts.sum()))
+
+
+def bayesian_scenarios(history,count,rng,cfg,prior_alpha=1.,prior_beta=1.):
+    sales=completed_sale_cohort(history,cfg)
+    n=len(sales)
+    attempts=sum(r.mark.attempts_return for r in sales)
+    accepted=sum(r.mark.accepted for r in sales)
+    good=sum(r.mark.resalable for r in sales)
+    # Beta(1,1) parameter priors (explicit experimental choices)
+    a_attempt,b_attempt=1+attempts,1+n-attempts
+    a_late,b_late=1+attempts-accepted,1+accepted
+    a_good,b_good=1+good,1+accepted-good
+    outbound=[r.mark.outbound_days for r in sales]
+    customer=[r.mark.customer_days for r in sales if r.mark.accepted]
+    reverse=[r.mark.reverse_days for r in sales if r.mark.attempts_return]
+    late_d=[r.mark.customer_days for r in sales if r.mark.attempts_return and not r.mark.accepted]
+    reason=[r.mark.reason for r in sales if r.mark.accepted]
+    phi_a,phi_b=demand_probability_posterior(history,cfg,prior_alpha,prior_beta)
+    kappa=cfg.bayesian_assumed_dispersion
+    scenarios=[]
+    weeks=cfg.season_days//7
     for _ in range(count):
-        # Bayesian bootstrap (Dirichlet weights) does not introduce new demand levels.
-        weights=rng.dirichlet(np.ones(len(history)))
-        times=history[int(rng.choice(len(history),p=weights))].demand_times
-        r=float(rng.beta(ralpha,rbeta))
-        k=float(rng.beta(kalpha,kbeta))
+        phi=float(rng.beta(phi_a,phi_b))
+        p_attempt=float(rng.beta(a_attempt,b_attempt))
+        p_late=float(rng.beta(a_late,b_late))
+        p_good=float(rng.beta(a_good,b_good))
+        times=[]
+        for w in range(weeks):
+            units=int(rng.negative_binomial(kappa,phi))
+            times.extend(float(7*w+rng.uniform(0.01,6.99)) for __ in range(units))
+        times.sort()
         marks=[]
-        for _ in times:
-            ret=bool(rng.random()<r)
-            good=bool(rng.random()<k) if ret else False
-            delay=float(rng.choice(lags,p=lag_weights)) if ret else 0.
-            processing=float(rng.choice(proc,p=proc_weights)) if good else 0.
-            marks.append(PotentialMark(ret,good,delay,processing))
-        output.append(Scenario(times,tuple(marks),cfg.selling_days))
-    return output
+        for __ in times:
+            od=int(rng.choice(outbound))
+            attempt=bool(rng.random()<p_attempt)
+            if not attempt:
+                marks.append(PotentialMark(outbound_days=od))
+                continue
+            late=bool(rng.random()<p_late)
+            # Model support is a predeclared POLICY assumption, not hidden truth.
+            cust=int(rng.choice(late_d)) if (late and late_d) else (
+                int(rng.integers(cfg.return_window_days+1,cfg.late_dispatch_last_day+1))
+                if late else (int(rng.choice(customer)) if customer else 1))
+            rev=int(rng.choice(reverse)) if reverse else 2
+            accepted=not late
+            good=bool(rng.random()<p_good) if accepted else False
+            why=str(rng.choice(reason)) if accepted and reason else ('late_request' if late else 'unspecified')
+            marks.append(PotentialMark(True,accepted,good,od,cust,rev,
+                                       cfg.processing_days if good else 0,why))
+        scenarios.append(Scenario(tuple(times),tuple(marks),cfg.season_days))
+    return scenarios
