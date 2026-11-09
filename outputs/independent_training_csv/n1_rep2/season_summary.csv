@@ -1,0 +1,2 @@
+season_id,sku_id,season_start,season_end,history_order,potential_demand,realized_sales,accepted_returns,rejected_late_attempts
+1,SEASONAL_APPAREL_SKU_001,2000-09-01T00:00:00,2001-01-05T00:00:00,1566,3042,2888,1530,36

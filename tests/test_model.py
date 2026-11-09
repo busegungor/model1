@@ -58,7 +58,12 @@ def test_calibrated_mean_and_early_share():
     rev=np.asarray(cfg.reverse_days)
     assert abs(maxent_daily_weights(rev,2.24)@rev-2.24)<1e-6
     p=conditional_dispatch_weights(cfg)
-    assert abs(p[:15].sum()-.72)<1e-6
+    wb=maxent_daily_weights(rev,cfg.reverse_mean_target)
+    receipt=np.zeros(len(p)+len(rev)+1)
+    for b,w in zip(rev,wb): receipt[np.arange(1,len(p)+1)+b]+=p*w
+    assert abs(receipt[:16].sum()-.72)<.03      # Fig. 16: 72% received within 15 days
+    assert abs(conditional_dispatch_weights(ExperimentConfig(return_window_days=14)).sum()-1)<1e-12
+
 
 def test_csv_round_trip_no_hidden_marks(tmp_path):
     cfg=ExperimentConfig(season_days=14,mean_weekly_units=5,seed=21)

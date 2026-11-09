@@ -8,6 +8,7 @@ from datetime import datetime,timedelta
 from pathlib import Path
 import numpy as np
 import pandas as pd
+from scipy.stats import nbinom
 from scipy.optimize import root,brentq
 from config import ExperimentConfig, Economics
 from simulation import PotentialMark, Scenario, SaleRecord, simulate
@@ -51,18 +52,14 @@ def maxent_daily_weights(days,mean_target,p_le2=None):
 
 
 def conditional_dispatch_weights(cfg):
-    """Truncated geometric; P(day<=15 | day<=30)=.72 (approximate figure evidence)."""
+    """Dispatch delay L^C = 1 + NegBin(r, p), truncated to the return window 1..omega.
+
+    (r, p) are fitted to the delivery-to-receipt curve of Difrancesco et al. (2018,
+    Fig. 16) after convolving with the reverse-transport law; r = 1 is the geometric case.
+    """
     d=np.arange(1,cfg.return_window_days+1)
-    if cfg.early_dispatch_by_day>=cfg.return_window_days: raise ValueError('Early cutoff too long')
-    # uniform has P<=early = early/total; require stronger early concentration
-    baseline=cfg.early_dispatch_by_day/cfg.return_window_days
-    if cfg.early_dispatch_share<baseline: raise ValueError('Target below uniform; change family')
-    if abs(cfg.early_dispatch_share-baseline)<1e-12: return np.ones(len(d))/len(d)
-    def early(prob):
-        weights=(1-prob)**(d-1);return weights[:cfg.early_dispatch_by_day].sum()/weights.sum()
-    p=brentq(lambda v:early(v)-cfg.early_dispatch_share,1e-10,0.999999)
-    weights=(1-p)**(d-1)
-    return weights/weights.sum()
+    w=nbinom.pmf(d-1,cfg.dispatch_nb_r,cfg.dispatch_nb_p)
+    return w/w.sum()
 
 
 def generate_demand_times(rng,cfg,season:int):

@@ -34,9 +34,9 @@ def test_experimental_files_small_smoke(tmp_path):
     assert set(conv.scenario_count)=={2,3}
     assert set(conv.method)=={'SAA','Bayesian'}
     intr=timing_sensitivity(hist,cfg,ec,33,4,tmp_path,(1,2),(-3,0,3))
-    assert len(intr)==10
-    assert set(intr.method)=={'SAA','Bayesian'}
-    assert intr.groupby(['factor','value']).size().eq(2).all()
+    assert len(intr)==15   # 5 settings x 3 fixed policies (SAA, Bayesian, No timing)
+    assert set(intr.method)=={'SAA','Bayesian','No timing'}
+    assert intr.groupby(['factor','value']).size().eq(3).all()
     assert (tmp_path/'audit.csv').exists()
     assert (tmp_path/'mc_convergence.csv').exists()
     assert (tmp_path/'intraperiod_sensitivity.csv').exists()

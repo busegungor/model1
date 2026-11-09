@@ -18,6 +18,7 @@ from evaluation import evaluate
 from scenario_generation import empirical_scenarios, bayesian_scenarios
 from simulation import Scenario, simulate
 from solver_core import _curve_one, optimize
+from benchmark_solvers import solve_no_timing
 
 
 def history_for_experiment(cfg, ec, n_history, seed, input_dir=None):
@@ -137,6 +138,8 @@ def timing_sensitivity(history, cfg, ec, seed, scenarios, output_dir,
     policies = {
         'SAA': optimize('SAA', empirical_scenarios(history, cfg.saa_scenarios, gs[0], cfg), ec).q,
         'Bayesian': optimize('Bayesian', bayesian_scenarios(history, cfg.bayes_scenarios, gs[1], cfg), ec).q,
+        # separate stream, so the SAA and Bayesian draws above are unchanged
+        'No timing': solve_no_timing(history, np.random.default_rng(np.random.SeedSequence([seed, 77])), cfg, ec).q,
     }
     reference_pool = [sample_true_scenario(gs[2], cfg) for _ in range(scenarios)]
     holdout_pool = [sample_true_scenario(gs[3], cfg) for _ in range(scenarios)]

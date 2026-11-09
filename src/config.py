@@ -43,8 +43,11 @@ class ExperimentConfig:
     outbound_mean_target: float = 4.93       # Masuch et al. (2024)
     outbound_p_le2_target: float = 0.079      # Masuch et al. (2024)
     reverse_mean_target: float = 2.24        # Asdecker & Karl (2022), Fashion/S2
-    early_dispatch_by_day: int = 15
-    early_dispatch_share: float = 0.72      # proxy from Difrancesco et al. (2018), Fig.16: return timing
+     # Customer dispatch delay L^C = 1 + NegBin(r, p), truncated to 1..return_window_days.
+    # (r, p) fitted to the delivery-to-receipt curve in Difrancesco et al. (2018), Fig. 16,
+    # after adding the reverse-transport delay; r = 1 would be the geometric special case.
+    dispatch_nb_r: float = 3.495
+    dispatch_nb_p: float = 0.2629
     history_stock_fraction: float = 0.58   # DESIGN CHOICE, not observed
     saa_scenarios: int = 20
     bayes_scenarios: int = 20
@@ -60,7 +63,8 @@ class ExperimentConfig:
         if self.mean_weekly_units<=0 or self.weekly_dispersion<=0 or self.bayesian_assumed_dispersion<=0: raise ValueError('Positive demand parameters required')
         if not 0<self.customer_geometric_p<=1: raise ValueError('Geometric p in (0,1]')
         for p in (self.return_attempt_probability,self.return_resalable_probability,
-                  self.late_dispatch_given_attempt,self.early_dispatch_share):
+                  self.late_dispatch_given_attempt,self.dispatch_nb_p):
             if not 0<=p<=1: raise ValueError('Probability outside [0,1]')
         if self.processing_days<0 or self.return_window_days<1 or self.late_dispatch_last_day<=self.return_window_days:
             raise ValueError('Invalid time limits')
+            if self.dispatch_nb_r<=0 or not 0<self.dispatch_nb_p<1: raise ValueError('Invalid dispatch-delay parameters')

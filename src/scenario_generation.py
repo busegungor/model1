@@ -53,11 +53,14 @@ def bayesian_scenarios(history,count,rng,cfg,prior_alpha=1.,prior_beta=1.):
     a_attempt,b_attempt=1+attempts,1+n-attempts
     a_late,b_late=1+attempts-accepted,1+accepted
     a_good,b_good=1+good,1+accepted-good
-    outbound=[r.mark.outbound_days for r in sales]
-    customer=[r.mark.customer_days for r in sales if r.mark.accepted]
-    reverse=[r.mark.reverse_days for r in sales if r.mark.attempts_return]
-    late_d=[r.mark.customer_days for r in sales if r.mark.attempts_return and not r.mark.accepted]
-    reason=[r.mark.reason for r in sales if r.mark.accepted]
+    # Empirical pools as arrays, built once: rng.choice on a Python list converts
+    # the whole list on every call, which made scenario generation O(n) per draw.
+    # Same draws as before (Generator.choice on a list or on the equivalent array).
+    outbound=np.array([r.mark.outbound_days for r in sales])
+    customer=np.array([r.mark.customer_days for r in sales if r.mark.accepted])
+    reverse=np.array([r.mark.reverse_days for r in sales if r.mark.attempts_return])
+    late_d=np.array([r.mark.customer_days for r in sales if r.mark.attempts_return and not r.mark.accepted])
+    reason=np.array([r.mark.reason for r in sales if r.mark.accepted])
     phi_a,phi_b=demand_probability_posterior(history,cfg,prior_alpha,prior_beta)
     kappa=cfg.bayesian_assumed_dispersion
     scenarios=[]
@@ -81,13 +84,13 @@ def bayesian_scenarios(history,count,rng,cfg,prior_alpha=1.,prior_beta=1.):
                 continue
             late=bool(rng.random()<p_late)
             # Model support is a predeclared POLICY assumption, not hidden truth.
-            cust=int(rng.choice(late_d)) if (late and late_d) else (
+            cust=int(rng.choice(late_d)) if (late and len(late_d)) else (
                 int(rng.integers(cfg.return_window_days+1,cfg.late_dispatch_last_day+1))
-                if late else (int(rng.choice(customer)) if customer else 1))
-            rev=int(rng.choice(reverse)) if reverse else 2
+                if late else (int(rng.choice(customer)) if len(customer) else 1))
+            rev=int(rng.choice(reverse)) if len(reverse) else 2
             accepted=not late
             good=bool(rng.random()<p_good) if accepted else False
-            why=str(rng.choice(reason)) if accepted and reason else ('late_request' if late else 'unspecified')
+            why=str(rng.choice(reason)) if accepted and len(reason) else ('late_request' if late else 'unspecified')
             marks.append(PotentialMark(True,accepted,good,od,cust,rev,
                                        cfg.processing_days if good else 0,why))
         scenarios.append(Scenario(tuple(times),tuple(marks),cfg.season_days))
